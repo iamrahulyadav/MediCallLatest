@@ -812,14 +812,19 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
                     e.printStackTrace();
                 }
 
+                if (response.toString().equals("") || response.toString().equals(null) || response.toString().equals("null")){
+                    Toast.makeText(getActivity(), "Server Not Responding, Please try later", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
             }
+
         }, new Response.ErrorListener() {
 
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Registration Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_LONG).show();
+               /* Toast.makeText(getApplicationContext(),
+                        error.getMessage(), Toast.LENGTH_LONG).show();*/
                 //hideDialog();
                 dialog.show();
             }
@@ -900,9 +905,8 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
             public void onResponse(String response) {
                 Log.d(TAG, "Register Response: " + response.toString());
                 //hideDialog();
-                dialog.dismiss();
                 try {
-
+                dialog.dismiss();
 
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
@@ -919,6 +923,8 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
+                }catch (IllegalArgumentException ar){
+                    ar.printStackTrace();
                 }
 
             }
@@ -969,15 +975,6 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
 
     //selectino pmd photo handler
     private void pmdfPhotoSelection(){
-
-//        ll_pmdc_photo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                selectImage();
-//            }
-//        });
-
 
         pmdcImageFromCamera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1068,6 +1065,7 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
         values.put(MediaStore.Images.Media.TITLE, "New Picture");
         values.put(MediaStore.Images.Media.DESCRIPTION, "From your Camera");
         imageUri = getActivity().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        Log.e("TAG", "the image uri is: " + imageUri);
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
         startActivityForResult(intent, REQUEST_CAMERA);
@@ -1083,12 +1081,8 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
         //  if (resultCode == Activity.RESULT_OK) {
         if (requestCode == SELECT_FILE)
             onSelectFromGalleryResult(data);
-        else if (requestCode == REQUEST_CAMERA)
-        {
-            if(data!=null)
-            {
-                onCaptureImageResult(data);
-            }
+        else if (requestCode == REQUEST_CAMERA) {
+                onCaptureImageResult();
 
         }
 
@@ -1113,15 +1107,14 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
     }
 
     //getting image form camera
-    private void onCaptureImageResult(Intent data) {
-
+    private void onCaptureImageResult() {
         try {
-
+            if (imageUri != null){
             bitmap1 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
             pmdcImageFrameLayout.setVisibility(View.VISIBLE);
             pmdc_select_picture_layout.setVisibility(View.GONE);
             iv_pmdc.setImageBitmap(bitmap1);
-
+        }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -1130,7 +1123,6 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
     }
 
     private void signUpdoctorwithImage(String imagePath, String drId){
-
 
         //Uploading code
         try {

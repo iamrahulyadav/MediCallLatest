@@ -1,6 +1,5 @@
 package themedicall.com;
 
-
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -13,9 +12,9 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -44,13 +43,6 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import themedicall.com.Adapter.CustomCityNewAdapter;
-import themedicall.com.GetterSetter.CitiesGetterSetter;
-import themedicall.com.Globel.CustomProgressDialog;
-import themedicall.com.Globel.DatabaseHelper;
-import themedicall.com.Globel.Glob;
-import themedicall.com.Globel.Utility;
-import themedicall.com.VolleyLibraryFiles.AppSingleton;
 
 import net.gotev.uploadservice.MultipartUploadRequest;
 
@@ -71,7 +63,15 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SignUp extends AppCompatActivity implements  SearchView.OnQueryTextListener{
+import themedicall.com.Adapter.CustomCityNewAdapter;
+import themedicall.com.GetterSetter.CitiesGetterSetter;
+import themedicall.com.Globel.CustomProgressDialog;
+import themedicall.com.Globel.DatabaseHelper;
+import themedicall.com.Globel.Glob;
+import themedicall.com.Globel.Utility;
+import themedicall.com.VolleyLibraryFiles.AppSingleton;
+
+public class SignupAsUser extends AppCompatActivity implements  SearchView.OnQueryTextListener{
     EditText signUpUserName  , signUpFullName ,  signUpMobile, signUpDob , signUpEmail, signUpPass ,  signUpConfirmPass , signUpUniName , signUpUniRegistrationNo;
     RadioGroup signUpGenderRadioGroup;
     RadioButton signUpGenderMale , signUpGenderFeMale ;
@@ -82,15 +82,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
     ArrayAdapter<String> cityAdapter;
     LinearLayout signUpGenderLayout;
     SearchView search_view ;
-    LinearLayout ll_pmdc_photo , pmdc_select_picture_layout;
-    FrameLayout pmdcImageFrameLayout ;
-    ImageView iv_pmdc , pmdcImageFromCamera , pmdcImageFromGallery , removePmdcDescriptionImg;
-    EditText et_pmdc_number;
-    String pmdcNumber;
 
-    private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
-    Uri imageUri = null;
-    Bitmap bitmap1;
 
     private String  userChoosenTask;
 
@@ -145,35 +137,21 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_signup_as_user);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-
-        // Progress dialog
-
-
-
         initiate();
-        //getText();
         setDoctorDob();
         setSelectDocStatus();
         setSelectCity();
         selectingBloodGroup();
         signUpPositionHideShowFields();
-        //getCitiesService();
-
-        checkUrlForSignUpPosition();
-        pmdfPhotoSelection();
 
         startMobileWithOnlyNumber3();
-
-
-        //SignUpBtnClick();
-
 
         signUpUserName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -209,7 +187,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
 
         //Toast.makeText(this, "item Position "+signUpPosition , Toast.LENGTH_SHORT).show();
 
-        dialog=new CustomProgressDialog(SignUp.this, 1);
+        dialog=new CustomProgressDialog(SignupAsUser.this, 1);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -237,15 +215,6 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
         signUpSelectSubSpecialityLayout = (RelativeLayout) findViewById(R.id.signUpSelectSubSpecialityLayout);
         signUpSelectCityLayout = (RelativeLayout) findViewById(R.id.signUpSelectCityLayout);
         signUpSelectBloodGroupLayout = (RelativeLayout) findViewById(R.id.signUpSelectBloodGroupLayout);
-
-        pmdcImageFrameLayout = (FrameLayout) findViewById(R.id.pmdcImageFrameLayout);
-        ll_pmdc_photo = (LinearLayout) findViewById(R.id.ll_pmdc_photo);
-        pmdc_select_picture_layout = (LinearLayout) findViewById(R.id.pmdc_select_picture_layout);
-        iv_pmdc = (ImageView) findViewById(R.id.iv_pmdc);
-        pmdcImageFromCamera = (ImageView) findViewById(R.id.pmdcImageFromCamera);
-        pmdcImageFromGallery = (ImageView) findViewById(R.id.pmdcImageFromGallery);
-        removePmdcDescriptionImg = (ImageView) findViewById(R.id.removePmdcDescriptionImg);
-        et_pmdc_number = (EditText) findViewById(R.id.et_pmdc_number);
 
         signUpBtn = (Button) findViewById(R.id.signUpBtn);
         city = getResources().getStringArray(R.array.city);
@@ -338,7 +307,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
         signUpDob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatePickerDialog datePickerDialog =  new DatePickerDialog(SignUp.this,R.style.CustomDatePickerDialogTheme,  date, myCalendar
+                DatePickerDialog datePickerDialog =  new DatePickerDialog(SignupAsUser.this,R.style.CustomDatePickerDialogTheme,  date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH));
 
@@ -358,71 +327,13 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
     {
 
 
-        doctorStatusAdapter = new ArrayAdapter<String>(SignUp.this , R.layout.spinner_list , R.id.spinnerList , doctorStatus);
+        doctorStatusAdapter = new ArrayAdapter<String>(SignupAsUser.this , R.layout.spinner_list , R.id.spinnerList , doctorStatus);
         btSignUpSelectDesignation.setAdapter(doctorStatusAdapter);
 
-
-        spinnerClickListener();
-
     }
 
 
 
-    public void spinnerClickListener()
-    {
-        btSignUpSelectDesignation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i)
-                {
-                    case 0:
-                        signUpUniName.setVisibility(View.GONE);
-                        signUpUniRegistrationNo.setVisibility(View.GONE);
-                        signUpUniName.setText("");
-                        signUpUniRegistrationNo.setText("");
-                        ll_pmdc_photo.setVisibility(View.VISIBLE);
-                        et_pmdc_number.setVisibility(View.VISIBLE);
-                        break;
-                    case 1:
-                        signUpUniName.setVisibility(View.GONE);
-                        signUpUniRegistrationNo.setVisibility(View.GONE);
-                        signUpUniName.setText("");
-                        signUpUniRegistrationNo.setText("");
-                        ll_pmdc_photo.setVisibility(View.VISIBLE);
-                        et_pmdc_number.setVisibility(View.VISIBLE);
-                        break;
-                    case 2:
-                        signUpUniName.setVisibility(View.GONE);
-                        signUpUniRegistrationNo.setVisibility(View.GONE);
-                        signUpUniName.setText("");
-                        signUpUniRegistrationNo.setText("");
-                        ll_pmdc_photo.setVisibility(View.VISIBLE);
-                        et_pmdc_number.setVisibility(View.VISIBLE);
-                        break;
-                    case 3:
-                        signUpUniName.setVisibility(View.GONE);
-                        signUpUniRegistrationNo.setVisibility(View.GONE);
-                        signUpUniName.setText("");
-                        signUpUniRegistrationNo.setText("");
-                        ll_pmdc_photo.setVisibility(View.VISIBLE);
-                        et_pmdc_number.setVisibility(View.VISIBLE);
-                        break;
-                    case 4:
-                        signUpUniName.setVisibility(View.VISIBLE);
-                        signUpUniRegistrationNo.setVisibility(View.VISIBLE);
-                        ll_pmdc_photo.setVisibility(View.GONE);
-                        et_pmdc_number.setVisibility(View.GONE);
-                        et_pmdc_number.setText("");
-                        break;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-    }
 
 
 
@@ -432,7 +343,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
         signUpSelectCity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(SignUp.this);
+                final Dialog dialog = new Dialog(SignupAsUser.this);
                 dialog.setContentView(R.layout.custom_citylist_search);
                 dialog.setTitle("Select City");
                 search_view = (SearchView) dialog.findViewById(R.id.search_view);
@@ -450,7 +361,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                 customCityNewAdapter = new CustomCityNewAdapter(getApplicationContext(), cityList);
                 //customCityNewAdapter = new CustomCityNewAdapter(getApplicationContext(), GetAllCitiesListService.CityList);
                 cityListView.setAdapter(customCityNewAdapter);
-                search_view.setOnQueryTextListener(SignUp.this);
+                search_view.setOnQueryTextListener(SignupAsUser.this);
 
 
                 cityListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -462,7 +373,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                         String City = city_title.getText().toString();
 
                         City_id = city_id.getText().toString();
-                        // Toast.makeText(SignUp.this, "id "+City_id, Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(SignupAsUser.this, "id "+City_id, Toast.LENGTH_SHORT).show();
                         signUpSelectCity.setText(City);
                         Log.e("TAG", "selected city name: " + City);
                         Log.e("TAG", "selected city id: " + City_id);
@@ -496,7 +407,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
     public void selectingBloodGroup(){
 
 
-        bloodGroupAdapter = new ArrayAdapter<String>(SignUp.this , R.layout.spinner_list , R.id.spinnerList , bloodGroupArray);
+        bloodGroupAdapter = new ArrayAdapter<String>(SignupAsUser.this , R.layout.spinner_list , R.id.spinnerList , bloodGroupArray);
         btSignUpSelectBloodGroup.setAdapter(bloodGroupAdapter);
 
     }
@@ -558,160 +469,12 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
         }
     }
 
-    public void checkUrlForSignUpPosition()
-    {
-        if(signUpPosition == 0)
+
+
+    public void signUpPositionHideShowFields() {
+        if(signUpPosition == 1)
         {
-            Sign_Up_URL = Glob.SIGNUP_DOCTOR;
-
-            ll_pmdc_photo.setVisibility(View.VISIBLE);
-            et_pmdc_number.setVisibility(View.VISIBLE);
-        }
-        else if(signUpPosition == 1)
-        {
-            Sign_Up_URL = Glob.SIGNUP_PATIENT;
-        }
-
-        else if(signUpPosition == 6)
-        {
-            Sign_Up_URL = Glob.SIGNUP_BLOOD_DONOR;
-        }
-
-
-    }
-
-    public void signUpPositionHideShowFields()
-    {
-
-        if(signUpPosition == 0)
-        {
-
-            getSupportActionBar().setTitle("Sign Up As Doctor");
-
-            signUpBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    if(!userNameValidator(signUpUserName.getText().toString()))
-                    {
-                        signUpUserName.setError(userNameError);
-                    }
-                    else if(signUpFullName.getText().toString().equals(""))
-                    {
-                        signUpFullName.setError(fullNameError);
-                    }
-                    else if(signUpMobile.length()<10)
-                    {
-                        signUpMobile.setError(mobileNoError);
-                    }
-                    else if(signUpDob.getText().toString().equals(""))
-                    {
-                        signUpDob.setError(dobError);
-                    }
-                    else if(signUpSelectCity.getText().toString().equals("City"))
-                    {
-                        Toast.makeText(SignUp.this, "Please Select City", Toast.LENGTH_SHORT).show();
-                        // signUpSelectCity.setError(selectCityError);
-                    }
-                    else if(signUpGenderRadioGroup.getCheckedRadioButtonId() == -1)
-                    {
-                        Toast.makeText(SignUp.this, "Please Select Gender", Toast.LENGTH_SHORT).show();
-                        signUpDob.setError(null);
-                    }
-                    else if (btSignUpSelectDesignation.getSelectedItem().toString().equals("Status")){
-                        Toast.makeText(SignUp.this, "Please Select your Status", Toast.LENGTH_SHORT).show();
-                    }
-                    else if((btSignUpSelectDesignation.getSelectedItem().toString().equals("Student Doctor") && signUpUniName.getText().toString().equals("")))
-                    {
-                        signUpUniName.setError(uniNameError);
-                    }
-                    else if((btSignUpSelectDesignation.getSelectedItem().toString().equals("Student Doctor") && signUpUniRegistrationNo.getText().toString().equals("")))
-                    {
-                        signUpUniRegistrationNo.setError(uniRegistrationNoError);
-                    }
-                    else if(!emailValidator(signUpEmail.getText().toString()))
-                    {
-                        signUpEmail.setError(emailError);
-                    }
-                    else if(signUpPass.getText().toString().equals("") || signUpPass.length() <= 5)
-                    {
-                        signUpPass.setError(passwordError);
-                    }
-                    else if(!signUpConfirmPass.getText().toString().equals(signUpPass.getText().toString()))
-                    {
-                        signUpConfirmPass.setError(passwordConfirmError);
-                    }
-
-                    else if((btSignUpSelectDesignation.getSelectedItem().toString().equals("Specialist") || btSignUpSelectDesignation.getSelectedItem().toString().equals("Trainee Specialist") || btSignUpSelectDesignation.getSelectedItem().toString().equals("General Practitioner")) && (et_pmdc_number.getText().length() == 0))
-                    {
-                        if (et_pmdc_number.getText().length() == 0){
-                            et_pmdc_number.setError("Please Enter PMDC No");
-                        }
-                    }
-
-                    /*else if (imageUri==null){
-                        Toast.makeText(SignUp.this, "Please Upload PMDC Photo", Toast.LENGTH_SHORT).show();
-                    }*/
-
-                    else {
-
-                        signUpUserNameText =   signUpUserName.getText().toString();
-                        signUpFullNameText = signUpFullName.getText().toString();
-                        signUpMobileText = signUpMobile.getText().toString();
-                        Log.e("TAG", "Mobile Number: " + signUpMobileText );
-                        signUpDobText = signUpDob.getText().toString();
-                        signUpEmailText = signUpEmail.getText().toString();
-                        signUpPassText = signUpPass.getText().toString();
-                        signUpConfirmPassText = signUpConfirmPass.getText().toString();
-                        signUpSelectCityText = signUpSelectCity.getText().toString();
-                        signUpSelectBloodGroupText = btSignUpSelectBloodGroup.getSelectedItem().toString();
-                        int selectedId = signUpGenderRadioGroup.getCheckedRadioButtonId();
-                        RadioButton radioButton = (RadioButton) findViewById(selectedId);
-                        signUpSelectedRadioText = radioButton.getText().toString();
-                        signUpSelectDoctorStatusText = btSignUpSelectDesignation.getSelectedItem().toString();
-                        signUpUniNameText = signUpUniName.getText().toString();
-                        signUpUniRegistrationNoText = signUpUniRegistrationNo.getText().toString();
-                        pmdcNumber = et_pmdc_number.getText().toString();
-
-
-                    /*    if (signUpSelectBloodGroupText.equals("A+")){bloodgroupId = "1";}
-                        if (signUpSelectBloodGroupText.equals("A-")){bloodgroupId = "2";}
-                        if (signUpSelectBloodGroupText.equals("B+")){bloodgroupId = "3";}
-                        if (signUpSelectBloodGroupText.equals("B-")){bloodgroupId = "4";}
-                        if (signUpSelectBloodGroupText.equals("O+")){bloodgroupId = "5";}
-                        if (signUpSelectBloodGroupText.equals("O-")){bloodgroupId = "6";}
-                        if (signUpSelectBloodGroupText.equals("AB+")){bloodgroupId = "7";}
-                        if (signUpSelectBloodGroupText.equals("AB-")){bloodgroupId = "8";}*/
-
-                        //seting doctor specialization id
-                        if (signUpSelectDoctorStatusText.equals("Specialist")){experienceStatusId = "1";}
-                        if (signUpSelectDoctorStatusText.equals("Trainee Specialist")){experienceStatusId = "2";}
-                        if (signUpSelectDoctorStatusText.equals("General Practitioner")){experienceStatusId = "3";}
-                        if (signUpSelectDoctorStatusText.equals("Student Doctor")){experienceStatusId = "4";}
-
-                        Log.e("TAG", "Current URL IS: " + Sign_Up_URL );
-                        Log.e("TAG", "Image URI : " + imageUri );
-
-                        if(imageUri!=null) {
-                            File getealPathOfImageUri = new File(getRealPathFromURI(imageUri));
-                            String imgePath = getealPathOfImageUri.toString();
-                            Log.e("TAG", "Image Path : " + imgePath);
-                        }
-
-                        Log.e("TAG", "the gender is: " + signUpSelectedRadioText);
-                        Log.e("TAG", "the uni name is: " + signUpSelectedRadioText);
-                        Log.e("TAG", "the uni registration is: " + signUpSelectedRadioText);
-
-                        signUpRegistration();
-
-                    }
-
-                }
-            });
-        }
-        else if(signUpPosition == 1)
-        {
-//            getSupportActionBar().setTitle("Sign Up As Patient");
+            getSupportActionBar().setTitle("Sign Up As Patient");
 
             signUpSelectDesignationLayout.setVisibility(View.GONE);
             signUpSelectBloodGroupLayout.setVisibility(View.VISIBLE);
@@ -719,7 +482,6 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
             signUpBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
 
                     if(!userNameValidator(signUpUserName.getText().toString()))
                     {
@@ -733,23 +495,20 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                     {
                         signUpMobile.setError(mobileNoError);
                     }
-                    else if(signUpDob.getText().toString().equals(""))
-                    {
-                        signUpDob.setError(dobError);
-                    }
+
                     else if(signUpSelectCity.getText().toString().equals("City"))
                     {
-                        Toast.makeText(SignUp.this, "Please Select City", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupAsUser.this, "Please Select City", Toast.LENGTH_SHORT).show();
                         // signUpSelectCity.setError(selectCityError);
                     }
                     else if(btSignUpSelectBloodGroup.getSelectedItem().toString().equals("Blood Group"))
                     {
-                        Toast.makeText(SignUp.this, "Please Select Bloodgroup", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupAsUser.this, "Please Select Bloodgroup", Toast.LENGTH_SHORT).show();
                         // btSignUpSelectBloodGroup.setError(selectBloodgropError);
                     }
                     else if(signUpGenderRadioGroup.getCheckedRadioButtonId() == -1)
                     {
-                        Toast.makeText(SignUp.this, "Please Select Gender", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupAsUser.this, "Please Select Gender", Toast.LENGTH_SHORT).show();
                         signUpDob.setError(null);
                     }
                     else if(!emailValidator(signUpEmail.getText().toString()))
@@ -769,7 +528,6 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                         signUpUserNameText =   signUpUserName.getText().toString();
                         signUpFullNameText = signUpFullName.getText().toString();
                         signUpMobileText = signUpMobile.getText().toString();
-                        signUpDobText = signUpDob.getText().toString();
                         signUpEmailText = signUpEmail.getText().toString();
                         signUpPassText = signUpPass.getText().toString();
                         signUpConfirmPassText = signUpConfirmPass.getText().toString();
@@ -790,6 +548,8 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                         if (signUpSelectBloodGroupText.equals("AB+")){bloodgroupId = "7";}
                         if (signUpSelectBloodGroupText.equals("AB-")){bloodgroupId = "8";}
 
+
+                        Sign_Up_URL = Glob.SIGNUP_PATIENT;
                         Log.i("TAG", "Current URL IS: " + Sign_Up_URL );
 
                         signUpRegistration();
@@ -824,26 +584,21 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                     {
                         signUpMobile.setError(mobileNoError);
                     }
-                    else if(signUpDob.getText().toString().equals(""))
-                    {
-                        signUpDob.setError(dobError);
-                    }
                     else if(signUpSelectCity.getText().toString().equals("City"))
                     {
-                        Toast.makeText(SignUp.this, "Please Select City", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupAsUser.this, "Please Select City", Toast.LENGTH_SHORT).show();
                         // signUpSelectCity.setError(selectCityError);
                     }
                     else if(btSignUpSelectBloodGroup.getSelectedItem().toString().equals("Blood Group"))
                     {
-                        Toast.makeText(SignUp.this, "Please Select Bloodgroup", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupAsUser.this, "Please Select Bloodgroup", Toast.LENGTH_SHORT).show();
                         // btSignUpSelectBloodGroup.setError(selectBloodgropError);
                     }
                     else if(signUpGenderRadioGroup.getCheckedRadioButtonId() == -1)
                     {
-                        Toast.makeText(SignUp.this, "Please Select Gender", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupAsUser.this, "Please Select Gender", Toast.LENGTH_SHORT).show();
                         signUpDob.setError(null);
                     }
-
 
                     else if(!emailValidator(signUpEmail.getText().toString()))
                     {
@@ -881,6 +636,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                         if (signUpSelectBloodGroupText.equals("AB+")){bloodgroupId = "7";}
                         if (signUpSelectBloodGroupText.equals("AB-")){bloodgroupId = "8";}
 
+                        Sign_Up_URL = Glob.SIGNUP_BLOOD_DONOR;
                         Log.i("TAG", "Current URL IS: " + Sign_Up_URL );
                         signUpRegistration();
 
@@ -925,50 +681,6 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
 
                         Log.e("TAG", "USER RESPONSE RECORD: " + CODE);
 
-
-                        if (signUpPosition == 0) {
-
-                            String drID = jObj.getString("doctor_id");
-                            Log.e("TAG", "Dr id: " + drID);
-                            Log.e("TAG", "Image URI : " + imageUri );
-
-                            if (imageUri!=null) {
-                                File getealPathOfImageUri = new File(getRealPathFromURI(imageUri));
-                                String imgePath = getealPathOfImageUri.toString();
-                                Log.e("TAG", "Image Path : " + imgePath);
-                                //calling image uplaod url
-                                signUpdoctorwithImage(imgePath, drID);
-                            }
-                            sharedPreferencesDoctor = getSharedPreferences("rdoctor", 0);
-                            SharedPreferences.Editor editorDoctor = sharedPreferencesDoctor.edit();
-                            editorDoctor.putString("userid", userID);
-                            editorDoctor.putString("code", CODE);
-                            editorDoctor.putString("username", signUpUserNameText);
-                            editorDoctor.putString("fullname", signUpFullNameText);
-                            editorDoctor.putString("mobile", "92"+signUpMobileText);
-                            editorDoctor.putString("dob", signUpDobText);
-                            editorDoctor.putString("gender", signUpSelectedRadioText);
-                            editorDoctor.putString("email", signUpEmailText);
-                            editorDoctor.putString("password", signUpPassText);
-                            editorDoctor.putString("city", signUpSelectCityText);
-                            editorDoctor.putString("bloodgroup", signUpSelectBloodGroupText);
-                            editorDoctor.putString("doctorstatus", signUpSelectDoctorStatusText);
-                            editorDoctor.putInt("signupposition", signUpPosition);
-                            editorDoctor.commit();
-
-                            // Launch login activity
-                            Intent intent = new Intent(SignUp.this, PinVerification.class);
-                            intent.putExtra("user_id", userID);
-                            intent.putExtra("code", CODE);
-                            intent.putExtra("signupposition", signUpPosition);
-                            intent.putExtra("claimee_id", claimee_id);
-                            intent.putExtra("claimee_name", mClaimee_name);
-                            intent.putExtra("from", mFrome);
-                            startActivity(intent);
-                            finish();
-
-                        }
-
                         if (signUpPosition == 1){
 
                             sharedPreferencesPatient = getSharedPreferences("rpatient", 0);
@@ -988,7 +700,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                             editorPatient.commit();
 
                             // Launch login activity
-                            Intent intent = new Intent(SignUp.this, PinVerification.class);
+                            Intent intent = new Intent(SignupAsUser.this, PinVerification.class);
                             intent.putExtra("user_id", userID);
                             intent.putExtra("code", CODE);
                             intent.putExtra("signupposition", signUpPosition);
@@ -1020,7 +732,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                             editorBloodDonor.commit();
 
                             // Launch login activity
-                            Intent intent = new Intent(SignUp.this, PinVerification.class);
+                            Intent intent = new Intent(SignupAsUser.this, PinVerification.class);
                             intent.putExtra("user_id", userID);
                             intent.putExtra("code", CODE);
                             intent.putExtra("signupposition", signUpPosition);
@@ -1043,14 +755,14 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
 
                         if (userStaus.equals("0")){
 
-                            AlertDialog.Builder alert = new AlertDialog.Builder(SignUp.this);
+                            AlertDialog.Builder alert = new AlertDialog.Builder(SignupAsUser.this);
                             alert.setTitle("User Already Exist!");
                             alert.setMessage("Mobile Number/Email already exist \nPlease Verify its you by receiving \nVerification Code on Registered Number");
                             alert.setPositiveButton("Send Code", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
 
-                                    Intent intent = new Intent(SignUp.this, PinVerification.class);
+                                    Intent intent = new Intent(SignupAsUser.this, PinVerification.class);
                                     intent.putExtra("user_id", userID);
                                     intent.putExtra("code", "00");//00 for taging for verifying already register user
                                     intent.putExtra("signupposition", signUpPosition);
@@ -1101,49 +813,14 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                 Map<String, String> params = new HashMap<String, String>();
 
 
-                if(signUpPosition == 0)
-                {
-                    Log.e("TAG", "doctor sign up key is " + Glob.Key);
-                    Log.e("TAG", "doctor sign up user name " + signUpUserNameText);
-                    Log.e("TAG", "doctor sign up full name " + signUpFullNameText);
-                    Log.e("TAG", "doctor sign up dob " + signUpDobText);
-                    Log.e("TAG", "doctor sign up number " + "92"+signUpMobileText);
-                    Log.e("TAG", "doctor sign up city id " + City_id);
-                    Log.e("TAG", "doctor sign up gender " + signUpSelectedRadioText);
-                    Log.e("TAG", "doctor sign up email " + signUpEmailText);
-                    Log.e("TAG", "doctor sign up password " + signUpPassText);
-                    Log.e("TAG", "doctor sign up blood group id " + bloodgroupId);
-                    Log.e("TAG", "doctor sign up stat us id " + experienceStatusId);
-                    Log.e("TAG", "doctor sign up pmdc number " + pmdcNumber);
-                    Log.e("TAG", "doctor sign up uni name " + signUpUniNameText);
-                    Log.e("TAG", "doctor sign up uni registration " + signUpUniRegistrationNoText);
 
-                    params.put("key", Glob.Key);
-                    params.put("username", signUpUserNameText);
-                    params.put("fullname", signUpFullNameText);
-                    params.put("mobilenumber", "92"+signUpMobileText);
-                    params.put("dob", signUpDobText);
-                    params.put("city", City_id);
-                    params.put("gender", signUpSelectedRadioText);
-                    params.put("email", signUpEmailText);
-                    params.put("password", signUpPassText);
-                    params.put("bloodgroup", "9");
-                    params.put("experience_status_id", experienceStatusId);
-                    params.put("pmdc_number", pmdcNumber);
-                    params.put("uni_name", signUpUniNameText);
-                    params.put("uni_registraion", signUpUniRegistrationNoText);
-                    params.put("social_id", mUserSocialId);
-                    //  params.put("pmdc_picture", experienceStatusId);
-
-
-                }
-                else if(signUpPosition == 1)
+                if(signUpPosition == 1)
                 {
                     params.put("key", Glob.Key);
                     params.put("username", signUpUserNameText);
                     params.put("fullname", signUpFullNameText);
                     params.put("mobilenumber", "92"+signUpMobileText);
-                    params.put("dob", signUpDobText);
+                   // params.put("dob", signUpDobText);
                     params.put("city", City_id);
                     params.put("gender", signUpSelectedRadioText);
                     params.put("email", signUpEmailText);
@@ -1159,7 +836,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                     params.put("username", signUpUserNameText);
                     params.put("fullname", signUpFullNameText);
                     params.put("mobilenumber", "92"+signUpMobileText);
-                    params.put("dob", signUpDobText);
+                    //params.put("dob", "");
                     params.put("city", City_id);
                     params.put("gender", signUpSelectedRadioText);
                     params.put("email", signUpEmailText);
@@ -1263,197 +940,6 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
             progressDialog.dismiss();
     }
 
-
-    //selectino pmd photo handler
-    private void pmdfPhotoSelection(){
-
-//        ll_pmdc_photo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                selectImage();
-//            }
-//        });
-
-
-        pmdcImageFromCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cameraIntent();
-            }
-        });
-
-
-        pmdcImageFromGallery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                galleryIntent();
-            }
-        });
-
-
-        removePmdcDescriptionImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                iv_pmdc.setImageDrawable(null);
-                pmdcImageFrameLayout.setVisibility(View.GONE);
-                pmdc_select_picture_layout.setVisibility(View.VISIBLE);
-            }
-        });
-    }
-
-    private void selectImage() {
-        final CharSequence[] items = { "Take Photo", "Select Photo From Gallery",
-                "Cancel" };
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(SignUp.this);
-        builder.setTitle("Add Photo!");
-        builder.setItems(items, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int item) {
-                boolean result= Utility.checkPermission(SignUp.this);
-
-                if (items[item].equals("Take Photo")) {
-                    userChoosenTask ="Take Photo";
-                    if(result)
-                        cameraIntent();
-
-                } else if (items[item].equals("Select Photo From Gallery")) {
-                    userChoosenTask ="Select Photo From Gallery";
-                    if(result)
-                        galleryIntent();
-
-                } else if (items[item].equals("Cancel")) {
-                    dialog.dismiss();
-                }
-            }
-        });
-        builder.show();
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case Utility.MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if(userChoosenTask.equals("Take Photo"))
-                        cameraIntent();
-                    else if(userChoosenTask.equals("Select Photo From Gallery"))
-                        galleryIntent();
-                } else {
-                    //code for deny
-                }
-                break;
-        }
-    }
-
-    private void galleryIntent()
-    {
-        Intent intent = new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_PICK);//
-        startActivityForResult(Intent.createChooser(intent, "Select File"),SELECT_FILE);
-    }
-
-    private void cameraIntent()
-    {
-        ContentValues values = new ContentValues();
-        values.put(MediaStore.Images.Media.TITLE, "New Picture");
-        values.put(MediaStore.Images.Media.DESCRIPTION, "From your Camera");
-        imageUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-        startActivityForResult(intent, REQUEST_CAMERA);
-    }
-
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        Log.e("TAg", "The Request code is: " + requestCode);
-
-        //  if (resultCode == Activity.RESULT_OK) {
-        if (requestCode == SELECT_FILE)
-            onSelectFromGalleryResult(data);
-        else if (requestCode == REQUEST_CAMERA)
-            onCaptureImageResult(data);
-
-    }
-
-    //selecting image from galary
-    private void onSelectFromGalleryResult(Intent data) {
-
-
-        if (data!=null) {
-            imageUri = data.getData();
-
-            try {
-                bitmap1 = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
-                pmdcImageFrameLayout.setVisibility(View.VISIBLE);
-                pmdc_select_picture_layout.setVisibility(View.GONE);
-                iv_pmdc.setImageBitmap(bitmap1);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    //getting image form camera
-    private void onCaptureImageResult(Intent data) {
-
-        try {
-
-            bitmap1 = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
-            pmdcImageFrameLayout.setVisibility(View.VISIBLE);
-            pmdc_select_picture_layout.setVisibility(View.GONE);
-            iv_pmdc.setImageBitmap(bitmap1);
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void signUpdoctorwithImage(String imagePath, String drId){
-
-
-        //Uploading code
-        try {
-            String uploadId = UUID.randomUUID().toString();
-
-            //Creating a multi part request
-            new MultipartUploadRequest(this, uploadId, Glob.UPLOAD_DR_PMDC_PIC )
-                    .addFileToUpload(imagePath, "pmdc_picture") //Adding file
-                    .addParameter("key", Glob.Key) //Adding text parameter to the request
-                    .addParameter("doctor_id", drId)
-                    //.setNotificationConfig(new UploadNotificationConfig())
-                    .setMaxRetries(2)
-                    .startUpload(); //Starting the upload
-
-
-        } catch (Exception exc) {
-            Toast.makeText(this, exc.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-    }
-
-
-    //getting real path of image uri
-    private String getRealPathFromURI(Uri contentURI) {
-        String result;
-        Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);
-        if (cursor == null) { // Source is Dropbox or other similar local file path
-            result = contentURI.getPath();
-        } else {
-            cursor.moveToFirst();
-            int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
-            result = cursor.getString(idx);
-            cursor.close();
-        }
-        return result;
-    }
-
     public void startMobileWithOnlyNumber3()
     {
 
@@ -1465,49 +951,49 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
                 if(x.startsWith("0"))
                 {
 
-                    Toast.makeText(SignUp.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupAsUser.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
                     signUpMobile.setText("");
                 }
 
                 if (x.startsWith("1")){
 
-                    Toast.makeText(SignUp.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupAsUser.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
                     signUpMobile.setText("");
                 }
                 if (x.startsWith("2")){
 
-                    Toast.makeText(SignUp.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupAsUser.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
                     signUpMobile.setText("");
                 }
 
                 if (x.startsWith("4")){
 
-                    Toast.makeText(SignUp.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupAsUser.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
                     signUpMobile.setText("");
                 }
                 if (x.startsWith("5")){
 
-                    Toast.makeText(SignUp.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupAsUser.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
                     signUpMobile.setText("");
                 }
                 if (x.startsWith("6")){
 
-                    Toast.makeText(SignUp.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupAsUser.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
                     signUpMobile.setText("");
                 }
                 if (x.startsWith("7")){
 
-                    Toast.makeText(SignUp.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupAsUser.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
                     signUpMobile.setText("");
                 }
                 if (x.startsWith("8")){
 
-                    Toast.makeText(SignUp.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupAsUser.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
                     signUpMobile.setText("");
                 }
                 if (x.startsWith("9")){
 
-                    Toast.makeText(SignUp.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupAsUser.this, "Pleae enter number starting with 3", Toast.LENGTH_SHORT).show();
                     signUpMobile.setText("");
                 }
 
@@ -1526,7 +1012,7 @@ public class SignUp extends AppCompatActivity implements  SearchView.OnQueryText
 
     @Override
     public void onBackPressed() {
-        Intent selectSignIn = new Intent(SignUp.this, SelectSignUpOptions.class);
+        Intent selectSignIn = new Intent(SignupAsUser.this, SelectSignUpOptions.class);
         if (mFrome.length()>2){
 
             finish();

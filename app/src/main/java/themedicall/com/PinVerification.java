@@ -319,8 +319,10 @@ public class PinVerification extends AppCompatActivity {
 
 
                             }
-                            else {
+                            else if (mFrome.equals("")){
 
+                                finish();
+                            }else {
                                 Toast.makeText(PinVerification.this, "Only Doctor Can Claim Doctor Profile", Toast.LENGTH_SHORT).show();
                                 finish();
                             }

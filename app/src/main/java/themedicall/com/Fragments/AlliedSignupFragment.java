@@ -889,14 +889,6 @@ public class AlliedSignupFragment extends Fragment implements  SearchView.OnQuer
     //selectino pmd photo handler
     private void pmdfPhotoSelection(){
 
-//        ll_pmdc_photo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                selectImage();
-//            }
-//        });
-
 
         pmdcImageFromCamera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1002,12 +994,9 @@ public class AlliedSignupFragment extends Fragment implements  SearchView.OnQuer
             if (requestCode == SELECT_FILE)
                 onSelectFromGalleryResult(data);
             else if (requestCode == REQUEST_CAMERA)
-                onCaptureImageResult(data);
-
+                onCaptureImageResult();
         }
-
     }
-
 
     //selecting image from galary
     private void onSelectFromGalleryResult(Intent data) {
@@ -1028,16 +1017,15 @@ public class AlliedSignupFragment extends Fragment implements  SearchView.OnQuer
     }
 
     //getting image form camera
-    private void onCaptureImageResult(Intent data) {
+    private void onCaptureImageResult() {
 
         try {
-
-
-            bitmap1 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
-            pmdcImageFrameLayout.setVisibility(View.VISIBLE);
-            pmdc_select_picture_layout.setVisibility(View.GONE);
-            iv_pmdc.setImageBitmap(bitmap1);
-
+            if (imageUri!=null) {
+                bitmap1 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
+                pmdcImageFrameLayout.setVisibility(View.VISIBLE);
+                pmdc_select_picture_layout.setVisibility(View.GONE);
+                iv_pmdc.setImageBitmap(bitmap1);
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -1168,9 +1156,8 @@ public class AlliedSignupFragment extends Fragment implements  SearchView.OnQuer
             public void onResponse(String response) {
                 Log.d(TAG, "Categories Response: " + response.toString());
                 //hideDialog();
-                dialog.dismiss();
                 try {
-
+                    dialog.dismiss();
 
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
@@ -1198,14 +1185,12 @@ public class AlliedSignupFragment extends Fragment implements  SearchView.OnQuer
 
                         }
 
-                    } else {
-
-
                     }
-
 
                 } catch (JSONException e) {
                     e.printStackTrace();
+                }catch (IllegalArgumentException ia){
+                    ia.printStackTrace();
                 }
 
                 CitiesGetterSetter temp = new CitiesGetterSetter("0", "Select Status");

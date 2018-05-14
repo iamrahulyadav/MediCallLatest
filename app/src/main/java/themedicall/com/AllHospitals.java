@@ -617,10 +617,7 @@ public class AllHospitals extends Fragment{
             @Override
             public boolean isLoading() {
 
-                return (totalDataOnServer-1 == hospitalsListRecycleView.getItemCount()) ? true : false;
-
-
-
+                    return (totalDataOnServer - 1 == hospitalsListRecycleView.getItemCount()) ? true : false;
 
             }
         });

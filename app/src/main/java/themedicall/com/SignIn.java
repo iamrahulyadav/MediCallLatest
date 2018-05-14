@@ -723,9 +723,7 @@ public class SignIn extends AppCompatActivity{
             // The Task returned from this call is always completed, no need to attach
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-
-                handleSignInResult(task);
-
+             handleSignInResult(task);
         }
         }catch (NullPointerException e){
             e.printStackTrace();

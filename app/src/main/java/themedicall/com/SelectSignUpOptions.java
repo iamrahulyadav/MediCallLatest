@@ -118,7 +118,7 @@ public class SelectSignUpOptions extends AppCompatActivity {
         signuppatient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectSignUpOptions.this , SignUp.class);
+                Intent intent = new Intent(SelectSignUpOptions.this , SignupAsUser.class);
                 intent.putExtra("item_position" , 1);
                 intent.putExtra("claimee_id", mClaimeeID);
                 intent.putExtra("claimee_name", mClimeeName);
@@ -177,7 +177,7 @@ public class SelectSignUpOptions extends AppCompatActivity {
         signupblood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectSignUpOptions.this , SignUp.class);
+                Intent intent = new Intent(SelectSignUpOptions.this , SignupAsUser.class);
                 intent.putExtra("item_position" , 6);
                 intent.putExtra("claimee_id", mClaimeeID);
                 intent.putExtra("claimee_name", mClimeeName);

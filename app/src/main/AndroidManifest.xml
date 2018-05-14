@@ -456,7 +456,9 @@
         <service
             android:name=".Services.UploadProfileImageService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".SignupAsUser"></activity>
     </application>
 
 </manifest>
