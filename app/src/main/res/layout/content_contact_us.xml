@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.medicall.ranglerz.com.medicall.ContactUs"
+    tools:showIn="@layout/activity_contact_us"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding"
+    android:background="@color/formBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="Name"
+                    android:id="@+id/contact_us_name"
+                    android:inputType="text"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    />
+
+
+                <EditText
+                    android:id="@+id/contact_us_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"/>
+
+
+                <EditText
+                    android:id="@+id/contact_us_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="Phone No."
+                    android:inputType="phone"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"/>
+
+
+                <EditText
+                    android:id="@+id/contact_us_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:minLines="2"
+                    android:gravity="top|left"
+                    android:maxLines="10"
+                    android:paddingTop="10dp"
+                    android:scrollbars="vertical"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    />
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Submit"
+                android:id="@+id/contact_us_submitBtn"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:background="@drawable/button_style"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/button_text_size"
+                android:layout_marginLeft="@dimen/button_margin_left"
+                android:layout_marginRight="@dimen/button_margin_right"
+                />
+
+
+
+<!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:layout_marginRight="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Or"
+                    android:textColor="#000000"
+                    />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Sign in with Facebook"
+                android:drawableLeft="@drawable/facebook"
+                android:id="@+id/doctorSignInFb"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:background="@drawable/fb_button_style"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/button_text_size"
+                />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Sign in with Gmail"
+                android:drawableLeft="@drawable/google"
+                android:paddingLeft="5dp"
+                android:id="@+id/doctorSignInGmail"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:background="@drawable/google_button_style"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/button_text_size"
+                />
+-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

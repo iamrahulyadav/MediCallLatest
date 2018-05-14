@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="themedicall.com.MedTools"
+    tools:showIn="@layout/activity_med_tools"
+    android:background="@color/landingScreenBackgroundColor">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_above="@+id/bottomLayout"
+            >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/bmicalculatorimg"
+                    android:id="@+id/bmiCalculator"
+                    android:layout_weight="1"/>
+
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/pregnancycalculatorimg"
+                    android:id="@+id/pregnancyCalculator"
+                    android:layout_weight="1"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/stepcounterimg"
+                    android:id="@+id/stepCounter"
+                    android:layout_weight="1"/>
+
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/medalarmimg"
+                    android:id="@+id/medAlarm"
+                    android:layout_weight="1"/>
+
+
+
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:id="@+id/bottomLayout"
+
+            >
+
+
+                <ImageView
+                    android:id="@+id/bottomnavigationmedistudy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/bottomnavigationmedistudy"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bottomnavigationplus"
+                    android:id="@+id/bottomnavigationplus"/>
+
+
+                <ImageView
+                    android:id="@+id/bottomnavigationmedipedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/bottomnavigationmedipedia"
+                    android:scaleType="fitXY"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

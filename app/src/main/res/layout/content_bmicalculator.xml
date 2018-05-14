@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="themedicall.com.BMICalculator"
+    tools:showIn="@layout/activity_bmicalculator"
+    android:orientation="vertical"
+    android:background="@color/landingScreenBackgroundColor"
+    android:padding="10dp">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="left|center"
+        android:background="@drawable/edittext_bottom_line"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Height"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/headingSize"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/heightFeet"
+            android:hint="Feet"
+            android:textSize="@dimen/hintSize"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColorHint="@color/hintColor"
+            android:layout_weight="1"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/heightInch"
+            android:hint="Inch"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textSize="@dimen/hintSize"
+            android:textColorHint="@color/hintColor"
+            android:layout_weight="1"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/heightInCM"
+            android:hint="Centimeter"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="@dimen/hintSize"
+            android:textColorHint="@color/hintColor"
+            android:layout_weight="0.69"
+            android:visibility="gone"/>
+
+
+        <Spinner
+            style="@style/Widget.AppCompat.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/heightSpinner"
+            android:layout_weight="0.9"/>
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="left|center"
+        android:background="@drawable/edittext_bottom_line"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weight"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/headingSize"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/weightInKgLB"
+            android:hint="KG / LB"
+            android:inputType="number"
+            android:textSize="@dimen/hintSize"
+            android:textColorHint="@color/hintColor"
+            android:layout_weight="0.69"/>
+
+
+
+        <Spinner
+            style="@style/Widget.AppCompat.Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/weightSpinner"
+            android:layout_weight="0.9"/>
+
+
+
+    </LinearLayout>
+
+
+    <de.nitri.gauge.Gauge
+        android:id="@+id/gauge"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        gauge:maxValue="120"
+        gauge:minValue="0"
+        gauge:totalNicks="160"
+        gauge:valuePerNick="1"
+        gauge:lowerText="0.0"/>
+
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="@dimen/button_height"
+            android:text="calculate BMI"
+            android:id="@+id/calculateBMIBtn"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/buttom_press_state"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/button_text_size"
+            />
+
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone" />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

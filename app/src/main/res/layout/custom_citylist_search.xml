@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/LinearLayout01"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/formBackground">
+
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:iconifiedByDefault="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:queryHint="Search City"
+        android:background="@drawable/edittext_bottom_line" />
+
+    <Button
+        android:id="@+id/bt_dilaog_done"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textColor="@color/whiteColor"
+        android:background="@color/blueColor"/>
+
+    <ListView android:id="@+id/cityList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0.5dp"
+        android:divider="@color/blackColor">
+    </ListView>
+
+
+
+
+</LinearLayout>

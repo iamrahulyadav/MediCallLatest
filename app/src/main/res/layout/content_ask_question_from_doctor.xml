@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.medicall.ranglerz.com.medicall.AskQuestionFromDoctor"
+    tools:showIn="@layout/activity_ask_question_from_doctor"
+    android:background="@drawable/background"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+                <EditText
+                    android:id="@+id/aks_ques_type_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:hint="Type your question"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:minLines="2"
+                    android:gravity="top|left"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:paddingTop="10dp"
+                    />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+
+                >
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:hint="Select Speciality"
+                            android:id="@+id/aks_ques_speciality"
+                            android:inputType="text"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/hintColor"
+                            android:textSize="@dimen/hintSize"
+                            android:background="@drawable/edittext_bottom_line"
+                            android:layout_marginRight="5dp"
+                            />
+
+
+
+
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:hint="Age"
+                            android:id="@+id/aks_ques_age"
+                            android:inputType="text"
+                            android:layout_weight="2"
+                            android:textColorHint="@color/hintColor"
+                            android:textSize="@dimen/hintSize"
+                            android:background="@drawable/edittext_bottom_line"
+                            android:layout_marginLeft="5dp"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:gravity="left|center"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/genderTextSize"
+                    android:textStyle="bold"
+                    />
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/aks_ques_gender_radioGroup"
+                    >
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:textSize="@dimen/genderTextMale"
+                        android:textColor="@color/blackColor"
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/aks_ques_gender_male_radioButton"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blackColor"
+                        android:text="Female"
+                        android:textSize="@dimen/genderTextFeMale"
+                        android:id="@+id/aks_ques_gender_female_radioButton"
+
+                        />
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:id="@+id/partLayout"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:text="City"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:id="@+id/aks_ques_city"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+
+                >
+
+
+                <Switch
+                    android:id="@+id/aks_ques_share_record_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Share medical record with Doctor"
+                    android:textColor="@color/hintColor"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                >
+
+
+
+                <Switch
+                    android:id="@+id/aks_ques_post_anonymously_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Post Anonymously"
+                    android:textColor="@color/hintColor"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_medicine_dotted_line"
+                android:orientation="vertical"
+                android:id="@+id/aks_ques_select_picture_layout">
+
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/cameragallery" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Attach File"
+                    android:textColor="@color/blackColor"
+                    android:textSize="14sp"
+                    android:typeface="serif" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/order_medicine_dotted_line"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:id="@+id/aks_ques_picture"
+                android:gravity="center"
+                android:padding="@dimen/crossImagePadding"
+                android:visibility="gone"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="@dimen/imageWidth"
+                    android:layout_height="@dimen/imageHeight"
+                    android:src="@drawable/name"
+                    android:id="@+id/aks_ques_img"
+                    android:padding="@dimen/crossImagePadding"
+                    android:scaleType="fitXY"
+                   />
+
+                <ImageView
+                    android:layout_width="@dimen/crossImageWidth"
+                    android:layout_height="@dimen/crossImageHeight"
+                    android:id="@+id/removeImage"
+                    android:src="@drawable/cross"
+                    android:layout_gravity="right"
+                    android:scaleType="fitXY"/>
+
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/button1"
+                tools:listitem="@layout/row_multiphoto_item"
+                android:layout_marginBottom="40dp"/>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:onClick="btnChoosePhotosClick"
+                android:layout_gravity="bottom|center"
+                android:text="Select Photos"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Submit"
+                android:id="@+id/ask_ques_submitBtn"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:layout_marginBottom="@dimen/buttonMarginBottom"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/buttom_press_state"
+                android:layout_marginLeft="@dimen/button_margin_left"
+                android:layout_marginRight="@dimen/button_margin_right"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

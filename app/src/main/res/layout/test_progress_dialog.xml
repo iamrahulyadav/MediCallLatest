@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/formBackground">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Progress :"
+            android:textColor="@color/whiteColor"
+            android:textSize="20sp"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correct Answer :"
+            android:textSize="14sp"
+            android:textColor="@color/blackColor"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="20"
+            android:id="@+id/totalCorrectAnswer"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wrong Answer :"
+            android:textSize="14sp"
+            android:textColor="@color/blackColor"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="20"
+            android:id="@+id/totalWrongAnswer"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Result :"
+            android:textSize="14sp"
+            android:textColor="@color/blackColor"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pass"
+            android:id="@+id/testResult"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="OK"
+        android:id="@+id/progressOk"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/button_text_size"
+        android:background="@drawable/buttom_press_state" />
+
+    </LinearLayout>
+
+</LinearLayout>

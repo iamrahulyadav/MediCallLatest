@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/et_hospital_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Search Work Place Name"
+            android:paddingLeft="10dp"
+            android:background="@null"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/search"/>
+
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/precticeProgress"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

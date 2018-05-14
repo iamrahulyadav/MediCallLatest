@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.medicall.ranglerz.com.medicall.BloodRequiredFragment"
+    android:id="@+id/bloodRequiredFragment"
+    android:orientation="vertical"
+    android:background="@color/landingScreenBackgroundColor">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/doNotPayForBlood"
+        android:background="@color/doNotPayBGColor"
+        android:textColor="@color/doNotPayTextColor"
+        android:textSize="@dimen/doNotPayTextSizeDimen"
+        android:padding="@dimen/doNotPayPadingDimen"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="45dp"
+            android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/apos"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:id="@+id/apos"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/aneg"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/aneg"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bpos"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:id="@+id/bpos"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bneg"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bneg"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/opos"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:id="@+id/opos"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/oneg"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/oneg"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/abpos"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:id="@+id/abpos"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/abneg"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/abneg"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".9"
+        android:orientation="horizontal">
+
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/becomeBloodDonor"
+                android:padding="5dp"
+                android:src="@drawable/becomedonorimg"
+                android:layout_weight="1"/>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/saveLife"
+                android:padding="5dp"
+                android:src="@drawable/savelifeimg"
+                android:layout_weight="1"/>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/appealBlood"
+                android:padding="5dp"
+                android:src="@drawable/appealbloodimg"
+                android:layout_weight="1"/>
+
+
+    </LinearLayout>
+        </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomLayout"
+
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+
+
+        <ImageView
+            android:id="@+id/bloodCompetibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/competibility" />
+
+        <ImageView
+            android:id="@+id/bottomnavigationplus"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottomnavigationplus" />
+
+
+        <ImageView
+            android:id="@+id/bloodfacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/bloodfacts" />
+
+    </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

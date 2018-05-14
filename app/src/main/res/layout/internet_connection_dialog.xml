@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="310dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/custom_dialog_round_border"
+    android:padding="10dp"
+    >
+
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/net_connection_avatar"
+        android:layout_centerHorizontal="true" />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connection lost"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have lost the internet connection with the server. Check your internet connection and try again."
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp"
+        android:layerType="software"
+        android:src="@drawable/dotted_line"
+        android:id="@+id/hospitalDocLine"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+       >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:id="@+id/enable"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:id="@+id/exit"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

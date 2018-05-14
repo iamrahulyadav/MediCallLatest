@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/formBackground">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Exam Criteria :"
+            android:textColor="@color/whiteColor"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="20dp"
+                android:id="@+id/selectSpecialitySpinnerLayout">
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/selectSpecialitySpinner" />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="20dp"
+                android:id="@+id/selectYearSpinnerLayout">
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/selectYearSpinner" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="20dp"
+                android:id="@+id/selectMonthSpinnerLayout">
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/selectMonthSpinner" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="20dp"
+                android:id="@+id/selectSubjectSpinnerLayout">
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/selectSubjectSpinner" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="20dp"
+                android:id="@+id/difficultyLevelSpinnerLayout">
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/difficultyLevelSpinner" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="20dp"
+                android:id="@+id/paperTypeSpinnerLayout">
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/paperTypeSpinner" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="20dp"
+                android:id="@+id/subjectUnitSpinnerLayout"
+                android:visibility="gone">
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/subjectUnitSpinner" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:text="Start Exam"
+                android:id="@+id/startExam"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="16sp"
+                android:background="@drawable/buttom_press_state"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

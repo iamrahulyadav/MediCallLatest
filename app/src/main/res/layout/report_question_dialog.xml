@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/formBackground">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report Error :"
+            android:id="@+id/dialogTitle"
+            android:textColor="@color/whiteColor"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/reportQuestionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Error Title"
+                android:inputType="text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+            <EditText
+                android:id="@+id/reportQuestionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Write error"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="5"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:gravity="top"
+                android:paddingTop="5dp"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:text="Submit"
+                android:id="@+id/reportQuestionSubmitBtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="16sp"
+                android:background="@drawable/buttom_press_state"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

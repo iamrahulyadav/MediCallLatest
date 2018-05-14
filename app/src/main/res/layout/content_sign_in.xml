@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="themedicall.com.SignIn"
+    tools:showIn="@layout/activity_sign_in"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding"
+    android:background="@color/formBackground"
+    android:gravity="center">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="60dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Username / Email / Mobile"
+                android:id="@+id/doctorSignInEmail"
+                android:inputType="text"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+
+            <EditText
+                android:id="@+id/doctorSignInPass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot Password ?"
+                    android:textColor="#000000"
+                    android:id="@+id/doctorSignInForgetPass"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="@dimen/forget_signup_text_size"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Sign In"
+                    android:id="@+id/doctorSignInBtn"
+                    android:background="@drawable/buttom_press_state"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="@dimen/buttonMarginTop"
+                    android:layout_marginBottom="@dimen/buttonMarginBottom"
+                    android:textAllCaps="false"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/button_text_size"
+                    />
+
+
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Sign Up"
+                    android:id="@+id/doctorSignUpButton"
+                    android:background="@drawable/buttom_press_state"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/buttonMarginTop"
+                    android:layout_marginBottom="@dimen/buttonMarginBottom"
+                    android:textAllCaps="false"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/button_text_size"
+
+                    />
+
+            </LinearLayout>
+
+
+            <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/button_height"-->
+            <!--android:text="Sign In"-->
+            <!--android:id="@+id/doctorSignInBtn"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:background="@drawable/button_style"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:textSize="@dimen/button_text_size"-->
+            <!--android:layout_marginLeft="@dimen/button_margin_left"-->
+            <!--android:layout_marginRight="@dimen/button_margin_right"-->
+            <!--/>-->
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:layout_marginRight="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Or"
+                    android:textColor="#000000"
+                    />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#000000"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="220dp"
+                android:layout_height="@dimen/button_height"
+                android:text="Login with Facebook"
+                android:drawableLeft="@drawable/facebook"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:id="@+id/doctorSignInFb"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:background="@drawable/fb_button_style"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/button_text_size"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp"
+
+                />
+
+
+            <Button
+                android:layout_width="220dp"
+                android:layout_height="@dimen/button_height"
+                android:text="Login with Gmail"
+                android:drawableLeft="@drawable/google"
+                android:drawablePadding="@dimen/drawable_padding"
+                android:id="@+id/doctorSignInGmail"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:background="@drawable/google_button_style"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/button_text_size"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

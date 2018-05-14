@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.medicall.ranglerz.com.medicall.HospitalDocList"
+    android:orientation="vertical"
+    android:background="@drawable/listingbackground">
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_hospitals_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="visible"
+        android:padding="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/noDataAvailable"
+        android:textSize="@dimen/noAvailableTextSize"
+        android:textColor="@color/noAvailableColor"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/emptyViewHosDocList"/>
+
+
+
+    <ProgressBar
+        android:id="@+id/loadmore_hos_doc_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:visibility="gone"/>
+
+
+</FrameLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dp"
+    android:layout_height="290dp"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/custom_dialog_round_border"
+    >
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/rating_avatar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/avatar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatar"
+        android:id="@+id/textlayout"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate Medicall"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If you love our app , Plase take a moment to rate it. "
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:layerType="software"
+            android:src="@drawable/dotted_line" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textlayout"
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/rateApp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/rateCancel"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

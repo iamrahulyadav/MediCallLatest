@@ -1,0 +1,253 @@
+<resources>
+    <string name="app_name">MediCall</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_select_doctor_or_patient">Medi Call</string>
+    <string name="title_activity_doctor_sign_in">Sign In</string>
+    <string name="title_activity_home">Home</string>
+
+
+    <string name="facebook_app_id">155132331962733</string>
+    <string name="fb_login_protocol_scheme">fb155132331962733</string>
+    <string name="google_client_id">846312700741-6234otu5g1mjt6tjtv0qhl9l0uuqc7se.apps.googleusercontent.com</string>
+    <string name="gogole_client_scret">zUNVLENwH9tWRCE2iqbwIs5p</string>
+
+
+    <string-array name="city">
+
+        <item>Lahore</item>
+        <item>Islamabad</item>
+        <item>Karachi</item>
+        <item>Peshawar</item>
+        <item>Sahiwal</item>
+        <item>Qasoor</item>
+
+    </string-array>
+
+    <string name="permission_rationale">"Storage permission is needed for fetching images from Gallery."</string>
+    <string name="title_activity_pin_verification">Pin Verification</string>
+
+
+    <string-array name="alied_health_status">
+        <item>Select Status</item>
+        <item>Physiotherapist</item>
+        <item>Nutritionistt</item>
+        <item>Pharmacist</item>
+        <item>Psychologist</item>
+        <item>Staff Nurse</item>
+        <item>Technician</item>
+        <item>Optometrist</item>
+        <item>Fitness Trainer</item>
+    </string-array>
+
+
+    <string-array name="speciality">
+        <item>Allergy Specialist</item>
+        <item>Audiologist</item>
+        <item>Bariatric Surgeon</item>
+        <item>Heart Surgeon</item>
+        <item>Chiropractor</item>
+        <item>Diabetologist</item>
+        <item>Hematologist</item>
+        <item>Hepatobiliary Surgeon</item>
+
+    </string-array>
+
+
+    <string-array name="medicine_quantity">
+        <item>take 0.5</item>
+        <item>take 1</item>
+        <item>take 1.5</item>
+        <item>take 2</item>
+    </string-array>
+
+
+    <string-array name="program_list">
+        <item>Select Program</item>
+        <item>Program 1</item>
+        <item>Program 2</item>
+        <item>Program 3</item>
+        <item>Program 4</item>
+        <item>Program 5</item>
+    </string-array>
+
+
+    <string-array name="subject_list">
+        <item>Select Subject</item>
+        <item>Subject 1</item>
+        <item>Subject 2</item>
+        <item>Subject 3</item>
+        <item>Subject 4</item>
+        <item>Subject 5</item>
+    </string-array>
+
+
+    <string-array name="month_array">
+        <item>Select Month</item>
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+
+    </string-array>
+
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="termandcondition"> <u><b>terms &amp; conditions</b></u></string>
+    <string name="noDataAvailable">No Data Found</string>
+    <string name="internetConnection">Your internet connection is too slow please try again</string>
+
+
+    <string name="title_activity_doctor_sign_up">Sign Up</string>
+    <string name="title_activity_forget_password">Forget Password</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_select_disease_type">Find Doctor</string>
+    <string name="title_activity_contact_us">Contact Us</string>
+    <string name="title_activity_privacy_policy">Privacy Policy</string>
+    <string name="title_activity_blood">Blood</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_jobs">Jobs</string>
+    <string name="title_activity_ask_aquestion">Ask a Question</string>
+    <string name="title_activity_tips">Blog</string>
+    <string name="title_activity_home_care">Home Care</string>
+    <string name="title_activity_hospitals">Hospitals</string>
+    <string name="title_activity_find_doctor">Find Doctor</string>
+    <string name="title_activity_emergency_contact">Emergency Contacts</string>
+    <string name="title_activity_discounted_offers">Discounted Offers</string>
+    <string name="title_activity_labs">Labs</string>
+    <string name="title_activity_pharmacy">Pharmacy</string>
+    <string name="title_activity_ask_question_from_doctor">Ask Question</string>
+    <string name="title_activity_hospitals_detail">Hospitals Detail</string>
+    <string name="title_activity_doctor_detail">Doctor Detail</string>
+    <string name="title_activity_blood_group_listing">Blood Group</string>
+    <string name="title_activity_youtube_api">YoutubeApiActivity</string>
+    <string name="title_activity_app_into_tutorial">Tutorial</string>
+    <string name="title_activity_order_medicine">OrderMedicine</string>
+    <string name="title_activity_health_events">Health Events</string>
+    <string name="title_activity_book_lab_test">BookLabTest</string>
+    <string name="title_activity_view_lab_test_report">Test Reports</string>
+    <string name="title_activity_medicine_reminder">Med Tools</string>
+    <string name="title_activity_medical_record">MedicalRecord</string>
+    <string name="title_activity_update_doctor_profile">Doctor Profile</string>
+    <string name="title_activity_health_events_detail">Health Events Detail</string>
+    <string name="title_activity_pharmacy_detail">Pharmacy Detail</string>
+    <string name="title_activity_lab_detail">Lab Detail</string>
+    <string name="title_activity_update_hospital_profile">Update Hospital Profile</string>
+    <string name="title_activity_update_pharmacy_detail">Update Pharmacy Detail</string>
+    <string name="title_activity_update_lab_profile">UpdateLab Profile</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_hospital_detail">Hospital Detail</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="bloodgroups">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+
+    <string-array name="doctorstatus">
+        <item>Specialist</item>
+        <item>Trainee Specialist</item>
+        <item>General Practitioner</item>
+        <item>Student Doctor</item>
+
+
+    </string-array>
+
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string name="login">Log In</string>
+    <string name="creat_account">Create Account</string>
+    <string name="free_consultation">Free Consultation</string>
+    <string name="logout">Logout</string>
+    <string name="labs">labs</string>
+    <string name="patients">patients</string>
+    <string name="hospitals">hospitals</string>
+    <string name="pharmacies">pharmacies</string>
+    <string name="doctors">doctors</string>
+    <string name="blood_donors">blood_donors</string>
+    <string name="ambulances">ambulances</string>
+    <string name="health_professionals">health_professionals</string>
+    <string name="others">others</string>
+    <string name="doNotPayForBlood">DON\'T pay for blood . Medicall is FREE</string>
+
+
+    <string name="place_key">AIzaSyBhBvlH1Fml-gvM3Lm6ZMExE3EyCDGv-Xo</string>
+
+    <!--<string name="place_key">AIzaSyDkdGuoJiqtd0dhB1LVpYPGkXfI_EavGnM</string>-->
+
+    <string name="title_activity_view_lab_reports">View Lab Reports</string>
+    <string name="title_activity_appeal_blood">Appeal Blood</string>
+    <string name="title_activity_emergency_center">Emergency Centers</string>
+    <string name="title_activity_blog_post_for_specific_category">BlogPostForSpecificCategory
+    </string>
+    <string name="title_activity_single_post">SinglePost</string>
+    <string name="title_activity_medi_media">MediPedia</string>
+    <string name="title_activity_medi_pedia">MediPedia</string>
+    <string name="title_activity_find_brand">Find Brand</string>
+    <string name="title_activity_brand_page">Brand Detail</string>
+    <string name="title_activity_compny_detail">Company Detail</string>
+    <string name="title_activity_blood_comptatibility">Blood Compatibility</string>
+    <string name="title_activity_blood_facts">Blood Facts</string>
+    <string name="title_activity_medi_study">MediCall > FCPS - 1</string>
+    <string name="title_activity_sign_upambulance">Sign Up As Ambulance</string>
+    <string name="title_activity_bmicalculator">BMI Calculator</string>
+    <string name="title_activity_pregnancy_calculator">Pregnancy Calculator</string>
+    <string name="title_activity_step_counter">StepCounter</string>
+    <string name="title_activity_sign_up_for_alied_health">SignUpForAliedHealth</string>
+    <string name="title_activity_med_alarm">Med Alarm</string>
+    <string name="title_activity_medi_study_subject_list">MediCall > Program</string>
+    <string name="title_activity_medi_study_question_test">MediCall </string>
+    <string name="title_activity_medi_study_skipped_question">MediCall > FCPS - 1</string>
+    <string name="title_activity_medi_study_preparatory_mode">MediCall > FCPS - 1</string>
+    <string name="title_activity_medi_study_preparatory_mode_skipped">
+        MediCall > FCPS - 1
+    </string>
+    <string name="title_activity_medi_study_book_download">MediStudyBookDownload</string>
+    <string name="title_activity_medi_study_flash_spot_slides">MediStudyFlashSpotSlides</string>
+    <string name="title_activity_medic_signup">MedicSignup</string>
+    <string name="title_activity_update_alied_helath_profile">UpdateAliedHelathProfile</string>
+
+</resources>

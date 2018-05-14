@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/order_medicine_dotted_line"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lab_id_tv"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_tv"
+                android:visibility="gone"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/bookLabTestAutoComplete"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Choose Lab Test"
+                android:inputType="text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:id="@+id/priceLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test Charges:"
+                    android:textSize="@dimen/hintSize"
+                    android:textColor="@color/whiteColor"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/hintSize"
+                    android:textColor="@color/whiteColor"
+                    android:textStyle="bold"
+                    android:id="@+id/lab_test_fee_tv"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="right|center"
+        android:src="@drawable/cross"
+        android:onClick="onDeleteLabCross"
+        />
+
+    <!--
+    -->
+
+
+</FrameLayout>
+<!--<FrameLayout android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="5dp">-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/editText"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:background="@drawable/edittext_background"-->
+            <!--android:hint="Choose Lab Test"-->
+            <!--android:inputType="text" />-->
+    <!--</LinearLayout>-->
+
+
+    <!--<ImageView-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:src="@drawable/cross"-->
+        <!--android:layout_gravity="right|center"-->
+        <!--android:onClick="onDeleteLab"-->
+        <!--/>-->
+
+<!--</FrameLayout>-->

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3b5998</color>
+    <color name="colorPrimaryDark">#3b5998</color>
+    <color name="colorAccent">#e43e3e</color>
+    <color name="editTextLineColor">#e43e3e</color>
+    <color name="redColor">#1A5276</color>
+    <color name="login_segments_bacground">#85edebe7</color>
+    <color name="tab_colorTransparant">#d667393b</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="doNotPayBGColor">#e43e3e</color>
+    <color name="doNotPayTextColor">#ffffff</color>
+    <color name="blueColor">#2980B9</color>
+    <color name="greenColor">#19b9be</color>
+    <color name="timingBackground">#64c737</color>
+    <color name="blackColor">#000000</color>
+    <color name="goldenColor">#E5C100</color>
+    <color name="imageCircularColor">#1A5276</color>
+    <color name="hintColor">#808080</color>
+    <color name="buttonTextColor">#ffffff</color>
+    <color name="customRowTextColor">#000000</color>
+    <color name="tab_color">#d7393b</color>
+    <color name="backgroundTranspearent">#8dfde5e5</color>
+    <color name="addressColor">#504e4e</color>
+    <color name="practiceBackground">#03a18a</color>
+    <color name="litWhiltColor">#deffffff</color>
+    <color name="headingColor">#504e4e</color>
+    <color name="belowHeadingTextColor">#000000</color>
+    <color name="landingScreenBackgroundColor">#112a4e</color>
+    <color name="universalbarcolor">#112a4e</color>
+    <color name="noAvailableColor">#112a4e</color>
+    <color name="formBackground">#eaeaea</color>
+    <color name="headingBackground">#eaeaea</color>
+
+    <color name="alarmStripBackground">#e5e5d8</color>
+    <color name="questionTextColor">#000000</color>
+    <color name="questionOptionNameColor">#ffffff</color>
+    <color name="explanationTextColor">#ffffff</color>
+    <color name="explanationBackground">#3b5998</color>
+
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+    <color name="bg_screen5">#306833</color>
+    <color name="bg_screen6">#a7fae5</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#14a895</color>
+    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+    <color name="dot_dark_screen5">#05de71</color>
+    <color name="dot_dark_screen6">#df6856</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#e4b5fc</color>
+    <color name="dot_light_screen5">#8b7894</color>
+    <color name="dot_light_screen6">#b2d4c3</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen5</item>
+        <item>@color/dot_light_screen6</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen5</item>
+        <item>@color/dot_dark_screen6</item>
+    </array>
+
+</resources>

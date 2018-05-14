@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding"
+    android:background="@drawable/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <!--   <de.hdodenhof.circleimageview.CircleImageView
+                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                       android:id="@+id/profileImg"
+                       android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:src="@drawable/doctor"
+                       app:civ_border_color="@color/imageCircularColor"
+                       app:civ_border_width="@dimen/picture_circular" />-->
+                <ImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profileImg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/doctor" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/pencil_icon"/>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Basic Information"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <EditText
+                android:id="@+id/contact_us_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Describe your issue in detail"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="2"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:paddingTop="10dp"
+                android:scrollbars="vertical"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_bottom_line">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Height i.e(6.5) in feet"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="feet"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/blueColor"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Weight i.e(45) in kg"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="kg"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/blueColor"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Full Name"
+                android:id="@+id/signUpName"
+                android:inputType="text"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus" />
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="DOB"
+                android:id="@+id/signUpDob"
+                android:focusable="false"
+                android:inputType="date"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Blood Group"
+                android:id="@+id/bloodgroup"
+                android:focusable="false"
+                android:inputType="date"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:gravity="left|center"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="@dimen/genderTextSize"
+                    android:textStyle="bold"
+                    android:textColor="@color/hintColor"
+                    />
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/signUpGenderRadioGroup"
+                    android:layout_marginLeft="20dp">
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:textSize="@dimen/genderTextMale"
+                        android:textColor="@color/blackColor"
+                        android:id="@+id/signUpGenderMale"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/signUpGenderFeMale"
+                        android:textSize="@dimen/genderTextFeMale"
+                        android:text="Female"
+                        android:textColor="@color/blackColor"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

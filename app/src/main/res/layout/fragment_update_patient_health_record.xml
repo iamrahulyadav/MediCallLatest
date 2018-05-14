@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding"
+    android:background="@drawable/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share Medical History"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:paddingTop="15dp"
+                android:paddingBottom="10dp"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do you have and previous diagnosed conditions ?"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"/>
+
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/add_icon_timing"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/previousDiagnosedCondition"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:layerType="software"
+                android:src="@drawable/dotted_line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do you take any Vaccination ?"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"/>
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/add_icon_timing"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/vaccination"/>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:layerType="software"
+                android:src="@drawable/dotted_line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do you have any allergies ?"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"/>
+
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/add_icon_timing"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/allergies"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:layerType="software"
+                android:src="@drawable/dotted_line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Do you Upload Medical Files ?"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"/>
+
+
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/add_icon_timing"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/uploadFiles"/>
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:layerType="software"
+                android:src="@drawable/dotted_line" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

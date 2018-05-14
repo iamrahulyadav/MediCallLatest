@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.medicall.ranglerz.com.medicall.UpdateHospitalProfile"
+    tools:showIn="@layout/activity_update_hospital_profile"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/hospitalProfileImg"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:src="@drawable/doctor"-->
+                <!--app:civ_border_color="@color/imageCircularColor"-->
+                <!--app:civ_border_width="@dimen/picture_circular" />-->
+
+
+            <ImageView
+                android:id="@+id/hospitalProfileImg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/doctor"
+                />
+
+
+            <EditText
+                android:id="@+id/signUpName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Hospital Name"
+                android:inputType="text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+            <EditText
+                android:id="@+id/signUpMobile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Mobile No."
+                android:inputType="phone"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Land Line"
+                android:inputType="phone"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Total Beds"
+                android:inputType="text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+            <RelativeLayout
+                android:id="@+id/signUpSelectDesignationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line">
+
+                <Button
+                    android:id="@+id/signUpSelectDesignation"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Timing"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+
+                    />
+
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/signUpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Services"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Insurance Accepted"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Affiliations"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Address"
+                android:inputType="text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line">
+
+                    <Button
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_bottom_line">
+
+                    <Button
+
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Area"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/signUpLicenceNo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="License No"
+                android:inputType="text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+            <EditText
+                android:id="@+id/contact_us_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="About Hospital"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="3"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/order_medicine_dotted_line"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/select_hos_license_image_layout"
+                        >
+
+
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/cameragallery" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Licence Image"
+                            android:textColor="@color/blackColor"
+                            android:textSize="14sp"
+                            android:typeface="serif" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/hos_license_image_frameLayout"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        >
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/hos_license_img"
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            android:padding="@dimen/crossImagePadding"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/name" />
+
+                        <ImageView
+                            android:id="@+id/remove_hos_license_image"
+                            android:layout_width="@dimen/crossImageWidth"
+                            android:layout_height="@dimen/crossImageHeight"
+                            android:layout_gravity="right"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/cross" />
+
+
+                    </FrameLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/select_hos_cover_image_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/cameragallery" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Cover Photo"
+                            android:textColor="@color/blackColor"
+                            android:textSize="14sp"
+                            android:typeface="serif" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/hos_cover_image_frameLayout"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        >
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+
+
+
+                        <ImageView
+                            android:id="@+id/hos_cover_img"
+                            android:layout_width="@dimen/imageWidth"
+                            android:layout_height="@dimen/imageHeight"
+                            android:padding="@dimen/crossImagePadding"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/name" />
+
+
+                        <ImageView
+                            android:id="@+id/remove_hos_cover_image"
+                            android:layout_width="@dimen/crossImageWidth"
+                            android:layout_height="@dimen/crossImageHeight"
+                            android:layout_gravity="right"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/cross" />
+
+
+                    </FrameLayout>
+
+                        </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/signUpBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginBottom="@dimen/buttonMarginBottom"
+                android:layout_marginLeft="@dimen/button_margin_left"
+                android:layout_marginRight="@dimen/button_margin_right"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:background="@drawable/buttom_press_state"
+                android:text="Update Profile"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/button_text_size" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

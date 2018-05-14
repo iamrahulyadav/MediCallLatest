@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/hospitalDetailActionBarImg"-->
+                <!--android:layout_width="40dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:src="@drawable/banner"-->
+                <!--app:civ_border_color="@color/blueColor"-->
+                <!--app:civ_border_width="2dp"-->
+                <!--android:layout_marginLeft="5dp"/>-->
+
+
+            <ImageView
+                android:id="@+id/hospitalDetailActionBarImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/name"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hospital Name"
+                android:textColor="@color/whiteColor"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:id="@+id/hospitalDetailActionBarName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hospital Address Hospital Address Hospital Address Hospital Address"
+                android:textSize="12sp"
+                android:textColor="@color/whiteColor"
+                android:typeface="serif"
+                android:id="@+id/hospitalDetailActionBarAddress"
+                android:layout_below="@+id/hospitalDetailActionBarName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

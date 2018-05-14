@@ -1,0 +1,46 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@color/landingScreenBackgroundColor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lab_test_id"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lab_test_name"
+        android:text="Name"
+        android:textColor="@color/whiteColor"
+        android:textStyle="bold"
+        android:textSize="14sp"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lab_test_rate"
+        android:text="Address"
+        android:textColor="@color/whiteColor"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

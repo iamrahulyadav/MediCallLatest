@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:appcompat="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right">
+
+
+
+
+
+        <Button
+            android:id="@+id/locationFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            style="@style/Widget.AppCompat.Spinner"
+            android:textSize="14sp"
+            android:text="Pakistan"
+            android:textColor="@color/whiteColor"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/userIcon"
+            android:layout_marginRight="0dp"
+            />
+
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/loginuser"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/doctorFilterImage"
+            android:layout_marginRight="8dp"
+
+            />
+
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/doctorfilter"
+            android:layout_centerVertical="true"
+            android:id="@+id/doctorFilterImage"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/searchicon"
+            android:layout_centerVertical="true"
+            android:id="@+id/searchViewImg"
+            android:layout_marginRight="8dp"
+            />
+
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/autoCompleteSearchLayout"
+            android:visibility="gone"
+            >
+
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="10dp"
+            android:layout_below="@+id/textView"
+            android:hint="Search">
+                <!--<requestFocus />-->
+        </AutoCompleteTextView>
+
+        <Button
+            android:id="@+id/ClearSearchBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:background="@android:drawable/ic_delete"
+            android:gravity="bottom"
+            />
+
+
+        <ProgressBar
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            android:id="@+id/searchViewProgress"
+            android:visibility="gone"/>
+
+
+        </FrameLayout>
+
+
+        <android.support.v7.widget.SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchView"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+</RelativeLayout>

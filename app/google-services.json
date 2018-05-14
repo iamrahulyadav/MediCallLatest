@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "802982966448",
+    "firebase_url": "https://medicall-dc6da.firebaseio.com",
+    "project_id": "medicall-dc6da",
+    "storage_bucket": "medicall-dc6da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802982966448:android:25af95ef5594efad",
+        "android_client_info": {
+          "package_name": "themedicall.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "802982966448-1dqs0emmuu2kguk5msum1l9qmpucaao8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "themedicall.com",
+            "certificate_hash": "eff18bccb9a561f800f635d42064291598f745f6"
+          }
+        },
+        {
+          "client_id": "802982966448-8lc7u9ih0u55bvt9pr36of95h7fnskln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWobOv5ZKKkD7g4U3ST53h_Y0EwxSDvn8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802982966448-8lc7u9ih0u55bvt9pr36of95h7fnskln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

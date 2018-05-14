@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="themedicall.com.MediStudySection.MediStudyExamModeSkipped"
+    tools:showIn="@layout/activity_medi_study_exam_mode_skipped"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/goldenColor"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question 1 of 20"
+            android:id="@+id/noOfQuestion"
+            android:textColor="@color/whiteColor"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00 : 00"
+            android:id="@+id/timer"
+            android:textColor="@color/whiteColor"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+    <com.daasuu.ahp.AnimateHorizontalProgressBar
+        android:id="@+id/animate_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ahp_backgroundColor="@color/colorPrimaryDark"
+        app:ahp_progressColor="@color/colorAccent"
+        android:layout_marginTop="5dp"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/formBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sample Text Sample Text Sample Text Sample Text Sample TextSample TextSample TextSample TextSample TextSample TextSample Text"
+            android:textSize="@dimen/questionTextSize"
+            android:id="@+id/question"
+            android:textColor="@color/questionTextColor"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionALayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="A"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionAText"
+                android:textColor="@color/blackColor"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/questionOptionMarginTop"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionBLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="B"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionBText"
+                android:textColor="@color/blackColor"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/questionOptionMarginTop"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionCLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="C"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionCText"
+                android:textColor="@color/blackColor"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/questionOptionMarginTop"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionDLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="D"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionDText"
+                android:textColor="@color/blackColor"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="Previous"
+            android:id="@+id/previousBtn"
+            android:layout_marginTop="@dimen/buttonMarginTop"
+            android:layout_marginBottom="@dimen/buttonMarginBottom"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/button_text_size"
+            android:onClick="previousButton"
+            android:background="@drawable/buttom_press_state"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="Skip"
+            android:id="@+id/skipBtn"
+            android:layout_marginTop="@dimen/buttonMarginTop"
+            android:layout_marginBottom="@dimen/buttonMarginBottom"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/button_text_size"
+            android:onClick="skipButton"
+            android:background="@drawable/buttom_press_state"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="Next"
+            android:id="@+id/nextBtn"
+            android:layout_marginTop="@dimen/buttonMarginTop"
+            android:layout_marginBottom="@dimen/buttonMarginBottom"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/button_text_size"
+            android:onClick="nextButton"
+            android:background="@drawable/buttom_press_state"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

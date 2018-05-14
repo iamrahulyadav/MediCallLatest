@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="themedicall.com.MediStudySection.MediStudyExamMode"
+    tools:showIn="@layout/activity_medi_study_exam_mode"
+    android:orientation="vertical"
+    android:background="@drawable/medistudybackground3"
+    android:id="@+id/mcqsMainLayout"
+    android:visibility="visible">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/medi_study_border_line">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Time"
+                    android:textSize="14sp"
+                    android:textColor="@color/whiteColor"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00 : 00"
+                    android:id="@+id/timer"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/medi_study_border_line">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skipped"
+                    android:textSize="14sp"
+                    android:textColor="@color/whiteColor"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/totalSkippedQuestion"
+                    android:visibility="visible"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Question"
+                    android:textSize="14sp"
+                    android:textColor="@color/whiteColor"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 / 20"
+                    android:id="@+id/noOfQuestion"
+                    android:textColor="@color/whiteColor"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:paddingBottom="5dp">-->
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Question 1 / 20"-->
+                <!--android:textSize="12sp"-->
+                <!--android:id="@+id/noOfQuestion"-->
+                <!--android:textColor="@color/whiteColor"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:visibility="visible"/>-->
+
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="Question : 10 / 100"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/whiteColor"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_gravity="center" />&ndash;&gt;-->
+
+
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Skipped : 0"-->
+                <!--android:id="@+id/totalSkippedQuestion"-->
+                <!--android:textColor="@color/whiteColor"-->
+                <!--android:textSize="12sp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:visibility="visible"/>-->
+
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="Skipped : 2"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/whiteColor"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="12sp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="2dp"/>&ndash;&gt;-->
+
+
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical">-->
+
+
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="00 : 00"-->
+                <!--android:id="@+id/timer"-->
+                <!--android:textColor="@color/whiteColor"-->
+                <!--android:textSize="12sp"-->
+                <!--android:gravity="right" />-->
+
+
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Paper A"-->
+                <!--android:id="@+id/paperName"-->
+                <!--android:textColor="@color/whiteColor"-->
+                <!--android:textSize="12sp"-->
+                <!--android:gravity="right" />-->
+
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+
+
+
+
+    <com.daasuu.ahp.AnimateHorizontalProgressBar
+        android:id="@+id/animate_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:ahp_backgroundColor="@color/colorPrimaryDark"
+        app:ahp_progressColor="@color/colorAccent"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/question_background"
+        android:animateLayoutChanges="true">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sample Text Sample Text Sample Text Sample Text Sample TextSample TextSample TextSample TextSample TextSample TextSample Text"
+            android:textSize="@dimen/questionTextSize"
+            android:id="@+id/question"
+            android:textStyle="bold"
+            android:textColor="@color/questionTextColor"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionALayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="A"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionAText"
+                android:textColor="@color/blackColor"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp" />
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/optionAImage"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The kidney cells that produce erythropoietin are sensitive to low level of oxygen in blood that travels through kidney. These cells make and produce erythropoietin when oxygen level is too low."
+            android:id="@+id/optionAExplanation"
+            android:textColor="@color/explanationTextColor"
+            android:textSize="@dimen/explanationTextSize"
+            android:padding="@dimen/explanationPadding"
+            android:background="@drawable/explanation_background"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/explanationMarginTop"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/questionOptionMarginTop"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionBLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="B"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionBText"
+                android:textColor="@color/blackColor"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/optionBImage"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The kidney cells that produce erythropoietin are sensitive to low level of oxygen in blood that travels through kidney. These cells make and produce erythropoietin when oxygen level is too low."
+            android:id="@+id/optionBExplanation"
+            android:textColor="@color/explanationTextColor"
+            android:textSize="@dimen/explanationTextSize"
+            android:padding="@dimen/explanationPadding"
+            android:background="@drawable/explanation_background"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/explanationMarginTop"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/questionOptionMarginTop"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionCLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="C"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionCText"
+                android:textColor="@color/blackColor"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/optionCImage"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The kidney cells that produce erythropoietin are sensitive to low level of oxygen in blood that travels through kidney. These cells make and produce erythropoietin when oxygen level is too low."
+            android:id="@+id/optionCExplanation"
+            android:textColor="@color/explanationTextColor"
+            android:textSize="@dimen/explanationTextSize"
+            android:padding="@dimen/explanationPadding"
+            android:background="@drawable/explanation_background"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/explanationMarginTop"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/questionOptionMarginTop"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionDLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="D"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionDText"
+                android:textColor="@color/blackColor"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/optionDImage"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The kidney cells that produce erythropoietin are sensitive to low level of oxygen in blood that travels through kidney. These cells make and produce erythropoietin when oxygen level is too low."
+            android:id="@+id/optionDExplanation"
+            android:textColor="@color/explanationTextColor"
+            android:textSize="@dimen/explanationTextSize"
+            android:padding="@dimen/explanationPadding"
+            android:background="@drawable/explanation_background"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/explanationMarginTop"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/questionOptionMarginTop"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionELayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="E"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionEText"
+                android:textColor="@color/blackColor"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/optionEImage"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The kidney cells that produce erythropoietin are sensitive to low level of oxygen in blood that travels through kidney. These cells make and produce erythropoietin when oxygen level is too low."
+            android:id="@+id/optionEExplanation"
+            android:textColor="@color/explanationTextColor"
+            android:textSize="@dimen/explanationTextSize"
+            android:padding="@dimen/explanationPadding"
+            android:background="@drawable/explanation_background"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/explanationMarginTop"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/questionOptionMarginTop"
+            android:background="@drawable/question_option_background"
+            android:padding="@dimen/questionOptionPadding"
+            android:id="@+id/QueOptionFLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question_option_background_circle"
+                android:text="F"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/questionOptionNameSize"
+                android:textColor="@color/questionOptionNameColor" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Text Sample Text Sample Text Sample Text"
+                android:id="@+id/questionFText"
+                android:textColor="@color/blackColor"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"/>
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/optionFImage"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The kidney cells that produce erythropoietin are sensitive to low level of oxygen in blood that travels through kidney. These cells make and produce erythropoietin when oxygen level is too low."
+            android:id="@+id/optionFExplanation"
+            android:textColor="@color/explanationTextColor"
+            android:textSize="@dimen/explanationTextSize"
+            android:padding="@dimen/explanationPadding"
+            android:background="@drawable/explanation_background"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/explanationMarginTop"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="@dimen/buttonMarginTop"
+        android:layout_marginBottom="5dp"
+        android:animateLayoutChanges="true">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/previousBtn"
+            android:onClick="previousButton"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/previousbtn"/>
+
+
+
+        <!--<Button-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:text="Previous"-->
+            <!--android:id="@+id/previousBtn"-->
+            <!--android:layout_marginTop="@dimen/buttonMarginTop"-->
+            <!--android:layout_marginBottom="@dimen/buttonMarginBottom"-->
+            <!--android:textAllCaps="false"-->
+            <!--android:textColor="@color/buttonTextColor"-->
+            <!--android:textSize="@dimen/button_text_size"-->
+            <!--android:onClick="previousButton"-->
+            <!--android:background="@drawable/buttom_press_state"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_marginRight="5dp"/>-->
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Skip"
+            android:id="@+id/skipBtn"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="16sp"
+            android:onClick="skipButton"
+            android:background="@drawable/buttom_press_state"
+            android:layout_weight=".9"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Answer"
+            android:id="@+id/viewAnswerBtn"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="16sp"
+            android:onClick="viewAnswerButton"
+            android:background="@drawable/buttom_press_state"
+            android:layout_weight=".9"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Finish"
+            android:id="@+id/testFinishSkipped"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="16sp"
+            android:onClick="nextButton"
+            android:background="@drawable/buttom_press_state"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/nextBtn"
+            android:onClick="nextButton"
+            android:layout_weight="1"
+            android:src="@drawable/nextbtn"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/reportquestion"
+                android:id="@+id/reportQuestion"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bookmarkquestion"
+                android:id="@+id/bookmarkQuestion"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notesquestion"
+                android:id="@+id/notesQuestion"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sharequestion"
+                android:id="@+id/shareQuestion"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/discussionquestion"
+                android:id="@+id/discussionQuestion"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

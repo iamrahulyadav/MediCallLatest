@@ -1,0 +1,257 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.medicall.ranglerz.com.medicall.PrecticeDetailHospitals"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:id="@+id/layout_fragments">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hosPitalNum"
+                    android:visibility="gone"/>
+                
+                
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/practiceTimingLayout"
+                android:background="@color/headingBackground"
+                android:paddingTop="@dimen/headingPaddingTop"
+                android:paddingBottom="@dimen/headingPaddingLeft"
+                android:paddingRight="@dimen/headingPaddingRight"
+                android:paddingLeft="@dimen/headingPaddingLeft">
+
+
+                <ImageView
+                    android:layout_width="@dimen/hosDetailImgWidth"
+                    android:layout_height="@dimen/hosDetailImgHeight"
+                    android:layout_marginRight="@dimen/hosDetailImgMargin"
+                    android:src="@drawable/hospitaltiming"
+                    android:layout_gravity="center"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Timing :"
+                    android:textSize="@dimen/headingSize"
+                    android:textColor="@color/headingColor"
+                    android:textStyle="bold"
+                    android:id="@+id/practiceDetailTimingHeading"/>
+
+
+            </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/prectice_detail_hosp_timing_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clipToPadding="false"
+                    android:scrollbars="none" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyclerTimingViewMore"
+                    android:layout_gravity="right"
+                    android:text="View All Timings"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#d7393b"
+                    android:layout_marginRight="10dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyclerTimingViewLess"
+                    android:layout_gravity="right"
+                    android:text="View Less Timings"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#d7393b"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"/>
+
+
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layerType="software"
+                    android:src="@drawable/dotted_line"
+                    android:id="@+id/practiceDetailTimingLine"
+                    android:visibility="gone"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/practiceLocationLayout"
+                android:background="@color/headingBackground"
+                android:paddingTop="@dimen/headingPaddingTop"
+                android:paddingBottom="@dimen/headingPaddingLeft"
+                android:paddingRight="@dimen/headingPaddingRight"
+                android:paddingLeft="@dimen/headingPaddingLeft">
+
+
+                <ImageView
+                    android:layout_width="@dimen/hosDetailImgWidth"
+                    android:layout_height="@dimen/hosDetailImgHeight"
+                    android:layout_marginRight="@dimen/hosDetailImgMargin"
+                    android:src="@drawable/hospitallocation"
+                    android:layout_gravity="center"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location :"
+                    android:textSize="@dimen/headingSize"
+                    android:textColor="@color/headingColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/docPracticeAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Address Address Address Address Address Address"
+                    android:textSize="@dimen/belowHeadingTextSize"
+                    android:textColor="@color/belowHeadingTextColor"
+                    android:typeface="serif" />
+
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/map_height"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:id="@+id/openMap"-->
+                    <!--&gt;-->
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/practiceMapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/map_height"
+                    />
+             <!--//   </RelativeLayout>-->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layerType="software"
+                    android:src="@drawable/dotted_line"
+                    android:id="@+id/practiceDetailMapLine"
+                    android:visibility="gone"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/practiceServicesLayout"
+                android:background="@color/headingBackground"
+                android:paddingTop="@dimen/headingPaddingTop"
+                android:paddingBottom="@dimen/headingPaddingLeft"
+                android:paddingRight="@dimen/headingPaddingRight"
+                android:paddingLeft="@dimen/headingPaddingLeft">
+
+
+                <ImageView
+                    android:layout_width="@dimen/hosDetailImgWidth"
+                    android:layout_height="@dimen/hosDetailImgHeight"
+                    android:layout_marginRight="@dimen/hosDetailImgMargin"
+                    android:src="@drawable/hospitalservices"
+                    android:layout_gravity="center"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Services :"
+                    android:textSize="@dimen/headingSize"
+                    android:textColor="@color/headingColor"
+                    android:textStyle="bold"
+                    android:id="@+id/practiceDetailServiceHeading"/>
+
+            </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/prectice_detail_hosp_service_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clipToPadding="false"
+                    android:scrollbars="none" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyclerServicesViewMore"
+                    android:layout_gravity="right"
+                    android:text="View All Services"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#d7393b"
+                    android:layout_marginRight="10dp"
+                    android:visibility="visible"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyclerServicesViewLess"
+                    android:layout_gravity="right"
+                    android:text="View Less Services"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#d7393b"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

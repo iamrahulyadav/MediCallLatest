@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:TagsEditText="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="themedicall.com.SignUp"
+    tools:showIn="@layout/activity_sign_up"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding"
+    android:background="@color/formBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Username"
+                android:id="@+id/signUpUserName"
+                android:inputType="text"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus" />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus">
+
+                <TextView
+                    android:id="@+id/tv_dr_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. "
+                    android:textColor="@color/hintColor"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_toRightOf="@id/tv_dr_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="Full Name"
+                    android:id="@+id/signUpName"
+                    android:inputType="text"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:background="@null"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:text="+92"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:id="@+id/signUpMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="3124623356"
+                    android:maxLength="10"
+                    android:inputType="phone"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:background="@drawable/edittext_bottom_line"
+                    />
+
+            </LinearLayout>
+
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="DOB"
+                android:id="@+id/signUpDob"
+                android:focusable="false"
+                android:inputType="date"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:visibility="gone"/>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:id="@+id/signUpSelectCityLayout"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus">
+
+                <Button
+                    android:id="@+id/signUpSelectCity"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="City"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:id="@+id/signUpSelectBloodGroupLayout"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:visibility="gone"
+                >
+
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btSignUpSelectBloodGroup"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:gravity="left|center"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:id="@+id/signUpGenderLayout"
+                >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/genderTextSize"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/signUpGenderRadioGroup"
+                    android:layout_marginLeft="20dp">
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:textSize="@dimen/genderTextMale"
+                        android:textColor="@color/blackColor"
+                        android:id="@+id/signUpGenderMale"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/signUpGenderFeMale"
+                        android:textSize="@dimen/genderTextFeMale"
+                        android:text="Female"
+                        android:textColor="@color/blackColor"/>
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:id="@+id/signUpSelectDesignationLayout"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                >
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btSignUpSelectDesignation"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="University name"
+                android:id="@+id/signUpUniName"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:visibility="gone"/>
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="University registration #"
+                android:id="@+id/signUpUniRegistrationNo"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:visibility="gone"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Email"
+                android:id="@+id/signUpEmail"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                />
+
+
+            <EditText
+                android:id="@+id/signUpPass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Password"
+                android:inputType="textPassword"
+
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                />
+
+
+            <EditText
+                android:id="@+id/signUpConfirmPass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                />
+
+            <EditText
+                android:id="@+id/et_pmdc_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="PMDC"
+                android:inputType="text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:visibility="visible"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/order_medicine_dotted_line"
+                android:id="@+id/ll_pmdc_photo"
+                android:layout_marginTop="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/pmdc_select_picture_layout">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/camera"
+                            android:layout_weight="1"
+                            android:id="@+id/pmdcImageFromCamera"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"/>
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/gallery"
+                            android:layout_weight="1"
+                            android:id="@+id/pmdcImageFromGallery"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="0dp"/>
+
+
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Take / Upload Picture of PMDC"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:typeface="serif" />
+
+
+                </LinearLayout>
+
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/pmdcImageFrameLayout"
+                    >
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/iv_pmdc"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/doctor"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/cross"
+                        android:layout_gravity="right"
+                        android:id="@+id/removePmdcDescriptionImg"/>
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Sign Up"
+                android:id="@+id/signUpBtn"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:layout_marginBottom="@dimen/buttonMarginBottom"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/buttom_press_state"
+                android:layout_marginLeft="@dimen/button_margin_left"
+                android:layout_marginRight="@dimen/button_margin_right" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

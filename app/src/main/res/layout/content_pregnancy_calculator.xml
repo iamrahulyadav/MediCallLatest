@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="themedicall.com.PregnancyCalculator"
+    tools:showIn="@layout/activity_pregnancy_calculator"
+    android:background="@color/landingScreenBackgroundColor"
+    android:padding="10dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="5dp">
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateSpinner"
+                    android:layout_weight="1"/>
+
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/monthSpinner"
+                    android:layout_weight="0.9"/>
+
+
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yearSpinner"
+                    android:layout_weight="1"/>
+
+
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/location_background_radious"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:id="@+id/deliveryDateLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approximate Date of Delivery"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/blackColor" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23232323343434"
+                android:id="@+id/deliveryDate"
+                android:textSize="18sp"
+                android:textColor="@color/redColor"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"/>
+
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+
+            <ProgressBar
+                android:id="@+id/pregnancyProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:secondaryProgress="0" />
+
+
+            <TextView
+                android:id="@+id/pregnancyWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/progressBar"
+                android:layout_centerInParent="true"
+                android:textSize="16sp"
+                android:textColor="@color/whiteColor"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </RelativeLayout>
+
+
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="@dimen/button_height"
+        android:text="Calculate"
+        android:id="@+id/calculatePregnancyBtn"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/buttom_press_state"
+        android:textAllCaps="false"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disclaimer"
+        android:id="@+id/pregnancyDisclaimer"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        />
+
+
+</RelativeLayout>

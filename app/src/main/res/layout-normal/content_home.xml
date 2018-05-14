@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="themedicall.com.Home"
+    tools:showIn="@layout/activity_home"
+    android:orientation="vertical"
+    android:background="@color/landingScreenBackgroundColor">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/simpleSearchView"
+        android:background="@drawable/searchviewbar"
+        android:layout_marginLeft="@dimen/searchViewMarginLeft"
+        android:layout_marginRight="@dimen/searchViewMarginRight"
+        android:gravity="center"
+        android:paddingLeft="5dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/mainSearchView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="10dp"
+            android:hint="Search By Doctor/Disease/Word"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/hintSize" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/simpleSearchView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/bottomLayout"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:orientation="horizontal"
+            android:id="@+id/askQuesMedicalRecordLayout">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:src="@drawable/askquestionbtn"
+                android:id="@+id/askQuestionBtn"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitXY"
+                />
+
+            <ImageView
+                android:id="@+id/healthEventBtn"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:src="@drawable/healtheventsbtn"
+                android:layout_marginLeft="5dp"
+                android:scaleType="fitXY"
+                />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2">
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.9">
+
+
+                        <ImageView
+                            android:id="@+id/bloodBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/bloodbtn"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:scaleX="1.1"
+                            android:paddingLeft="6dp"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="6dp"
+                            android:scaleY="1.1345"
+                            />
+
+                        <ImageView
+                            android:id="@+id/blogBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.1"
+                            android:scaleType="fitXY"
+                            android:paddingLeft="-8dp"
+                            android:paddingRight="-8dp"
+                            android:paddingBottom="33dp"
+                            android:src="@drawable/blogbtn"
+                            />
+
+
+                        <ImageView
+                            android:id="@+id/discountBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:scaleY="1.1345"
+                            android:layout_weight="1"
+                            android:scaleX="1.1"
+                            android:paddingRight="5dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="4dp"
+                            android:src="@drawable/discountbtn" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:adjustViewBounds="true"
+                        android:layout_weight="1"
+                        android:layout_marginTop="-42dp"
+                        android:layout_marginBottom="-42dp">
+
+
+                        <ImageView
+                            android:id="@+id/videoAudioCallBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4"
+                            android:paddingRight="-8dp"
+                            android:scaleType="fitXY"
+                            android:paddingTop="34dp"
+                            android:paddingBottom="28dp"
+                            android:src="@drawable/videoaudiocallbtn" />
+
+
+                        <ImageView
+                            android:id="@+id/doctorBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/blogBtn"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="0.9"
+                            android:paddingLeft="-8dp"
+                            android:paddingRight="-8dp"
+                            android:paddingTop="10dp"
+                            android:scaleType="fitXY"
+                            android:scaleY="1.2"
+                            android:scaleX="1"
+                            android:src="@drawable/doctorbtn" />
+
+                        <ImageView
+                            android:id="@+id/ambluanceBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4"
+                            android:paddingLeft="-8dp"
+                            android:scaleType="fitXY"
+                            android:paddingTop="34dp"
+                            android:paddingBottom="28dp"
+                            android:src="@drawable/ambulancebtn" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.9"
+                        android:layout_marginTop="8dp">
+
+
+                        <ImageView
+                            android:id="@+id/pharmacybtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:scaleX="1.1"
+                            android:paddingLeft="6dp"
+
+                            android:scaleY="1.1345"
+                            android:src="@drawable/pharmacybtn" />
+
+                        <ImageView
+                            android:id="@+id/homecarebtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/doctorBtn"
+                            android:layout_weight="1.1"
+                            android:scaleType="fitXY"
+                            android:paddingLeft="-8dp"
+                            android:paddingRight="-8dp"
+                            android:paddingTop="27dp"
+                            android:src="@drawable/homecarebtn"
+                            android:layout_marginBottom="-7dp"/>
+
+
+                        <ImageView
+                            android:id="@+id/labsBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:scaleX="1.1"
+                            android:paddingRight="5dp"
+                            android:scaleY="1.1345"
+                            android:src="@drawable/labsbtn" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/jobBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:scaleType="fitXY"
+                            android:scaleY="1.1"
+                            android:paddingRight="-4dp"
+                            android:paddingBottom="4dp"
+                            android:src="@drawable/jobbtn" />
+
+
+                        <ImageView
+                            android:id="@+id/hospitalbtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingLeft="-10dp"
+                            android:paddingRight="-10dp"
+                            android:scaleType="fitXY"
+                            android:scaleY="1.1"
+                            android:paddingBottom="4dp"
+                            android:src="@drawable/hospitalbtn" />
+
+
+
+                        <ImageView
+                            android:id="@+id/medicineReminderBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:scaleType="fitXY"
+                            android:scaleY="1.1"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="-4dp"
+                            android:src="@drawable/medicinereminderbtn" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@drawable/footerbackground"
+        android:visibility="gone"
+        >
+
+
+        <ImageView
+            android:id="@+id/medicalRecordBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/medicalrecordbtn" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/facebookbottom"
+            android:id="@+id/facebookBtn"/>
+
+
+        <ImageView
+            android:id="@+id/youtubeBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/notificationbottpm" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/bottomLayout"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/bottomnavigationmedistudy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/bottomnavigationmedistudy"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottomnavigationplus"
+            android:id="@+id/bottomnavigationplus"/>
+
+
+        <ImageView
+            android:id="@+id/bottomnavigationmedipedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/bottomnavigationmedipedia"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_frond"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tab_colorTransparant"
+        android:visibility="gone">
+
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_guide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:visibility="gone">
+
+        <!--  <ImageView
+              android:id="@+id/iv_crosee"
+              android:layout_width="30dp"
+              android:layout_height="30dp"
+              android:src="@drawable/cross_for_first_guide"
+              android:layout_alignParentTop="true"
+              android:layout_marginRight="100dp"
+              android:layout_alignParentRight="true"/>
+  -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Slid to Right or Tap on Above Option Icon to open menu for login or registration"
+            android:textColor="@color/whiteColor"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/arra"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/name" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:background="@drawable/cross" />
+
+    </FrameLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Upload"
+        android:background="@drawable/add_more_button_press_state"
+        android:textColor="@color/whiteColor"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="Choose Type"
+        android:inputType="text"
+        android:background="@drawable/edittext_bottom_line"
+        android:textColorHint="@color/hintColor"
+        android:textSize="@dimen/hintSize"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="Date"
+        android:inputType="text"
+        android:background="@drawable/edittext_bottom_line"
+        android:textColorHint="@color/hintColor"
+        android:textSize="@dimen/hintSize"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="Select Disease "
+        android:inputType="text"
+        android:background="@drawable/edittext_bottom_line"
+        android:textColorHint="@color/hintColor"
+        android:textSize="@dimen/hintSize"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Submit"
+        android:layout_marginTop="@dimen/buttonMarginTop"
+        android:layout_marginBottom="@dimen/buttonMarginBottom"
+        android:textAllCaps="false"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/button_text_size"
+        android:background="@drawable/buttom_press_state"
+        android:layout_marginLeft="@dimen/button_margin_left"
+        android:layout_marginRight="@dimen/button_margin_right"
+        />
+
+
+</LinearLayout>

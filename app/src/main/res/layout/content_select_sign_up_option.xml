@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SelectSignUpOptions"
+    tools:showIn="@layout/activity_select_sign_up_option"
+    android:orientation="vertical"
+    android:background="@color/landingScreenBackgroundColor"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.07">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/signuptext"
+            android:scaleType="fitXY"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="0dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signupdoctor"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:id="@+id/signupdoctor"/>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signuphealthprofessional"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/signuphealthprofessional"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signuppatient"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:id="@+id/signuppatient"/>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signuphospital"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/signuphospital"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signuppharmacy"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:id="@+id/signuppharmacy"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signuplab"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/signuplab"/>
+
+        //////////////////////////////////////////////////////
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signupblood"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:id="@+id/signupblood"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signupambulance"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/signupambulance"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:src="@drawable/signuptext"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:layout_marginRight="50dp"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:layout_marginTop="0dp"/>-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/recycler_view_sign_up_option"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:scrollbars="none"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:visibility="gone"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="bottom">
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/skipAndEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip &amp; Enter"
+            android:textAllCaps="true"
+            android:textColor="@color/whiteColor"
+            android:textSize="16sp"
+            android:typeface="serif"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

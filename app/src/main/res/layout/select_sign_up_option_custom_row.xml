@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="10dp"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/doctor"
+        android:layout_gravity="center"
+        android:id="@+id/singUpOptionImg"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/singUpOptionId"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sample Text"
+        android:textColor="@color/blackColor"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:textSize="16sp"
+        android:typeface="serif"
+        android:id="@+id/singUpOptionName"
+        android:visibility="gone"
+        />
+
+</LinearLayout>
+

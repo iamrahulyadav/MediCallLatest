@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="390dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/formBackground">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doctor search filter :"
+            android:textColor="@color/whiteColor"
+            android:textSize="20sp"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal"
+        android:gravity="left|center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_bottom_line">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/genderTextSize"
+            android:textStyle="bold" />
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/GenderRadioGroup"
+            android:layout_marginLeft="20dp">
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="@dimen/genderTextMale"
+                android:textColor="@color/blackColor"
+                android:id="@+id/GenderMale"
+                android:layout_marginRight="20dp"
+                android:checked="true"/>
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/GenderFeMale"
+                android:textSize="@dimen/genderTextFeMale"
+                android:text="Female"
+                android:textColor="@color/blackColor"/>
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal"
+        android:gravity="left|center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_bottom_line">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/genderTextSize"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+
+        <RatingBar
+            android:id="@+id/doctorFilterRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            style="@style/CustomRatingBar"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@drawable/edittext_bottom_line"
+            android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+            android:layout_weight="1">
+
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/doctorFilterFeeRange"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@drawable/edittext_bottom_line"
+            android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+            android:layout_weight="1">
+
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/doctorFilterExperienceRange"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal"
+        android:gravity="left|center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_bottom_line">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radius"
+            android:textColor="@color/blackColor"
+            android:textSize="@dimen/genderTextSize"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+
+        <SeekBar
+            android:id="@+id/doctorRadiosSeekBar"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:thumb="@drawable/seekbarthumb"
+            android:theme="@style/Widget.AppCompat.SeekBar.Discrete"
+            style="@style/MySeekBar"
+            android:minHeight="10dp"
+            android:maxHeight="10dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="Submit"
+            android:id="@+id/doctorFilterSubmit"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="@dimen/button_text_size"
+            android:background="@drawable/buttom_press_state" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,1525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".com.MediaPediaSection.BrandPage"
+    tools:showIn="@layout/activity_brand_page"
+    android:orientation="vertical"
+    android:background="@color/formBackground">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/cardview_light_background">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/medicineRowProfileImg"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="0dp"
+                            android:src="@drawable/capsule" />
+
+                        <!--<TextView
+                            android:id="@+id/doctorRowExperience"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:layout_marginTop="-5dp"
+                            android:background="@drawable/textview_radious"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:paddingTop="1dp"
+                            android:text="10 Years"
+                            android:textColor="@color/whiteColor"
+                            android:textSize="8sp"
+                            android:textStyle="bold" />-->
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="10dp">-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:src="@drawable/locationicon"-->
+                <!--android:layout_gravity="center_horizontal"/>-->
+
+                <!--</FrameLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    android:id="@+id/brandRowId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:typeface="serif"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/brandRowShareLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:typeface="serif"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/brandRowRatingtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:typeface="serif"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/brandRowName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="Plasil"
+                        android:textColor="@color/redColor"
+                        android:textSize="@dimen/listingHeadingSize"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/verifiedMed"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/verifieddoc"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="10dp"
+                        android:maxLines="1"
+                        android:text="10 mg"
+                        android:textSize="12sp"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/company" />
+
+                    <TextView
+                        android:id="@+id/medicineCompany"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:text="Pacific Pharmaceutical"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:typeface="serif"
+                        android:layout_marginLeft="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/opencapsule" />
+
+                    <TextView
+                        android:id="@+id/medicinedGeneric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Metoclopramide (HCL)"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:typeface="serif"
+                        android:layout_marginLeft="5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!--<ImageView
+                    android:id="@+id/doctorRowDiscountedImg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right|top"
+                    android:layout_weight="1"
+                    android:src="@drawable/discounted"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/doctorRowDiscountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/blackColor"
+                    android:textSize="10dp"
+                    android:typeface="serif"
+                    android:visibility="gone"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!--<ImageView
+                        android:id="@+id/doctorRowPhone"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/callicon"
+                        />
+
+                    <TextView
+                        android:id="@+id/doctorRowDiscounted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Fee Rs : 1500"
+                        android:textColor="@color/blackColor"
+                        android:textSize="10dp"
+                        android:typeface="serif"
+                        android:visibility="gone"/>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <!--<TextView
+                    android:id="@+id/doctorRowDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="14 KM"
+                    android:textColor="@color/blackColor"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />-->
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/location" />
+
+                <!--
+                                android:background="@drawable/textview_radious"
+                -->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <RatingBar
+                    android:id="@+id/doctorRowRating"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar" />
+
+                <!--<ImageView-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="12dp"-->
+                <!--android:src="@drawable/starranking"-->
+                <!--android:layout_gravity="left"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/doctorRowClaimProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/textview_radious"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Claim Profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="14sp"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="2dp"
+            android:layerType="software"
+            android:src="@drawable/dotted_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <!--<android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_brands_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:paddingLeft="5dp"
+                />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/tabletpack" />
+
+                <TextView
+                    android:id="@+id/medicineRowPacking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="100s"
+                    android:textColor="@color/blackColor"
+                    android:textSize="12sp"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/note"
+                    android:layout_marginTop="2dp"/>
+
+                <TextView
+                    android:id="@+id/medicineRowPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Rs: 40"
+                    android:textColor="@color/blackColor"
+                    android:textSize="12sp"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/singlecapsule" />
+                <!--android:background="@drawable/fee_border"-->
+
+                <TextView
+                    android:id="@+id/medicineRowForm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Tab"
+                    android:textColor="@color/blackColor"
+                    android:textSize="12sp"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/docBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/bottombackground"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center">
+
+                <ImageView
+                    android:layout_width="@dimen/universalbarimgwidth"
+                    android:layout_height="@dimen/universalbarimgheight"
+                    android:layout_marginRight="@dimen/universalbarmarginright"
+                    android:src="@drawable/alarm" />
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ask"
+                    android:textColor="@color/universalbarcolor"
+                    android:textSize="@dimen/universalbartextsize"
+                    android:typeface="serif"
+                    android:gravity="center"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center">
+
+                <ImageView
+                    android:layout_width="@dimen/universalbarimgwidth"
+                    android:layout_height="17dp"
+                    android:layout_marginRight="@dimen/universalbarmarginright"
+                    android:src="@drawable/thumbsup" />
+
+                <TextView
+                    android:id="@+id/doctorRowNoOfThumbUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="20"
+                    android:textColor="@color/universalbarcolor"
+                    android:textSize="@dimen/universalbartextsize"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center">
+
+                <ImageView
+                    android:layout_width="@dimen/universalbarimgwidth"
+                    android:layout_height="@dimen/universalbarimgheight"
+                    android:layout_marginRight="@dimen/universalbarmarginright"
+                    android:src="@drawable/viewicon" />
+
+                <TextView
+                    android:id="@+id/doctorRowNoOfViews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="20"
+                    android:textColor="@color/universalbarcolor"
+                    android:textSize="@dimen/universalbartextsize"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shareLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center">
+
+                <ImageView
+                    android:layout_width="@dimen/universalbarimgwidth"
+                    android:layout_height="@dimen/universalbarimgheight"
+                    android:layout_marginRight="@dimen/universalbarmarginright"
+                    android:src="@drawable/prescription" />
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:textColor="@color/universalbarcolor"
+                    android:textSize="@dimen/universalbartextsize"
+                    android:typeface="serif"
+                    android:gravity="center"
+                    />-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/brand_page_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Drugs Used:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="Metoclopramide (HCL)" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_drugforms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="Drug Forms:"
+                    android:textColor="@color/redColor"
+                    android:textSize="@dimen/listingHeadingSize"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layerType="software"
+                    android:src="@drawable/dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+                    <!--android:background="#ffffff"-->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_drug_forms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_similar_brands"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="Similar Brands:"
+                    android:textColor="@color/redColor"
+                    android:textSize="@dimen/listingHeadingSize"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layerType="software"
+                    android:src="@drawable/dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+                    <!--android:background="#ffffff"-->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view_similar_brands"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_brand_page_indication"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Indication:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_brand_page_precaution"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Precautions:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_brand_page_contra_indication"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Contraindications:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_brand_page_dose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Dose:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_brand_page_side_effect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Side Effects:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_brand_page_mode_of_action"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Storage Conditions:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_brand_page_interaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Interaction"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_brand_page_pregnancy_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Pregnancy Type"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_brand_page_pregnancy_type_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:text="Pregnancy Type Description"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold"
+                            android:padding="2dp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_indications"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Indication: "
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layerType="software"
+                            android:src="@drawable/dotted_line" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Migraine, Nausea and vomiting, Psychosis, Reflux oesophagitis, Tardive dyskinesias, Gastritis, Flatulence, Postural hypotension, GI motality disorder, Defective lactation, Heart burn, Nausea and vomiting (chemotherapy induced), Delayed gastric emptying. " />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_precaution"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Precaution: "
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layerType="software"
+                            android:src="@drawable/dotted_line" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Patient should observe caution while driving or performing other tasks requiring alertness because it may produce drowsiness. Metoclopramide should be used with caution in patients with previously detected breast cancer.Children, Young adults &amp; elderly should be treated with care as they are at increased risk of extrapyramidal reactions. Care should be taken when metoclopramide is given to pateints with renal or hepatic impairment. " />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_contraIndication"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Contraindications: "
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layerType="software"
+                            android:src="@drawable/dotted_line" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Parkinsonism, Phaeochromocytoma, Dystonia, Pyloric stenosis. " />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_dose"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Dose: "
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layerType="software"
+                            android:src="@drawable/dotted_line" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Adult Dosage: "
+                            android:textColor="@color/redColor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1 to 5 mg      8 hourly      Oral " />
+
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Paedriatic Dosage (20kg): "
+                            android:textColor="@color/redColor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0.1 to 0.2 mg/kg    8 hourly     Oral " />
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Neonatal Dosage (3kg): "
+                            android:textColor="@color/redColor"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0.1 mg/kg 0.1    8 hourly    Oral " />
+
+
+
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_sideEffect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Side Effect: "
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layerType="software"
+                            android:src="@drawable/dotted_line" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="The severe or irreversible adverse effects of Metoclopramide (HCl), which give rise to further complications include Tardive dyskinesia, Parkinsonism, Acute dystonia, Acute porphyria, Acute dyskinesia, Extrapyramidal reactions. The signs and symptoms that are produced after the acute overdosage of Metoclopramide (HCl) include Tachycardia, Drowsiness, Drowsiness, Dystonia. The symptomatic adverse reactions produced by Metoclopramide (HCl) are more or less tolerable and if they become severe, they can be treated symptomatically, these include Drowsiness, Diarrhea, Akathisia, Skin rash, Impotence, Hypotension, Gynecomastia, Galactorrhea, Hypertension, Increase in heart rate, Hyperprolactinemia, Mental disturbances, neuroleptic disorder." />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_modeOfAction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Storage Conditions:"
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layerType="software"
+                            android:src="@drawable/dotted_line" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tab, Oral Soln Store in a well closed container, Below 40°C. Protect from Sunlight." />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_interaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Interaction: "
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layerType="software"
+                            android:src="@drawable/line_dark" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text " />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_pregnancyType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Pregnancy Type: "
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layerType="software"
+                            android:src="@drawable/line_dark" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text " />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brands_detail_pregnancyTypeDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="Pregnancy Type Description: "
+                            android:textColor="@color/redColor"
+                            android:textSize="@dimen/listingHeadingSize"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layerType="software"
+                            android:src="@drawable/line_dark" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text " />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

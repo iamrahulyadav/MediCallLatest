@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="8dp"
+    >
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="id"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:id="@+id/jobRequiredRowId"
+            android:visibility="gone"/>
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Job Title"
+            android:textColor="@color/redColor"
+            android:textSize="@dimen/listingHeadingSize"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+
+            android:id="@+id/jobRequiredRowTitle"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Prefer Gender "
+            android:textColor="@color/addressColor"
+            android:textSize="@dimen/addressSize"
+            android:typeface="serif"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/jobRequiredRowGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Male"
+            android:textColor="@color/addressColor"
+            android:textSize="@dimen/addressSize"
+            android:typeface="serif"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Job Location"
+            android:textColor="@color/addressColor"
+            android:textSize="@dimen/addressSize"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+
+        <TextView
+            android:id="@+id/jobRequiredRowLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lahore"
+            android:textColor="@color/addressColor"
+            android:textSize="@dimen/addressSize"
+            android:typeface="serif"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Age Limit"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/addressColor"
+                android:textSize="@dimen/addressSize"
+                android:typeface="serif"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="20 Years"
+                android:textColor="@color/addressColor"
+                android:textSize="@dimen/addressSize"
+                android:typeface="serif"
+                android:id="@+id/jobRequiredRowAge"/>
+
+
+        </LinearLayout>
+
+ </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.medicall.ranglerz.com.medicall.HospitalDetail"
+    tools:showIn="@layout/activity_hospital_detail"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/hospitalDetailLayout"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/cardview_light_background">
+
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+
+                    <!--<de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:id="@+id/hospitalRowProfileImg"-->
+                    <!--android:layout_width="45dp"-->
+                    <!--android:layout_height="45dp"-->
+                    <!--android:src="@drawable/banner"-->
+                    <!--app:civ_border_color="@color/imageCircularColor"-->
+                    <!--app:civ_border_width="@dimen/picture_circular"/>-->
+
+
+                    <ImageView
+                        android:id="@+id/hospitalRowProfileImg"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/name" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:id="@+id/hospitalId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="id"
+                        android:textSize="14sp"
+                        android:typeface="monospace"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/hospitalRowProfileLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="id"
+                        android:textSize="14sp"
+                        android:typeface="monospace"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/hospitalRowName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Farooq Hospital"
+                        android:textColor="@color/redColor"
+                        android:textSize="@dimen/listingHeadingSize"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"/>
+
+
+                    <TextView
+                        android:id="@+id/hospitalRowAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="2-asif block. Main Boulevard , Allama Iqbal Town, Lahore"
+                        android:textColor="@color/addressColor"
+                        android:textSize="@dimen/addressSize"
+                        android:typeface="serif"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/hospitalRowPanelDoc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Panel Doctor:"
+                            android:textSize="12sp"
+                            android:typeface="monospace" />
+
+
+                        <TextView
+                            android:id="@+id/hospitalRowNoOfDoc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="14"
+                            android:textSize="12sp"
+                            android:typeface="monospace"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/callicon"
+                            android:id="@+id/doctorCallBtn"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                >
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+
+
+                    <TextView
+                        android:id="@+id/hospitalKm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="14 KM"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/location_background_radious"
+                        />
+
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:layout_gravity="center"
+                    >
+
+
+                    <RatingBar
+                        android:id="@+id/doctorRowRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:theme="@style/RatingBar" />
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="12dp"-->
+                    <!--android:src="@drawable/starranking"-->
+                    <!--android:layout_gravity="left"/>-->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bottombackground"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:id="@+id/docBottomLayout"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center">
+
+
+
+                    <ImageView
+                        android:layout_width="@dimen/universalbarimgwidth"
+                        android:layout_height="@dimen/universalbarimgheight"
+                        android:src="@drawable/askicon"
+                        android:layout_marginRight="@dimen/universalbarmarginright"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ask"
+                        android:textColor="@color/universalbarcolor"
+                        android:textSize="@dimen/universalbartextsize"
+                        android:typeface="serif"
+                        android:gravity="center"/>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/universalbarimgwidth"
+                        android:layout_height="@dimen/universalbarimgheight"
+                        android:src="@drawable/thumbsup"
+                        android:layout_marginRight="@dimen/universalbarmarginright"/>
+
+
+                    <TextView
+                        android:id="@+id/doctorRowNoOfThumbUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textColor="@color/universalbarcolor"
+                        android:typeface="serif"
+                        android:textSize="@dimen/universalbartextsize"
+                        android:gravity="center"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/universalbarimgwidth"
+                        android:layout_height="@dimen/universalbarimgheight"
+                        android:src="@drawable/viewicon"
+                        android:layout_marginRight="@dimen/universalbarmarginright"/>
+
+                    <TextView
+                        android:id="@+id/hospitalRowNoOfViews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textColor="@color/universalbarcolor"
+                        android:textSize="@dimen/universalbartextsize"
+                        android:typeface="serif"
+                        android:gravity="center"
+                        />
+
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center"
+                    android:id="@+id/hospitalShareLayout">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/universalbarimgwidth"
+                        android:layout_height="@dimen/universalbarimgheight"
+                        android:src="@drawable/shareicon"
+                        android:layout_marginRight="@dimen/universalbarmarginright"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:textColor="@color/universalbarcolor"
+                        android:textSize="@dimen/universalbartextsize"
+                        android:typeface="serif"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tabHeight"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabTextAppearance="@style/TabTextAppearance"
+                app:tabIndicatorColor="@color/whiteColor"
+                app:tabIndicatorHeight="@dimen/tabIndicator"
+                />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

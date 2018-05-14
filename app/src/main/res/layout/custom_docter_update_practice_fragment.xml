@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framelayouta">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:paddingRight="10dp"
+        android:id="@+id/medicineCustomRow"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/black_dotted_line"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:id="@+id/tv_hospital_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Work Place Name"
+                android:textColor="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:inputType="text"
+                android:focusable="false"/>
+
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/precticeProgress"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/ll_prectice_day_time"
+            android:animateLayoutChanges="true">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:orientation="horizontal"
+                    android:animateLayoutChanges="true">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.899"
+                        android:layout_marginRight="2dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/edittext_background">
+
+                            <Button
+                                android:id="@+id/bt_select_day"
+                                style="@style/Widget.AppCompat.Spinner"
+                                android:layout_width="match_parent"
+                                android:onClick="selectDaysFromDropDown"
+                                android:layout_height="wrap_content"
+                                android:text="Day"
+                                tools:ignore="OnClick"
+                                android:textColor="@color/hintColor"
+                                android:textSize="10sp"/>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp">
+
+
+                        <EditText
+                            android:id="@+id/et_startTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/edittext_background"
+                            android:hint="Start Time"
+                            android:onClick="startTimePicker"
+                            android:inputType="text"
+                            android:focusable="false"
+                            tools:ignore="OnClick"
+                            android:textColor="@color/hintColor"
+                            android:textSize="@dimen/hintSize"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="6dp">
+
+
+                        <EditText
+                            android:id="@+id/et_endtime"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="@drawable/edittext_background"
+                            android:hint="End Time"
+                            android:onClick="endTimePicker"
+                            android:inputType="text"
+                            android:focusable="false"
+                            tools:ignore="OnClick"
+                            android:textColor="@color/hintColor"
+                            android:textSize="@dimen/hintSize"/>
+
+
+                    </LinearLayout>
+
+                    <!--      <ImageView
+                              android:id="@+id/iv_remove_timing"
+                              android:layout_width="15dp"
+                              android:layout_height="15dp"
+                              android:layout_marginLeft="4dp"
+                              android:src="@drawable/crose_icon_timing"
+                              android:layout_gravity="center|right"/>-->
+
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/iv_add_timing"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/add_icon_timing"
+                    android:layout_gravity="top|right"/>
+                <ImageView
+                    android:id="@+id/iv_remove_timing"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/crose_icon_timing"
+                    android:layout_gravity="top|right"
+                    android:visibility="gone"/>
+            </FrameLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/edittext_background">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Rs."
+                    android:textSize="@dimen/hintSize"
+                    android:textColor="@color/blueColor"
+                    android:gravity="center"/>
+                <EditText
+                    android:layout_weight="0.2"
+                    android:id="@+id/et_minprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Min Fee"
+                    android:paddingLeft="4dp"
+                    android:background="@null"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:inputType="number" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/edittext_background">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Rs."
+                    android:textSize="@dimen/hintSize"
+                    android:textColor="@color/blueColor"
+                    android:gravity="center"/>
+
+                <EditText
+                    android:id="@+id/et_maxprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:paddingLeft="4dp"
+                    android:hint="Max Fee"
+                    android:layout_weight="0.2"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="-5dp"
+            >
+
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Offer any discount package ?"
+                android:id="@+id/discountPackageSwitch"
+                android:textColor="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:textOn="Yes"
+                android:textOff="No" />
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/discountTableLayout"
+            android:layout_marginTop="-5dp">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Check Up "
+                    android:textColorHint="@color/blackColor"
+                    android:textSize="@dimen/hintSize"
+                    android:textColor="@color/whiteColor"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"
+                    android:gravity="center"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Procedure"
+                    android:textColorHint="@color/blackColor"
+                    android:textSize="@dimen/hintSize"
+                    android:textColor="@color/whiteColor"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"
+                    android:gravity="center"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Other"
+                    android:textColorHint="@color/blackColor"
+                    android:textSize="@dimen/hintSize"
+                    android:textColor="@color/whiteColor"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="center"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_marginTop="-10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edittext_background">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="10"
+                        android:id="@+id/checkUpPercent"
+                        android:inputType="text"
+                        android:background="@null"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+                        android:gravity="center"
+                        android:layout_weight="0.2" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textColor="@color/blueColor"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edittext_background">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="10"
+                        android:id="@+id/procedurePercent"
+                        android:inputType="text"
+                        android:background="@null"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+                        android:gravity="center"
+                        android:layout_weight="0.2" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textColor="@color/blueColor"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edittext_background">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="10"
+                        android:id="@+id/otherPercent"
+                        android:inputType="text"
+                        android:background="@null"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+                        android:gravity="center"
+                        android:layout_weight="0.2" />
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textColor="@color/blueColor"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:hint="Write about other package "
+            android:id="@+id/writeAboutOtherPercent"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="3"
+            android:gravity="top|left"
+            android:maxLines="10"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:layout_marginTop="-5dp"
+            android:textColorHint="@color/hintColor"
+            android:textSize="@dimen/hintSize"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_delete_item"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="right"
+        android:src="@drawable/cross"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/whiteColor"
+        android:layout_gravity="bottom"
+        android:text="abc"
+        android:textColor="@color/whiteColor"
+        android:id="@+id/textview_line"
+        android:visibility="gone"/>
+
+</FrameLayout>
+

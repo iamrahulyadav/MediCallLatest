@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/formBackground">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Please Writ Your Report Detail"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/whiteColor"
+        android:textSize="18sp"/>
+
+
+
+    <EditText
+        android:id="@+id/et_dialog_report"
+        android:layout_below="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bottom_line"
+        android:hint="Wiret Report"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="top"
+        android:paddingTop="10dp"
+        android:textSize="16sp"
+        android:textColorHint="@color/hintColor"
+        android:textColor="@color/blackColor"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:lines="10"
+        android:maxLines="10"
+        android:minLines="7"
+        android:scrollbars="vertical"/>
+
+    <Button
+        android:id="@+id/bt_dialog_submit_report"
+        android:layout_below="@+id/et_dialog_report"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/buttom_press_state"
+        android:textSize="14sp"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/whiteColor"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"/>
+
+
+</RelativeLayout>

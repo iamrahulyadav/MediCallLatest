@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="horizontal" android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:layout_marginRight="10dp"
+android:padding="5dp"
+    >
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:id="@+id/hospitalRowId"/>
+
+<!--<de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/tabImage"-->
+    <!--android:layout_width="32dp"-->
+    <!--android:layout_height="32dp"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@drawable/doctor"-->
+    <!--app:civ_border_color="@color/imageCircularColor"-->
+    <!--app:civ_border_width="@dimen/picture_circular" />-->
+
+
+    <ImageView
+        android:id="@+id/tabImage"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/doctor"
+        />
+
+<TextView
+    android:id="@+id/tabContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:text="Muhammad Adeel"
+    android:textColor="@color/blackColor"
+    android:textSize="11sp"
+    android:textStyle="bold"
+    android:typeface="sans"
+    android:layout_gravity="center"/>
+
+</LinearLayout>

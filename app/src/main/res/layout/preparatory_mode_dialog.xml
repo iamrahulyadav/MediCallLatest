@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/formBackground">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Exam Criteria :"
+            android:textColor="@color/whiteColor"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:background="@drawable/edittext_bottom_line"
+            android:gravity="center"
+            android:visibility="gone">
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/modeRadioGroup"
+                android:layout_weight="1">
+
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Preparatory Mode"
+                    android:textSize="@dimen/genderTextMale"
+                    android:textColor="@color/blackColor"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/genderTextFeMale"
+                    android:text="Exam Mode"
+                    android:textColor="@color/blackColor"
+                    android:layout_weight="1"/>
+
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Question"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/blackColor"
+            android:layout_marginTop="10dp"/>
+
+
+
+
+
+        <SeekBar
+            android:id="@+id/numOfQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="4"
+            android:theme="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:progressDrawable="@drawable/custom_seekbar"
+            android:layout_marginTop="10dp"
+            android:thumb="@drawable/seekbarthumbfortest"
+            style="@style/SeekBarWithoutSteps"
+            android:thumbTintMode="multiply"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_weight="1"
+                android:layout_marginLeft="14dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="9dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="2dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="150"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="-15dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Time (mins)"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:textSize="14sp"
+            android:textColor="@color/blackColor"/>
+
+
+        <SeekBar
+            android:id="@+id/minForExam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="6"
+            android:theme="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_marginTop="10dp"
+            android:progressDrawable="@drawable/custom_seekbar"
+            android:thumb="@drawable/seekbarthumbfortest"
+            style="@style/SeekBarWithoutSteps"
+            android:thumbTintMode="multiply"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="7dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="8dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="60"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="2dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="90"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="-2dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="120"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="-10dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="150"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="180"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:textSize="13sp"
+                android:textColor="@color/redColor"/>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@drawable/edittext_bottom_line"
+            android:layout_marginTop="20dp"
+            android:id="@+id/selectSpecialitySpinnerLayout">
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/selectSpecialitySpinner" />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@drawable/edittext_bottom_line"
+            android:layout_marginTop="20dp"
+            android:id="@+id/selectYearSpinnerLayout">
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/selectYearSpinner" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@drawable/edittext_bottom_line"
+            android:layout_marginTop="20dp"
+            android:id="@+id/selectMonthSpinnerLayout">
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/selectMonthSpinner" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@drawable/edittext_bottom_line"
+            android:layout_marginTop="20dp"
+            android:id="@+id/selectSubjectSpinnerLayout">
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/selectSubjectSpinner" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@drawable/edittext_bottom_line"
+            android:layout_marginTop="20dp"
+            android:id="@+id/difficultyLevelSpinnerLayout">
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/difficultyLevelSpinner" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@drawable/edittext_bottom_line"
+            android:layout_marginTop="20dp"
+            android:id="@+id/paperTypeSpinnerLayout">
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/paperTypeSpinner" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@drawable/edittext_bottom_line"
+            android:layout_marginTop="20dp"
+            android:id="@+id/subjectUnitSpinnerLayout"
+            android:visibility="gone">
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/subjectUnitSpinner" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:text="Start Exam"
+            android:id="@+id/startExam"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="16sp"
+            android:background="@drawable/buttom_press_state"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

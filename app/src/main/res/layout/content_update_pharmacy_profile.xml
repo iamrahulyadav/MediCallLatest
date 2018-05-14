@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.medicall.ranglerz.com.medicall.UpdatePharmacyProfile"
+    tools:showIn="@layout/activity_update_pharmacy_profile"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/pharmacyProfileImg"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:src="@drawable/doctor"-->
+                <!--app:civ_border_color="@color/imageCircularColor"-->
+                <!--app:civ_border_width="@dimen/picture_circular" />-->
+
+
+            <ImageView
+                android:id="@+id/pharmacyProfileImg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/doctor"
+                />
+
+
+
+            <EditText
+                android:id="@+id/signUpName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Pharmacy Name"
+                android:inputType="text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+            <EditText
+                android:id="@+id/signUpMobile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Mobile No."
+                android:inputType="phone"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+
+                />
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Land Line"
+                android:inputType="phone"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/signUpSelectDesignationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line">
+
+                <Button
+                    android:id="@+id/signUpSelectDesignation"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Timing"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Address"
+                android:inputType="text"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2dp">
+
+                    <Button
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2dp">
+
+                    <Button
+
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Area"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="License No"
+                android:id="@+id/signUpLicenceNo"
+                android:inputType="text"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+
+                />
+
+            <EditText
+                android:id="@+id/contact_us_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="About Pharmacy"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="3"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/select_pharmacy_picture_layout"
+                android:background="@drawable/order_medicine_dotted_line"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cameragallery"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Licence Image"
+                    android:textColor="@color/blackColor"
+                    android:textSize="14sp"
+                    android:typeface="serif"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="5dp"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/order_medicine_dotted_line"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:id="@+id/pharmacy_picture_layout"
+                android:gravity="center"
+                android:padding="@dimen/crossImagePadding"
+                android:visibility="gone"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/imageWidth"
+                        android:layout_height="@dimen/imageHeight"
+                        android:src="@drawable/name"
+                        android:id="@+id/pharmacy_prescription_img"
+                        android:padding="@dimen/crossImagePadding"
+                        android:scaleType="fitXY"
+                        />
+
+                    <ImageView
+                        android:layout_width="@dimen/crossImageWidth"
+                        android:layout_height="@dimen/crossImageHeight"
+                        android:id="@+id/pharmacyRemoveImage"
+                        android:src="@drawable/cross"
+                        android:layout_gravity="right"
+                        android:scaleType="fitXY"/>
+
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Update Profile"
+                android:id="@+id/signUpBtn"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:layout_marginBottom="@dimen/buttonMarginBottom"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/buttom_press_state"
+                android:layout_marginLeft="@dimen/button_margin_left"
+                android:layout_marginRight="@dimen/button_margin_right" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

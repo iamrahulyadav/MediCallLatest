@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dp"
+    android:layout_height="210dp"
+    android:background="@color/formBackground"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:text="Advance Search"
+        android:textSize="20sp"
+        android:textColor="@color/whiteColor"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_bottom_line">
+
+
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="10dp"
+        android:hint="Search"
+        android:layout_weight="2"
+         android:background="@null"/>
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/advanceSearchBar"
+                android:layout_gravity="right|center"
+                android:visibility="gone"
+                android:layout_centerVertical="true" />
+
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mainSearchRadioGroup"
+            android:layout_marginTop="10dp">
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctors"
+                android:id="@+id/mainSearchDoctors"
+                android:checked="true"/>
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hospitals"
+                android:id="@+id/mainSearchHospitals"/>
+
+
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Pharmacies"-->
+                <!--android:id="@+id/mainSearchPharmacies"/>-->
+
+
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Labs"-->
+                <!--android:id="@+id/mainSearchLabs"/>-->
+
+        </RadioGroup>
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

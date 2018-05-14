@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custome_login_gradian_back_drawable">
+
+
+    <RelativeLayout
+        android:id="@+id/rr_center_segment"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <RelativeLayout
+            android:id="@+id/iv_circular"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/login_circulor_icon"
+            android:layout_centerHorizontal="true">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:src="@drawable/login_center_login"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/login_segment_back_drawable"
+            android:layout_centerInParent="true">
+
+            <!-- <TextView
+                 android:id="@+id/tv_title"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:text="Sgin In"
+                 android:textSize="22sp"
+                 android:textColor="@color/whiteColor"
+                 android:layout_marginTop="20dp"/>-->
+
+            <LinearLayout
+                android:layout_below="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp">
+
+                <RelativeLayout
+                    android:id="@+id/rr_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edittext_background">
+
+
+                    <ImageView
+                        android:id="@+id/im_login"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/username"
+                        android:layout_centerVertical="true" />
+                    <TextView
+                        android:layout_toRightOf="@+id/im_login"
+                        android:layout_width="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundTranspearent"/>
+
+                    <EditText
+                        android:id="@+id/doctorSignInEmail"
+                        android:inputType="text"
+                        android:layout_toRightOf="@+id/im_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Username/Email/Phone"
+                        android:textSize="14sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rr_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_background">
+
+
+                    <ImageView
+                        android:id="@+id/im_login_2"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/password"
+                        android:tint="@color/landingScreenBackgroundColor"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:layout_toRightOf="@+id/im_login_2"
+                        android:layout_width="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundTranspearent"/>
+
+                    <EditText
+                        android:id="@+id/doctorSignInPass"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:layout_toRightOf="@+id/im_login_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:layout_centerVertical="true"
+                        android:background="@null"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp">
+
+                    <Button
+                        android:id="@+id/doctorSignUpButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Create Account"
+                        android:textAllCaps="false"
+                        android:layout_weight="1"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/buttom_press_state"
+                        android:textColor="@color/whiteColor"/>
+                    <Button
+                        android:id="@+id/doctorSignInBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Login"
+                        android:layout_weight="1"
+                        android:textAllCaps="false"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/buttom_press_state"
+                        android:textColor="@color/whiteColor"/>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/doctorSignInForgetPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot Password?"
+                    android:textColor="@color/whiteColor"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/rr_center_segment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/whiteColor"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/doctorSignInFb"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:background="@drawable/drawable_socoail_background">
+
+
+                <ImageView
+                    android:id="@+id/iv_fb"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/facebook"
+                    android:tint="@color/noAvailableColor"/>
+
+                <TextView
+                    android:id="@+id/tv_fb"
+                    android:layout_toRightOf="@+id/iv_fb"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login With Facebook"
+                    android:textSize="11sp"
+                    android:textColor="@color/noAvailableColor"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/doctorSignInGmail"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/drawable_socoail_background">
+
+
+                <ImageView
+                    android:id="@+id/iv_google"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/google"
+                    android:tint="#800000"/>
+                <TextView
+                    android:id="@+id/tv_google"
+                    android:layout_toRightOf="@+id/iv_google"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login With Google"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="@color/noAvailableColor"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+
+            <!-- <Button
+                 android:layout_width="150dp"
+                 android:layout_height="30dp"
+                 android:text="Login with Gmail"
+                 android:drawableLeft="@drawable/google"
+                 android:drawablePadding="@dimen/drawable_padding"
+                 android:id="@+id/doctorSignInGmail"
+                 android:textAllCaps="false"
+                 android:layout_weight="1"
+                 android:background="@drawable/google_button_style"
+                 android:textColor="#ffffff"
+                 android:textSize="12sp"
+                 android:layout_marginLeft="4dp"
+                 android:layout_gravity="center"
+                 android:paddingLeft="5dp"
+                 />-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dp"
+    android:layout_height="270dp"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/custom_dialog_round_border"
+    >
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/free_consultation_avatar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/avatar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatar"
+        android:id="@+id/textlayout"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your are about to call for free consultation"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click yes to make a call"
+            android:gravity="center"
+            android:layout_marginTop="5dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:layerType="software"
+            android:src="@drawable/dotted_line" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textlayout"
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/yesCall"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/noCall"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.medicall.ranglerz.com.medicall.BloodFacts"
+    tools:showIn="@layout/activity_blood_facts"
+    android:background="@color/formBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tips for a Successful Donation"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By following a few recommendations before, during and after your blood donation can help you make your donation experience as safe, successful and pleasant as possible."
+                android:textSize="14sp"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="5dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Before Your Donation"
+                android:textSize="16sp"
+                android:textColor="@color/redColor"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="5dp"
+                android:text="•	Maintain a healthy iron level in your diet by eating iron rich foods, such as red meat, fish, poultry, beans, spinach, iron-fortified cereals and raisins.\n
+•	Get a good night's sleep.\n
+•	Drink an extra 16 oz. of water or nonalcoholic fluids before the donation.\n
+•	Eat a healthy meal before your donation. Avoid fatty foods, such as hamburgers, fries or ice cream before donating. (Fatty foods can affect the tests we do on your blood. If there is too much fat in your blood, your donation cannot be tested for infectious diseases and the blood will not be used for transfusion.)\n
+•	If you are a platelet donor, remember that your system must be free of aspirin for two days prior to donation.\n
+•	Remember to bring your donor card, driver's license or two other forms of ID."/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="During Your Donation"
+                android:textSize="16sp"
+                android:textColor="@color/redColor"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="5dp"
+                android:text="•	Wear clothing with sleeves that can be raised above the elbow.\n
+•	Let the person taking your blood know if you have a preferred arm and show them any good veins that have been used successfully in the past to draw blood.\n
+•	Relax, listen to music, talk to other donors or read during the donation process.\n
+•	Take the time to enjoy a snack and a drink in the refreshments area immediately after donating."/>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After Your Donation"
+                android:textSize="16sp"
+                android:textColor="@color/redColor"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/blackColor"
+                android:layout_marginTop="5dp"
+                android:text="•	Drink an extra four (8 ounce) glasses of liquids and avoid alcohol over the next 24 hours.\n
+•	Keep the strip bandage on for the next several hours.\n
+•	To avoid a skin rash, clean the area around the strip bandage with soap and water.\n
+•	Do not do any heavy lifting or vigorous exercise for the rest of the day.\n
+•	If the needle site starts to bleed, apply pressure to it and raise your arm straight up for about 5-10 minutes or until bleeding stops.\n
+•	If you experience dizziness or lightheadedness after donation, stop what you are doing and sit down or lie down until you feel better. Avoid performing any activity where fainting may lead to injury for at least 24 hours."/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

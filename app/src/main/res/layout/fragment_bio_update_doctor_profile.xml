@@ -1,0 +1,751 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="themedicall.com.BioUpdateDoctorProfile"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/bioAboutMe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="About Me"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+
+            <org.apmem.tools.layouts.FlowLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/fl_for_reegistration">
+
+            </org.apmem.tools.layouts.FlowLayout>
+
+
+
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_background"
+                android:gravity="top|left"
+                android:hint="Registration"
+                android:id="@+id/bioRegistration"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="3"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"/>
+
+
+
+
+            <org.apmem.tools.layouts.FlowLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/fl_for_institution">
+
+            </org.apmem.tools.layouts.FlowLayout>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_background"
+                android:gravity="top|left"
+                android:hint="Institutions"
+                android:id="@+id/bioInstitution"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="3"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"/>
+
+
+            <org.apmem.tools.layouts.FlowLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/fl_for_experties">
+
+            </org.apmem.tools.layouts.FlowLayout>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_background"
+                android:gravity="top|left"
+                android:hint="Expertise"
+                android:id="@+id/bioExpertise"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="3"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"/>
+
+
+
+
+
+
+            <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/edittext_background"-->
+            <!--android:hint="Services"-->
+            <!--android:id="@+id/bioServices"-->
+            <!--android:inputType="textMultiLine"-->
+            <!--android:lines="8"-->
+            <!--android:minLines="3"-->
+            <!--android:gravity="top|left"-->
+            <!--android:maxLines="10"-->
+            <!--android:padding="10dp"-->
+            <!--android:scrollbars="vertical"-->
+            <!--android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"-->
+            <!--android:textColorHint="@color/hintColor"-->
+            <!--android:textSize="@dimen/hintSize"-->
+            <!--/>-->
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Achievements"
+                android:id="@+id/bioAchievements"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Publications"
+                android:id="@+id/bioPublications"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Other Extra Curricular Activities"
+                android:id="@+id/bioExtraCurricular1"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:visibility="gone"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Work Experience"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/bioWorkExperience"
+                    android:padding="10dp"
+                    android:layout_weight="0.2"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Year"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:visibility="gone">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Offer any discount package ?"
+                    android:id="@+id/discountPackageSwitch"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:textOn="Yes"
+                    android:textOff="No"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:background="@drawable/edittext_background"-->
+            <!--android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"-->
+            <!--&gt;-->
+
+            <!--<Switch-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:checked="false"-->
+            <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+            <!--android:text="Want to join Medicall discount panel ?"-->
+            <!--/>-->
+
+            <!--</LinearLayout>-->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/discountTableLayout"
+                android:visibility="gone">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Check Up "
+                        android:textColorHint="@color/blackColor"
+                        android:textSize="@dimen/hintSize"
+                        android:textColor="@color/blackColor"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:gravity="center"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Procedure"
+                        android:textColorHint="@color/blackColor"
+                        android:textSize="@dimen/hintSize"
+                        android:textColor="@color/blackColor"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_marginRight="3dp"
+                        android:gravity="center"/>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Other"
+                        android:textColorHint="@color/blackColor"
+                        android:textSize="@dimen/hintSize"
+                        android:textColor="@color/blackColor"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="-10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_background">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:hint="10"
+                            android:id="@+id/checkUpPercent"
+                            android:inputType="text"
+                            android:background="@null"
+                            android:textColorHint="@color/hintColor"
+                            android:textSize="@dimen/hintSize"
+                            android:gravity="center"
+                            android:layout_weight="0.2" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textColor="@color/blueColor"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_background">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:hint="10"
+                            android:id="@+id/procedurePercent"
+                            android:inputType="text"
+                            android:background="@null"
+                            android:textColorHint="@color/hintColor"
+                            android:textSize="@dimen/hintSize"
+                            android:gravity="center"
+                            android:layout_weight="0.2" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textColor="@color/blueColor"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_background">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:hint="10"
+                            android:id="@+id/otherPercent"
+                            android:inputType="text"
+                            android:background="@null"
+                            android:textColorHint="@color/hintColor"
+                            android:textSize="@dimen/hintSize"
+                            android:gravity="center"
+                            android:layout_weight="0.2" />
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textColor="@color/blueColor"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Write about other package "
+                android:id="@+id/writeAboutOtherPercent"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                >
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Want to join Medicall welfare panel ?"
+                    android:id="@+id/welfarePanelSwitch"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:textOn="Yes"
+                    android:textOff="No"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="left|center"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:id="@+id/welfarePanelLayout">
+
+
+
+                <!--<RadioGroup-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:id="@+id/signUpGenderRadioGroup"-->
+                <!--android:layout_marginLeft="20dp">-->
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Social Media Awareness"
+                    android:id="@+id/socialMediaCheckBox"
+                    android:textSize="@dimen/genderTextMale"
+                    android:textColor="@color/blackColor"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Live Video Session"
+                    android:id="@+id/queriesAnswerCheckBox"
+                    android:textSize="@dimen/genderTextMale"
+                    android:textColor="@color/blackColor"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/genderTextFeMale"
+                    android:text="Medical Camp"
+                    android:id="@+id/medicalCampCheckBox"
+                    android:textColor="@color/blackColor"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/genderTextFeMale"
+                    android:text="Blood Camp"
+                    android:id="@+id/bloodCampCheckBox"
+                    android:textColor="@color/blackColor"/>
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/genderTextFeMale"
+                    android:text="Health Article"
+                    android:id="@+id/healthArticleCheckBox"
+                    android:textColor="@color/blackColor"/>
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/genderTextFeMale"
+                    android:text="Other"
+                    android:textColor="@color/blackColor"
+                    android:id="@+id/otherCheckBox"/>
+
+                <!--</RadioGroup>-->
+
+
+
+            </LinearLayout>
+
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Write about other Welfare Panel "
+                android:id="@+id/writeAboutOtherWelfarePanel"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                >
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Available for Video Consultation ?"
+                    android:id="@+id/videoConsultationSwitch"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:textOn="Yes"
+                    android:textOff="No"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                >
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Available for Home Care Service ?"
+                    android:id="@+id/homeCareServiceSwitch"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:textOn="Yes"
+                    android:textOff="No"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Want to Become a Blood Donor ?"
+                    android:id="@+id/becomeBloodDonorSwitch"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:textOn="Yes"
+                    android:textOff="No"
+                    />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/bioExtraCurricular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Other Extra Curricular Activities"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+            <EditText
+                android:id="@+id/et_video_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Video Url"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_select_muliti_photo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/add_image"
+                    android:layout_centerHorizontal="true"/>
+
+                <GridView
+                    android:layout_below="@+id/iv_select_muliti_photo"
+                    android:id="@+id/PhoneImageGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:verticalSpacing="15dp"
+
+                    android:numColumns="4">
+
+                </GridView>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:layout_marginBottom="@dimen/buttonMarginBottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Exit"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/button_text_size"
+                    android:background="@drawable/buttom_press_state"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/updateProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/button_text_size"
+                    android:background="@drawable/buttom_press_state"
+                    android:layout_weight="1"/>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

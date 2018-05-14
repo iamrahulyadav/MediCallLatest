@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="280dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/formBackground">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Set Medicine Reminder"
+        android:background="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textColor="@color/whiteColor"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="Medicine Name"
+        android:id="@+id/medicineName"
+        android:inputType="text"
+        android:background="@drawable/edittext_bottom_line"
+        android:textColorHint="@color/hintColor"
+        android:textSize="@dimen/hintSize"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal"
+        android:gravity="left|center"
+        android:id="@+id/medicineTimeLayout"
+        android:background="@drawable/edittext_bottom_line"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:id="@+id/medicineTime"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/genderTextSize"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/plus_icon"
+            android:layout_marginRight="10dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal"
+        android:gravity="left|center"
+        android:background="@drawable/edittext_bottom_line"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textColor="@color/hintColor"
+            android:textSize="@dimen/genderTextSize"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Spinner
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/medicineQuantity"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Submit"
+                android:id="@+id/medicineReminderSubmit"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/buttonMarginBottom"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/buttom_press_state"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Cancel"
+                android:id="@+id/medicineReminderCancle"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="@dimen/buttonMarginBottom"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/buttom_press_state"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

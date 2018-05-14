@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="themedicall.com">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SelectSignUpOptions"
+            android:label="@string/title_activity_select_doctor_or_patient"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignIn"
+            android:label="@string/title_activity_doctor_sign_in"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignUp"
+            android:label="@string/title_activity_doctor_sign_up"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ForgetPassword"
+            android:label="@string/title_activity_forget_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".NavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SelectSpecialityForFindDoc"
+            android:label="@string/title_activity_select_disease_type"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ContactUs"
+            android:label="@string/title_activity_contact_us"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".PrivacyPolicy"
+            android:label="@string/title_activity_privacy_policy"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Blood"
+            android:label="@string/title_activity_blood"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".Jobs"
+            android:label="@string/title_activity_jobs"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".AskAQuestion"
+            android:label="@string/title_activity_ask_aquestion"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Blog"
+            android:label="@string/title_activity_tips"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HomeCare"
+            android:label="@string/title_activity_home_care"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Hospitals"
+            android:label="@string/title_activity_hospitals"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FindDoctor"
+            android:label="@string/title_activity_find_doctor"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Emergency"
+            android:label="@string/title_activity_emergency_contact"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DiscountedOffers"
+            android:label="@string/title_activity_discounted_offers"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Labs"
+            android:label="@string/title_activity_labs"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Pharmacy"
+            android:label="@string/title_activity_pharmacy"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".AskQuestionFromDoctor"
+            android:label="@string/title_activity_ask_question_from_doctor"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DoctorDetail"
+            android:label="@string/title_activity_doctor_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BloodGroupListing"
+            android:label="@string/title_activity_blood_group_listing"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AppIntoTutorial"
+            android:label="@string/title_activity_app_into_tutorial"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HealthEvents"
+            android:label="@string/title_activity_health_events"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ViewLabTestReport"
+            android:label="@string/title_activity_view_lab_test_report"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MedTools"
+            android:label="@string/title_activity_medicine_reminder"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MedicalRecord"
+            android:label="@string/title_activity_medical_record"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".UpdateDoctorProfile"
+            android:label="@string/title_activity_update_doctor_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PharmacyDetail"
+            android:label="@string/title_activity_pharmacy_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LabDetail"
+            android:label="@string/title_activity_lab_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UpdateHospitalProfile"
+            android:label="@string/title_activity_update_hospital_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UpdatePharmacyProfile"
+            android:label="@string/title_activity_update_pharmacy_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UpdateLabProfile"
+            android:label="@string/title_activity_update_lab_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/place_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".HospitalDetail"
+            android:label="@string/title_activity_hospital_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MultiPhotoSelectActivity" />
+        <activity
+            android:name=".PinVerification"
+            android:label="@string/title_activity_pin_verification"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service
+            android:name=".Services.GetAllDoctorDetailService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.GettingAllHospitalListService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.GetAllCitiesListService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".BroadCasts.MyReceiverForNetworkDialog"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MapActivityForSelectingHospital" />
+
+        <receiver
+            android:name=".BroadCasts.CheckConnectivity"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+            <activity
+            android:name="themedicall.com.ViewLabReports"
+            android:label="@string/title_activity_view_lab_reports"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        -->
+        <activity
+            android:name=".AppealBlood"
+            android:label="@string/title_activity_appeal_blood"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".MapForAppealBlood" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".EmergencyContact"
+            android:label="@string/title_activity_emergency_contact"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EmergencyCenter"
+            android:label="@string/title_activity_emergency_center"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BlogPostForSpecificCategory"
+            android:label="@string/title_activity_blog_post_for_specific_category"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".BlogSinglePost"
+            android:label="@string/title_activity_single_post"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MediaPediaSection.MediPedia"
+            android:label="@string/title_activity_medi_pedia"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MediaPediaSection.FindBrand"
+            android:label="@string/title_activity_find_brand"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MediaPediaSection.BrandPage"
+            android:label="@string/title_activity_brand_page"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MediaPediaSection.CompnyDetail"
+            android:label="@string/title_activity_compny_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".PinVerificationForForgotPassword" />
+        <activity
+            android:name=".BloodComptatibility"
+            android:label="@string/title_activity_blood_comptatibility"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".BloodFacts"
+            android:label="@string/title_activity_blood_facts"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MediStudySection.MediStudy"
+            android:label="@string/title_activity_medi_study"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SignUpAmbulance"
+            android:label="@string/title_activity_sign_upambulance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service android:name=".Notifications.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Notifications.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".BMICalculator"
+            android:label="@string/title_activity_bmicalculator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PregnancyCalculator"
+            android:label="@string/title_activity_pregnancy_calculator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StepCounter"
+            android:label="@string/title_activity_step_counter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignUpForAliedHealth"
+            android:label="@string/title_activity_sign_up_for_alied_health"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MedAlarm"
+            android:label="@string/title_activity_med_alarm"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name=".BroadCasts.AlarmReceiver" />
+
+        <activity
+            android:name=".MediStudySection.MediStudyProgramList"
+            android:label="@string/title_activity_medi_study_subject_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MediStudySection.MediStudyExamMode"
+            android:label="@string/title_activity_medi_study_question_test"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MediStudySection.MediStudyExamModeSkipped"
+            android:label="@string/title_activity_medi_study_skipped_question"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MediStudySection.MediStudyPreparatoryMode"
+            android:label="@string/title_activity_medi_study_preparatory_mode"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MediStudySection.MediStudyPreparatoryModeSkipped"
+            android:label="@string/title_activity_medi_study_preparatory_mode_skipped"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MediStudySection.MediStudyBookDownload"
+            android:label="@string/title_activity_medi_study_book_download"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MediStudySection.MediStudyFlashSpotSlides"
+            android:label="@string/title_activity_medi_study_flash_spot_slides"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MedicSignup"
+            android:label="@string/title_activity_medic_signup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UpdateAliedHelathProfile"
+            android:label="@string/title_activity_update_alied_helath_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".Services.UploadProfileImageService"
+            android:enabled="true"
+            android:exported="true"></service>
+    </application>
+
+</manifest>

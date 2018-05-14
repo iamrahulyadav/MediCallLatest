@@ -1,0 +1,21 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appcompat="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/action_settings"-->
+        <!--app:showAsAction="never" />
+
+        -->
+
+    <item
+        android:id="@+id/menu_search"
+        android:title="Search Ad"
+        appcompat:actionViewClass="android.support.v7.widget.SearchView"
+        appcompat:showAsAction="always|collapseActionView"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:icon="@android:drawable/ic_menu_search"/>
+
+</menu>

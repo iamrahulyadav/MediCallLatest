@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/ll_prectice_day_time"
+        android:animateLayoutChanges="true">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-4dp"
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.899"
+                    android:layout_marginRight="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edittext_background">
+
+                        <Button
+                            android:id="@+id/bt_select_day"
+                            style="@style/Widget.AppCompat.Spinner"
+                            android:layout_width="match_parent"
+                            android:onClick="selectDaysFromDropDown"
+                            android:layout_height="wrap_content"
+                            android:text="Day"
+                            android:textColor="@color/hintColor"
+                            android:textSize="10sp"
+                            tools:ignore="OnClick" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2dp">
+
+
+                    <EditText
+                        android:id="@+id/et_startTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="Start Time"
+                        android:onClick="startTimePicker"
+                        android:inputType="text"
+                        android:focusable="false"
+                        tools:ignore="OnClick"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="6dp">
+
+
+                    <EditText
+                        android:id="@+id/et_endtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="End Time"
+                        android:onClick="endTimePicker"
+                        android:inputType="text"
+                        android:focusable="false"
+                        tools:ignore="OnClick"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize"/>
+
+
+                </LinearLayout>
+
+                <!--      <ImageView
+                          android:id="@+id/iv_remove_timing"
+                          android:layout_width="15dp"
+                          android:layout_height="15dp"
+                          android:layout_marginLeft="4dp"
+                          android:src="@drawable/crose_icon_timing"
+                          android:layout_gravity="center|right"/>-->
+
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/iv_remove_timing"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/crose_icon_timing"
+                android:layout_gravity="top|right" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

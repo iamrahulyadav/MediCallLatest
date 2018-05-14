@@ -1,0 +1,574 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MedicineReminderDateFragment"
+    android:background="@color/formBackground">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_morning_tag"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/alarmStripBackground">
+
+
+                <ImageView
+                    android:id="@+id/im_morning"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/morning_icon"
+                    android:layout_marginLeft="15dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im_morning"
+                    android:layout_centerHorizontal="true"
+                    android:text="Morning"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="4dp"
+                    android:layout_marginLeft="6dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/red_circle_alarm"
+                        android:layout_marginRight="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:id="@+id/NoOfTakeMedicineForMorning"
+                            android:textColor="@color/whiteColor"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/black_circle_alarm"
+                        android:layout_marginRight="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:id="@+id/NoOfSkipMedicineForMorning"
+                            android:textColor="@color/whiteColor"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_plus_minus_morning"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp">
+
+
+                        <ImageView
+                            android:id="@+id/im_plus_morning"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/plus_icon"
+                            android:layout_centerInParent="true"/>
+
+                        <ImageView
+                            android:id="@+id/im_minus_morning"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/minus_icon"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_tv_time_range_morning"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/rl_morning_tag">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="6 AM - 12 PM"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expand_for_morning"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/rl_tv_time_range_morning"
+                android:background="@color/alarmStripBackground"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Medicine"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/addMedicineForMorning"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_medicine_list_for_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_afternoon_tag"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/alarmStripBackground"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/rl_expand_for_morning">
+
+
+                <ImageView
+                    android:id="@+id/im_afternoon"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/atermoon_icon"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im_afternoon"
+                    android:layout_centerHorizontal="true"
+                    android:text="Aftermoon"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="4dp"
+                    android:layout_marginLeft="6dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/red_circle_alarm"
+                        android:layout_marginRight="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:id="@+id/NoOfTakeMedicineForAfternoon"
+                            android:textColor="@color/whiteColor"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/black_circle_alarm"
+                        android:layout_marginRight="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:id="@+id/NoOfSkipMedicineForAfternoon"
+                            android:textColor="@color/whiteColor"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_plus_minus_afternoon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp">
+
+                        <ImageView
+                            android:id="@+id/im_plus_afternoon"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/plus_icon"
+                            android:layout_centerInParent="true"/>
+                        <ImageView
+                            android:id="@+id/im_minus_afternoon"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/minus_icon"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_tv_time_range_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/rl_afternoon_tag">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="12 PM - 5 PM"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expand_for_afternoon"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/rl_tv_time_range_afternoon"
+                android:background="@color/alarmStripBackground"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Medicine"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/addMedicineForAfternoon"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_medicine_list_for_afternoon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_evening"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/alarmStripBackground"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/rl_expand_for_afternoon">
+
+
+                <ImageView
+                    android:id="@+id/im_evening"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/evening_icon"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im_evening"
+                    android:layout_centerHorizontal="true"
+                    android:text="Evening"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="4dp"
+                    android:layout_marginLeft="6dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/red_circle_alarm"
+                        android:layout_marginRight="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:id="@+id/NoOfTakeMedicineForEvening"
+                            android:textColor="@color/whiteColor"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/black_circle_alarm"
+                        android:layout_marginRight="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:id="@+id/NoOfSkipMedicineForEvening"
+                            android:textColor="@color/whiteColor"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_plus_minus_evening"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp">
+
+                        <ImageView
+                            android:id="@+id/im_plus_evning"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/plus_icon"
+                            android:layout_centerInParent="true"/>
+                        <ImageView
+                            android:id="@+id/im_minus_evning"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/minus_icon"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_tv_time_range_evening"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/rl_evning">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:text="5 PM - 8 PM"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expand_for_evening"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@+id/rl_tv_time_range_evening"
+                android:background="@color/alarmStripBackground"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Medicine"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/addMedicineForEvening"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_medicine_list_for_evening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"/>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_night"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/alarmStripBackground"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/rl_expand_for_evening">
+
+
+                <ImageView
+                    android:id="@+id/im_night"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/night_icon"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im_night"
+                    android:layout_centerHorizontal="true"
+                    android:text="Night"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="4dp"
+                    android:layout_marginLeft="6dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/red_circle_alarm"
+                        android:layout_marginRight="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:id="@+id/NoOfTakeMedicineForNight"
+                            android:textColor="@color/whiteColor"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/black_circle_alarm"
+                        android:layout_marginRight="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="12dp"
+                            android:id="@+id/NoOfSkipMedicineForNight"
+                            android:textColor="@color/whiteColor"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_plus_minus_night"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp">
+
+                        <ImageView
+                            android:id="@+id/im_plus_night"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/plus_icon"
+                            android:layout_centerInParent="true"/>
+                        <ImageView
+                            android:id="@+id/im_minus_night"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/minus_icon"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_tv_time_range_night"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/rl_night">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:text="8 PM - 6 AM"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/textView" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expand_for_night"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@+id/rl_tv_time_range_night"
+                android:background="@color/alarmStripBackground"
+                android:visibility="gone">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Medicine"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/addMedicineForNight"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_medicine_list_for_night"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none" />
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    
+
+</RelativeLayout>

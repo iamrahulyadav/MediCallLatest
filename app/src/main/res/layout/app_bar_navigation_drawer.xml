@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavigationDrawer">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_navigation_drawer" />
+
+    <RelativeLayout
+        android:id="@+id/rl_for_drawer_icon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="top"
+        android:visibility="gone"
+        android:background="@drawable/first_guide_back">
+
+        <ImageView
+            android:id="@+id/iv_crosee"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cross_for_first_guide"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"/>
+
+
+        <ImageView
+            android:id="@+id/iv_touch"
+            android:layout_width="75dp"
+            android:layout_height="67dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/hand_with_touch"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteColor"
+            android:text="Menu for Login, Registration and other options"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <ImageView
+            android:id="@+id/im_up_arrow"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:src="@drawable/arra"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="100dp"
+            android:translationZ="@dimen/fab_margin"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

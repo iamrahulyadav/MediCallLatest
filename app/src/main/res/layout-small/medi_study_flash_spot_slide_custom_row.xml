@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardPreventCornerOverlap="false">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flashSpotSlideId"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/flashSpotSlideImageUrl"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/labbanner"
+            android:id="@+id/flashSpotSlideImage"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chain"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/chainOne"/>
+
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chain"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:id="@+id/chainTwo"/>
+
+
+        </RelativeLayout>
+    <!--<LinearLayout-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="10dp"-->
+        <!--android:background="@drawable/explanation_background">-->
+
+        <!--<WebView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/flashSpotSlideDescription"-->
+            <!--android:gravity="center"/>-->
+
+    <!--</LinearLayout>-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/flashSpotSlideDescription"
+            android:text="Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text Sample Text "
+            android:textSize="14sp"
+            android:textColor="@color/whiteColor"
+            android:background="@drawable/slides_background"
+            android:padding="10dp" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

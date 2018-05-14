@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_custom_gridview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_marginLeft="-2dp"
+    android:background="@drawable/even_speciality_border_design">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_speciality_id"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/select_speciality_image"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/name"
+        android:layout_gravity="top|center_horizontal"/>
+
+    <TextView
+        android:id="@+id/select_speciality_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="13sp"
+        android:typeface="serif"
+        android:text="Sample"
+        android:textColor="#262525"
+        android:gravity="top|center_horizontal" />
+
+</LinearLayout>

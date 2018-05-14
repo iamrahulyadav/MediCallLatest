@@ -1,0 +1,500 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="themedicall.com.Jobs"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding"
+    android:background="@color/formBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Job Title"
+                android:id="@+id/job_request_title"
+                android:inputType="text"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:id="@+id/job_request_age_required_layout"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus">
+
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/job_request_age_spinner" />
+
+
+            </RelativeLayout>
+
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="Mobile No."
+                    android:id="@+id/job_request_phone"
+                    android:inputType="phone"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus" />
+
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="Email"
+                    android:id="@+id/job_request_email"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/genderTextSize"
+                    android:textStyle="bold"
+                    />
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/job_request_gender_radioGroup"
+                    >
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:textSize="@dimen/genderTextMale"
+                        android:textColor="@color/blackColor"
+                        android:text="Male"
+                        android:id="@+id/job_request_male_radioBtn"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/genderTextFeMale"
+                        android:textColor="@color/blackColor"
+                        android:text="Female"
+                        android:id="@+id/job_request_female_radioBtn"
+                        />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Job location"
+                    android:id="@+id/job_request_locaton"
+                    android:inputType="text"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:gravity="left|center"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:drawableRight="@drawable/locationpointer"
+                    android:paddingRight="10dp"
+                    />
+
+
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="Preferred Location"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:id="@+id/job_request_preferred_location"
+
+                    />
+
+
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/fasdfasdf"-->
+                <!--android:layout_marginTop="@dimen/floating_edit_text_margin"-->
+                <!--&gt;-->
+
+
+
+            <EditText
+                android:id="@+id/job_request_key_skills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:gravity="top|left"
+                android:hint="Key Skills"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="2"
+                android:paddingTop="10dp"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize" />
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:id="@+id/partLayout"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/job_request_qualification"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:text="Select Qualification"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:id="@+id/fdfdddffdfd"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/job_request_speciality"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:text="Select Speciality"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/fdfgfdsgd"-->
+                <!--android:layout_marginTop="@dimen/floating_edit_text_margin"-->
+                <!--&gt;-->
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:hint="Total experience"
+                    android:id="@+id/job_request_experience"
+                    android:inputType="text"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+
+                    />
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/fsdfasfa"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/floating_edit_text_margin"-->
+                <!--&gt;-->
+
+                <EditText
+                    android:id="@+id/job_request_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Job Description"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:minLines="2"
+                    android:gravity="top|left"
+                    android:maxLines="10"
+                    android:scrollbars="vertical"
+                    android:paddingTop="10dp"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+
+                    />
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/fsdfasfaad"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/floating_edit_text_margin"-->
+                <!--&gt;-->
+
+            <EditText
+                android:id="@+id/job_request_any_requirement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:gravity="top|left"
+                android:hint="Any Other Requirements"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="2"
+                android:paddingTop="10dp"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/order_medicine_dotted_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                >
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/jobSelectPictureLayout">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/camera"
+                            android:layout_weight="1"
+                            android:id="@+id/jobImageFromCamera"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"/>
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/gallery"
+                            android:layout_weight="1"
+                            android:id="@+id/jobImageFromGallery"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="0dp"/>
+
+
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Take / Upload picture of job requirement"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:typeface="serif" />
+
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/jobImageFrameLayout"
+                    >
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/jobImage"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/doctor"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/cross"
+                        android:layout_gravity="right"
+                        android:id="@+id/removejobImg"/>
+
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/order_medicine_dotted_line"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:id="@+id/job_request_picture"
+                android:gravity="center"
+                android:padding="@dimen/crossImagePadding"
+                android:visibility="gone"
+                >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/imageWidth"
+                        android:layout_height="@dimen/imageHeight"
+                        android:src="@drawable/name"
+                        android:id="@+id/job_request_job_img"
+                        android:padding="@dimen/crossImagePadding"
+                        android:scaleType="fitXY"
+                        />
+
+                    <ImageView
+                        android:layout_width="@dimen/crossImageWidth"
+                        android:layout_height="@dimen/crossImageHeight"
+                        android:id="@+id/removeImage"
+                        android:src="@drawable/cross"
+                        android:layout_gravity="right"
+                        android:scaleType="fitXY"/>
+
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Submit"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:layout_marginBottom="@dimen/buttonMarginBottom"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/buttom_press_state"
+                android:layout_marginLeft="@dimen/button_margin_left"
+                android:layout_marginRight="@dimen/button_margin_right"
+                android:id="@+id/job_request_submit_button"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,528 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="themedicall.com.BasicInfoUpdateDocProfile"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding"
+    android:background="@color/formBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <!--   <de.hdodenhof.circleimageview.CircleImageView
+                           xmlns:app="http://schemas.android.com/apk/res-auto"
+                           android:id="@+id/profileImg"
+                           android:layout_width="100dp"
+                           android:layout_height="100dp"
+                           android:src="@drawable/doctor"
+                           app:civ_border_color="@color/imageCircularColor"
+                           app:civ_border_width="@dimen/picture_circular" />-->
+
+                    <ImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profileImg"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/doctor" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/pencil_icon"/>
+
+                </RelativeLayout>
+
+
+                <EditText
+                    android:id="@+id/signUpName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:hint="Full Name"
+                    android:inputType="text"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+
+                <EditText
+                    android:id="@+id/signUpMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:hint="Mobile No."
+                    android:inputType="phone"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize"
+                    android:visibility="gone"/>
+
+
+                <EditText
+                    android:id="@+id/signUpDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:focusable="false"
+                    android:hint="DOB"
+                    android:inputType="date"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+                <!--<LinearLayout
+                    android:id="@+id/signUpGenderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:gravity="left|center"
+                    android:orientation="horizontal"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/genderTextSize"
+                        android:textStyle="bold" />
+
+
+                    <RadioGroup
+                        android:id="@+id/signUpGenderRadioGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:id="@+id/signUpGenderMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text="Male"
+                            android:textColor="@color/blackColor"
+                            android:textSize="@dimen/genderTextMale" />
+
+                        <RadioButton
+                            android:id="@+id/signUpGenderFeMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:textColor="@color/blackColor"
+                            android:textSize="@dimen/genderTextMale" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+    -->
+
+                <RelativeLayout
+                    android:id="@+id/signUpSelectDesignationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line">
+
+                    <!--<Button-->
+                        <!--android:id="@+id/signUpSelectDesignation"-->
+                        <!--style="@style/Widget.AppCompat.Spinner"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Status"-->
+                        <!--android:textColor="@color/hintColor"-->
+                        <!--android:textSize="@dimen/hintSize" />-->
+
+
+                    <Spinner
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/signUpSelectDesignation"
+                        />
+
+
+
+                </RelativeLayout>
+
+                <!-- <LinearLayout
+                     android:id="@+id/rl_custom_specialist_tags"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     style="@style/Widget.AppCompat.Spinner"
+                     android:visibility="gone">
+
+
+                 </LinearLayout>-->
+
+
+                <org.apmem.tools.layouts.FlowLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/rl_custom_specialist_tags">
+
+                </org.apmem.tools.layouts.FlowLayout>
+
+                <RelativeLayout
+                    android:id="@+id/signUpSelectSpecialityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line">
+
+                    <Button
+                        android:id="@+id/signUpSelectSpeciality"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Speciality"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize" />
+
+
+                </RelativeLayout>
+
+
+                <!--   <GridLayout
+                       android:id="@+id/ll_custom_for_supspecialist"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+
+                       android:visibility="gone"/>-->
+
+
+                <org.apmem.tools.layouts.FlowLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/ll_custom_for_supspecialist">
+
+                </org.apmem.tools.layouts.FlowLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/signUpSelectSubSpecialityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    >
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ac_sup_specialisty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:hint="Type Sub Specialiity"
+                        android:textColor="@color/blackColor"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="@dimen/hintSize" />
+
+                    <Button
+                        android:id="@+id/signUpSelectSubSpeciality"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Speciality"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+                        android:visibility="gone"/>
+
+
+                </RelativeLayout>
+
+
+                <org.apmem.tools.layouts.FlowLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/fl_dr_services">
+
+                </org.apmem.tools.layouts.FlowLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_autocomplete_for_services"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ac_sup_services"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Type Services"
+                        android:textColor="@color/blackColor"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="@dimen/hintSize"/>
+
+                    <Button
+                        android:id="@+id/bt_rl_sub_services"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Speciality"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+                        android:visibility="gone"/>
+
+
+                </RelativeLayout>
+
+
+
+                <org.apmem.tools.layouts.FlowLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/fl_dr_qualifications">
+
+                </org.apmem.tools.layouts.FlowLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_autocomplete_for_qualifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus">
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ac_sup_qualifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Type Qualifications"
+                        android:textColor="@color/blackColor"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="@dimen/hintSize"/>
+
+                    <Button
+                        android:id="@+id/bt_rl_sub_qualifications"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Speciality"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize"
+                        android:visibility="gone"/>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/signUpSelectCityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line">
+
+                    <Button
+                        android:id="@+id/signUpSelectCity"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:textColor="@color/hintColor"
+                        android:textSize="@dimen/hintSize" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line">
+
+                    <!--<Button-->
+                        <!--android:id="@+id/bt_blood_group"-->
+                        <!--style="@style/Widget.AppCompat.Spinner"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Blood Group"-->
+                        <!--android:textColor="@color/hintColor"-->
+                        <!--android:textSize="@dimen/hintSize" />-->
+
+
+                    <Spinner
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/bt_blood_group"
+                        />
+
+
+                </RelativeLayout>
+
+
+                <!--          <EditText
+                              android:id="@+id/signUpEmail"
+                              android:layout_width="match_parent"
+                              android:layout_height="@dimen/edittext_height"
+                              android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                              android:background="@drawable/edittext_bottom_line"
+                              android:hint="Email"
+                              android:inputType="textEmailAddress"
+                              android:textColorHint="@color/hintColor"
+                              android:textSize="@dimen/hintSize"
+
+                              />-->
+
+
+                <!-- <EditText
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/edittext_height"
+                     android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                     android:background="@drawable/edittext_bottom_line"
+                     android:hint="PMDC"
+                     android:inputType="text"
+                     android:textColorHint="@color/hintColor"
+                     android:textSize="@dimen/hintSize" />
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_marginTop="10dp"
+                     android:layout_weight="1"
+                     android:background="@drawable/order_medicine_dotted_line"
+                     android:orientation="vertical">
+
+                     <ImageView
+                         android:layout_width="80dp"
+                         android:layout_height="80dp"
+                         android:layout_gravity="center"
+                         android:layout_marginTop="5dp"
+                         android:src="@drawable/cameragallery" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:gravity="center"
+                         android:padding="5dp"
+                         android:text="Take Or Upload Picture of PMDC"
+                         android:textColor="@color/blackColor"
+                         android:textSize="14sp"
+                         android:typeface="serif" />
+
+                 </LinearLayout>
+     -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_select_muliti_photo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/add_image"
+                        android:layout_centerHorizontal="true"/>
+
+                    <GridView
+                        android:layout_below="@+id/iv_select_muliti_photo"
+                        android:id="@+id/PhoneImageGrid"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:verticalSpacing="15dp"
+
+                        android:numColumns="4">
+
+                    </GridView>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:layout_marginBottom="@dimen/buttonMarginBottom">
+
+
+                <Button
+                    android:id="@+id/bt_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Exit"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/button_text_size"
+                    android:background="@drawable/buttom_press_state"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/bt_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/button_text_size"
+                    android:background="@drawable/buttom_press_state"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

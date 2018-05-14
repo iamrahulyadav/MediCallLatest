@@ -1,0 +1,186 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.medicall.ranglerz.com.medicall.HomeCareRequestFormFragment"
+    android:paddingTop="@dimen/Layout_paddingTop"
+    android:paddingRight="@dimen/Layout_paddingRight"
+    android:paddingLeft="@dimen/Layout_paddingLeft"
+    android:paddingBottom="@dimen/Layout_paddingBottom"
+    android:padding="@dimen/Layout_padding"
+    android:background="@color/formBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Full name"
+                android:id="@+id/home_care_name"
+                android:inputType="text"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus" />
+
+
+
+
+
+
+            <EditText
+                android:id="@+id/home_care_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Phone No."
+                android:inputType="phone"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                />
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Location"
+                android:id="@+id/homeCareLocation"
+                android:inputType="text"
+                android:background="@drawable/edittext_bottom_line"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:gravity="left|center"
+                android:clickable="true"
+                android:focusable="false"
+                android:drawableRight="@drawable/locationpointer"
+                android:drawablePadding="10dp"
+                />
+
+
+            <EditText
+                android:id="@+id/home_care_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:hint="Address"
+                android:inputType="text"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:gravity="left|center"
+                android:background="@drawable/edittext_bottom_line"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:id="@+id/signUpGenderLayout"
+                >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Care Required"
+                    android:textColor="@color/hintColor"
+                    android:textSize="@dimen/genderTextSize"
+                    android:textStyle="bold" />
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/homeCareRadioGroup"
+                    android:layout_marginLeft="20dp">
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Doctor"
+                        android:textSize="@dimen/genderTextMale"
+                        android:textColor="@color/blackColor"
+                        android:id="@+id/homeCareDoctor"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/homeCareNurse"
+                        android:textSize="@dimen/genderTextFeMale"
+                        android:text="Nurse"
+                        android:textColor="@color/blackColor"/>
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <EditText
+                android:id="@+id/home_care_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/hintSize"
+                android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                android:background="@drawable/edittext_bottom_line"
+                android:hint="Explain Service Required"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:minLines="2"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:paddingTop="10dp"
+                android:scrollbars="vertical" />
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="Submit"
+                android:id="@+id/home_care_submitBtn"
+                android:layout_marginTop="@dimen/buttonMarginTop"
+                android:layout_marginBottom="@dimen/buttonMarginBottom"
+                android:textAllCaps="false"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/button_text_size"
+                android:background="@drawable/buttom_press_state"
+                android:layout_marginLeft="@dimen/button_margin_left"
+                android:layout_marginRight="@dimen/button_margin_right" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

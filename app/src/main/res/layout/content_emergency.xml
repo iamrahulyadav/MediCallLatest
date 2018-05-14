@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.medicall.ranglerz.com.medicall.Emergency"
+    tools:showIn="@layout/activity_emergency"
+    android:background="@color/landingScreenBackgroundColor"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottomLayout"
+        android:gravity="center">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/ambulanceimg"
+            android:layout_weight="1"
+            android:id="@+id/emergencyAmbulance"/>
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/emergencycentersimg"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:id="@+id/emergencyCenters"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/firstaidimg"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:id="@+id/emergencyFirstAid"/>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/emergencycontactsimg"
+            android:layout_weight="1"
+            android:id="@+id/emergencyContacts"/>
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/bloodappealimg"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:id="@+id/emergencyBloodAppeal"/>
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/bottomLayout"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/bottomnavigationmedistudy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/bottomnavigationmedistudy"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottomnavigationplus"
+            android:id="@+id/bottomnavigationplus"/>
+
+
+        <ImageView
+            android:id="@+id/bottomnavigationmedipedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/bottomnavigationmedipedia"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

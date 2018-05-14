@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/contact_us_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Disease Description"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="2"
+        android:gravity="top|left"
+        android:maxLines="10"
+        android:paddingTop="10dp"
+        android:scrollbars="vertical"
+        android:background="@drawable/edittext_bottom_line"
+        android:textColorHint="@color/hintColor"
+        android:textSize="@dimen/hintSize"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="When this Disease diagnosed"
+        android:inputType="text"
+        android:background="@drawable/edittext_bottom_line"
+        android:textColorHint="@color/hintColor"
+        android:textSize="@dimen/hintSize"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="Medicine"
+        android:inputType="text"
+        android:background="@drawable/edittext_bottom_line"
+        android:textColorHint="@color/hintColor"
+        android:textSize="@dimen/hintSize"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:hint="Treatment"
+        android:inputType="text"
+        android:background="@drawable/edittext_bottom_line"
+        android:textColorHint="@color/hintColor"
+        android:textSize="@dimen/hintSize"
+        android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="have this"
+            android:textSize="@dimen/genderTextMale"/>
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No longer have this"
+            android:textSize="@dimen/genderTextMale"/>
+
+
+    </RadioGroup>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Submit"
+        android:layout_marginTop="@dimen/buttonMarginTop"
+        android:layout_marginBottom="@dimen/buttonMarginBottom"
+        android:textAllCaps="false"
+        android:textColor="@color/buttonTextColor"
+        android:textSize="@dimen/button_text_size"
+        android:background="@drawable/buttom_press_state"
+        android:layout_marginLeft="@dimen/button_margin_left"
+        android:layout_marginRight="@dimen/button_margin_right"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MediStudySection.MediStudy"
+    tools:showIn="@layout/activity_medi_study"
+    android:orientation="vertical"
+    android:background="@drawable/medistudybackground3"
+    android:padding="10dp">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:gravity="center">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/edittext_bottom_line"
+                android:visibility="gone">
+
+                <Spinner
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/programSpinner"
+                    android:spinnerMode="dropdown"/>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_bottom_line"
+                android:gravity="center">
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/modeRadioGroup"
+                    android:layout_weight="1">
+
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Preparatory Mode"
+                        android:textSize="@dimen/genderTextMale"
+                        android:textColor="@color/blackColor"
+                        android:id="@+id/signUpGenderMale"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/signUpGenderFeMale"
+                        android:textSize="@dimen/genderTextFeMale"
+                        android:text="Exam Mode"
+                        android:textColor="@color/blackColor"
+                        android:layout_weight="1"/>
+
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/guidancePapers"
+            android:src="@drawable/guidancepapers"
+            android:layout_marginTop="10dp"/>
+
+
+        <ImageView
+            android:id="@+id/subjectExam"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/subjects"
+            android:layout_marginTop="0dp"/>
+
+
+        <ImageView
+            android:id="@+id/pastPaperExam"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/pastpapers"
+            android:layout_marginTop="0dp"/>
+
+
+        <ImageView
+            android:id="@+id/mockUpExam"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:src="@drawable/mocktests"
+            android:layout_marginTop="0dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/flashCardImg"
+            android:src="@drawable/flashimg"
+            android:layout_marginTop="0dp"/>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/clinicalsImg"
+            android:src="@drawable/clinicals"
+            android:layout_marginTop="0dp"/>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/notesImg"
+            android:src="@drawable/notesimg"
+            android:layout_marginTop="0dp"/>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/videoImg"
+            android:src="@drawable/videos"
+            android:layout_marginTop="0dp"/>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/examResultImg"
+            android:src="@drawable/examresults"
+            android:layout_marginTop="0dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/examDateResultImg"
+            android:src="@drawable/examdate"
+            android:layout_marginTop="0dp"/>
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/examBookmakedImg"
+            android:src="@drawable/bookmarked"
+            android:layout_marginTop="0dp"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/contributorsImg"
+            android:src="@drawable/contributors"
+            android:layout_marginTop="0dp"/>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="edit_text_margin">5dp</dimen>
+    <dimen name="floating_edit_text_margin">-7dp</dimen>
+    <dimen name="edittext_height">35dp</dimen>
+    <dimen name="button_height">40dp</dimen>
+    <dimen name="Layout_paddingRight">0dp</dimen>
+    <dimen name="Layout_paddingLeft">0dp</dimen>
+    <dimen name="Layout_paddingTop">0dp</dimen>
+    <dimen name="Layout_paddingBottom">0dp</dimen>
+    <dimen name="Layout_padding">10dp</dimen>
+    <dimen name="forget_signup_text_size">16dp</dimen>
+    <dimen name="button_text_size">18dp</dimen>
+    <dimen name="button_margin_left">50dp</dimen>
+    <dimen name="button_margin_right">50dp</dimen>
+    <dimen name="drawable_padding">10dp</dimen>
+    <dimen name="home_button_text_size">17sp</dimen>
+    <dimen name="home_button_spacing">2.5dp</dimen>
+    <dimen name="home_text_padding_bottom">10dp</dimen>
+    <dimen name="edit_text_margin_top_in_minus">10dp</dimen>
+    <dimen name="picture_circular">0dp</dimen>
+    <dimen name="hintSize">14dp</dimen>
+    <dimen name="selectSpecialityHeight">50dp</dimen>
+    <dimen name="buttonMarginTop">10dp</dimen>
+    <dimen name="buttonMarginBottom">10dp</dimen>
+    <dimen name="listingHeadingSize">13dp</dimen>
+    <dimen name="addressSize">11dp</dimen>
+    <dimen name="listingAddressSize">11dp</dimen>
+
+    <dimen name="headingSize">15sp</dimen>
+    <dimen name="doNotPayPadingDimen">4dp</dimen>
+    <dimen name="doNotPayTextSizeDimen">14dp</dimen>
+    <dimen name="belowHeadingTextSize">12sp</dimen>
+
+    <dimen name="hosDetailImgHeight">18dp</dimen>
+    <dimen name="hosDetailImgWidth">18dp</dimen>
+    <dimen name="hosDetailImgMargin">5dp</dimen>
+
+    <dimen name="headingPaddingLeft">2dp</dimen>
+    <dimen name="headingPaddingRight">5dp</dimen>
+    <dimen name="headingPaddingTop">5dp</dimen>
+    <dimen name="headingPaddingBottom">5dp</dimen>
+
+
+    <dimen name="genderTextSize">16sp</dimen>
+    <dimen name="genderTextMale">13sp</dimen>
+    <dimen name="genderTextFeMale">13sp</dimen>
+    <dimen name="item_offset">2dp</dimen>
+    <dimen name="map_height">150dp</dimen>
+    <dimen name="loadig_width">100dp</dimen>
+    <dimen name="loading_height">100dp</dimen>
+    <dimen name="universalbarimgwidth">20dp</dimen>
+    <dimen name="universalbarimgheight">20dp</dimen>
+    <dimen name="universalbarmarginright">5dp</dimen>
+    <dimen name="universalbartextsize">10dp</dimen>
+
+
+    <dimen name="searchViewHeight">40dp</dimen>
+    <dimen name="searchViewMarginLeft">20dp</dimen>
+    <dimen name="searchViewMarginRight">20dp</dimen>
+    <dimen name="searchViewMarginBottom">2dp</dimen>
+    <dimen name="searchViewMarginTop">0dp</dimen>
+
+
+    <dimen name="mainScreenButtonMarginTop">20dp</dimen>
+    <dimen name="mainScreenButtonMarginTopForSmall">0dp</dimen>
+
+    <dimen name="mainScreenButtonMarginTopForNormal">0dp</dimen>
+    <dimen name="mainScreenButtonPaddingRightForNormal">0dp</dimen>
+    <dimen name="mainScreenButtonPaddingLeftNormal">0dp</dimen>
+
+    <dimen name="tabIndicator">2dp</dimen>
+    <dimen name="tabHeight">25dp</dimen>
+    <dimen name="noAvailableTextSize">18dp</dimen>
+    <dimen name="questionTextSize">16dp</dimen>
+    <dimen name="questionOptionHeight">40dp</dimen>
+    <dimen name="questionOptionNameSize">15sp</dimen>
+    <dimen name="questionOptionMarginTop">10sp</dimen>
+    <dimen name="questionOptionPadding">10sp</dimen>
+    <dimen name="explanationTextSize">12sp</dimen>
+    <dimen name="explanationPadding">10dp</dimen>
+    <dimen name="explanationMarginTop">5dp</dimen>
+
+
+    <!--capture or upload image dimens -->
+    <dimen name="imageHeight">120dp</dimen>
+    <dimen name="imageWidth">120dp</dimen>
+    <dimen name="crossImageHeight">20dp</dimen>
+    <dimen name="crossImageWidth">20dp</dimen>
+    <dimen name="crossImagePadding">10dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">120dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_desc">16dp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+</resources>

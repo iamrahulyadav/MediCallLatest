@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/logIn"
+            android:icon="@drawable/login"
+            android:title="Log In" />
+        <item
+            android:id="@+id/bonus"
+            android:icon="@drawable/getbonus"
+            android:title="Get Bonus"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/free_consultation"
+            android:icon="@drawable/creat_account_icon"
+            android:title="@string/creat_account" />
+
+        <item
+            android:id="@+id/blog"
+            android:icon="@drawable/blog"
+            android:title="Tips"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/emergency_contacts"
+            android:icon="@drawable/emergengy"
+            android:title="Emergency" />
+
+        <item
+            android:id="@+id/rate_us"
+            android:icon="@drawable/rateus"
+            android:title="Rate Us" />
+
+
+        <item
+            android:id="@+id/share_app"
+            android:icon="@drawable/sharethisapp"
+            android:title="Share this App" />
+
+        <item
+            android:id="@+id/tutorial"
+            android:icon="@drawable/tutorial"
+            android:title="Tutorial" />
+
+
+        <item
+            android:id="@+id/premium"
+            android:icon="@drawable/premiummember"
+            android:title="Become Premium Member"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/contact_us"
+            android:icon="@drawable/contact"
+            android:title="Contact Us" />
+
+        <item
+            android:id="@+id/privacy"
+            android:icon="@drawable/privacypolicy"
+            android:title="Privacy Plicy"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="Logout"
+            android:visible="false"/>
+    </group>
+
+    <!--<item android:title="Communicate">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_share"-->
+    <!--android:icon="@drawable/ic_menu_share"-->
+    <!--android:title="Share" />-->
+    <!--<item-->
+    <!--android:id="@+id/nav_send"-->
+    <!--android:icon="@drawable/ic_menu_send"-->
+    <!--android:title="Send" />-->
+    <!--</menu>-->
+    <!--</item>-->
+
+</menu>

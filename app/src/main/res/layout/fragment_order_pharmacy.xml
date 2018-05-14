@@ -1,0 +1,422 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.medicall.ranglerz.com.medicall.OrderPharmacyFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/formBackground">
+
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginBottom="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/pharmacybanner"
+                android:layout_marginTop="5dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/pharmacy_select_picture_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/order_medicine_dotted_line"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/camera"
+                            android:layout_weight="1"
+                            android:id="@+id/labImageFromCamera"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"/>
+
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/gallery"
+                            android:layout_weight="1"
+                            android:id="@+id/labImageFromGallery"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="0dp"/>
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Take Or Upload Picture of Prescription"
+                        android:textColor="@color/blackColor"
+                        android:textSize="12sp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/pharmacy_picture_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/order_medicine_dotted_line"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/crossImagePadding"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/pharmacy_prescription_img"
+                        android:layout_width="@dimen/imageWidth"
+                        android:layout_height="@dimen/imageHeight"
+                        android:padding="@dimen/crossImagePadding"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/name" />
+
+                    <ImageView
+                        android:id="@+id/removeImage"
+                        android:layout_width="@dimen/crossImageWidth"
+                        android:layout_height="@dimen/crossImageHeight"
+                        android:layout_gravity="right"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/cross" />
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1.5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dotted_line"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OR"
+                    android:textColor="#000000" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1.5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/dotted_line" />
+
+            </LinearLayout>
+
+
+            <!--start add fields section-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Add Medicine By Name"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/medicineCustomRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <EditText
+                                android:id="@+id/editText"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/edittext_background"
+                                android:hint="Medicine Name"
+                                android:inputType="text"
+                                android:textColorHint="@color/hintColor"
+                                android:textSize="@dimen/hintSize" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="-10dp"
+                                android:orientation="horizontal">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:background="@drawable/edittext_background"
+                                        android:layout_marginRight="5dp">
+
+                                        <Button
+                                            android:id="@+id/home_care_city"
+                                            style="@style/Widget.AppCompat.Spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Type"
+                                            android:textColor="@color/hintColor"
+                                            android:textSize="@dimen/hintSize" />
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2">
+
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:background="@drawable/edittext_background"
+                                        android:hint="Quantity"
+                                        android:inputType="text"
+                                        android:textColorHint="@color/hintColor"
+                                        android:textSize="@dimen/hintSize" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/deleteImageView"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right|center"
+                            android:src="@drawable/cross" />
+
+<!--
+                        android:onClick="onDeleteBtn"
+-->
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/addFieldBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#b7393b"
+                    android:text="Add More"
+                    android:textAllCaps="false"
+                    android:textColor="@color/buttonTextColor" />
+
+
+<!--
+                android:onClick="onAddBtn"
+-->
+
+
+            </LinearLayout>
+
+
+            <!--end add fields section-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="Contact Detail"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+
+                <EditText
+                    android:id="@+id/contact_us_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+
+                <EditText
+                    android:id="@+id/contact_us_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:hint="Mobile No"
+                    android:inputType="phone"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+
+                <EditText
+                    android:id="@+id/contact_us_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+
+                <EditText
+                    android:id="@+id/contact_us_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/edit_text_margin_top_in_minus"
+                    android:background="@drawable/edittext_bottom_line"
+                    android:hint="Any Instruction"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:minLines="3"
+                    android:scrollbars="vertical"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/hintSize" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I agree with" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/termandcondition"
+                        android:textColor="@color/blackColor"
+                        android:layout_marginLeft="5dp"
+                        />
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/orderPharmacyBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginBottom="@dimen/buttonMarginBottom"
+                    android:layout_marginLeft="@dimen/button_margin_left"
+                    android:layout_marginRight="@dimen/button_margin_right"
+                    android:layout_marginTop="@dimen/buttonMarginTop"
+                    android:background="@drawable/buttom_press_state"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/buttonTextColor"
+                    android:textSize="@dimen/button_text_size" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
