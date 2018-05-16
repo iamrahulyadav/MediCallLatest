@@ -8,6 +8,7 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -521,10 +522,6 @@ public class AlliedSignupFragment extends Fragment implements  SearchView.OnQuer
                 {
                     signUpMobile.setError(mobileNoError);
                 }
-                else if(signUpDob.getText().toString().equals(""))
-                {
-                    signUpDob.setError(dobError);
-                }
                 else if(signUpSelectCity.getText().toString().equals("City"))
                 {
                     Toast.makeText(getActivity(), "Please Select City", Toast.LENGTH_SHORT).show();
@@ -975,11 +972,12 @@ public class AlliedSignupFragment extends Fragment implements  SearchView.OnQuer
         values.put(MediaStore.Images.Media.TITLE, "New Picture");
         values.put(MediaStore.Images.Media.DESCRIPTION, "From your Camera");
         imageUri = getActivity().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        Log.e("TAG", "the image uri is: " + imageUri);
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+        intent.putExtra(MediaStore.EXTRA_SCREEN_ORIENTATION, ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         startActivityForResult(intent, REQUEST_CAMERA);
     }
-
 
 
     @Override
@@ -988,43 +986,35 @@ public class AlliedSignupFragment extends Fragment implements  SearchView.OnQuer
 
         Log.e("TAg", "The Request code is: " + requestCode);
 
-        if (data!=null) {
-
-            //  if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == SELECT_FILE)
-                onSelectFromGalleryResult(data);
-            else if (requestCode == REQUEST_CAMERA)
-                onCaptureImageResult();
+        //  if (resultCode == Activity.RESULT_OK) {
+        if (requestCode == SELECT_FILE)
+            onSelectFromGalleryResult(data);
+        else if (requestCode == REQUEST_CAMERA) {
+            onCaptureImageResult();
         }
     }
 
     //selecting image from galary
     private void onSelectFromGalleryResult(Intent data) {
 
-
         if (data!=null) {
             imageUri = data.getData();
 
-            try {
-                bitmap1 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
                 pmdcImageFrameLayout.setVisibility(View.VISIBLE);
                 pmdc_select_picture_layout.setVisibility(View.GONE);
                 iv_pmdc.setImageBitmap(bitmap1);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
         }
     }
 
     //getting image form camera
     private void onCaptureImageResult() {
-
         try {
-            if (imageUri!=null) {
+            if (imageUri != null){
                 bitmap1 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
                 pmdcImageFrameLayout.setVisibility(View.VISIBLE);
                 pmdc_select_picture_layout.setVisibility(View.GONE);
-                iv_pmdc.setImageBitmap(bitmap1);
+                iv_pmdc.setImageURI(imageUri);
+                //iv_pmdc.setImageBitmap(bitmap1);
             }
 
         } catch (IOException e) {
@@ -1032,7 +1022,6 @@ public class AlliedSignupFragment extends Fragment implements  SearchView.OnQuer
         }
 
     }
-
     private void signUpdoctorwithImage(String imagePath, String drId){
 
 

@@ -83,6 +83,8 @@ public class SelectSpecialityForFindDoc extends NavigationDrawer {
         recyclerView_speciality_list.setHasFixedSize(true);
         recyclerView_speciality_list.setLayoutManager(new GridLayoutManager(SelectSpecialityForFindDoc.this , 2 ,GridLayoutManager.VERTICAL, false ));
         specialityList = new ArrayList<>();
+
+
     }
 
     public void getSpecialityList()

@@ -474,7 +474,7 @@ public class SignupAsUser extends AppCompatActivity implements  SearchView.OnQue
     public void signUpPositionHideShowFields() {
         if(signUpPosition == 1)
         {
-            getSupportActionBar().setTitle("Sign Up As Patient");
+            getSupportActionBar().setTitle("Sign Up Non Medic");
 
             signUpSelectDesignationLayout.setVisibility(View.GONE);
             signUpSelectBloodGroupLayout.setVisibility(View.VISIBLE);

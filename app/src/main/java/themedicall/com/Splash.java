@@ -229,7 +229,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "City Service Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(), "onErrorResponse "+error.getMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Server Not Responding, Please Wait", Toast.LENGTH_LONG).show();
 
                 getCitiesService();
 

@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -62,6 +63,8 @@ public class PinVerification extends AppCompatActivity {
     String mFrome = "";
     CustomProgressDialog mClaimDialog;
 
+    private static int SPLASH_TIME_OUT = 3500;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +75,9 @@ public class PinVerification extends AppCompatActivity {
         init();
         btVerifygPin();
         resentCode();
+
+        //temp call loop
+        handlerCall();
 
     }
 
@@ -275,6 +281,10 @@ public class PinVerification extends AppCompatActivity {
 
                                 }
                             }
+                            else if (user_table.equals("allied_healths")){
+
+                                finish();
+                            }
 
                             Log.e("TAG", "the selected user position is: " + signUpPosition);
 
@@ -316,8 +326,6 @@ public class PinVerification extends AppCompatActivity {
                                 reportDialog.setCancelable(false);
                                 reportDialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimationTooDouen;
                                 reportDialog.show();
-
-
                             }
                             else if (mFrome.equals("")){
 
@@ -335,7 +343,6 @@ public class PinVerification extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
         }, new Response.ErrorListener() {
 
@@ -767,6 +774,31 @@ public class PinVerification extends AppCompatActivity {
         // Adding request to request queue
 
         AppSingleton.getInstance(PinVerification.this).addToRequestQueue(strReq, cancel_req_tag);
+    }
+
+
+    private void handlerCall(){
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                et_pin_code.setText(mCode);
+                String pinFromET  = et_pin_code.getText().toString();
+                Log.e("TAG", "THE CODE IS: " + mCode);
+
+
+                if (!pinFromET.equals(mCode)){
+                    Toast.makeText(PinVerification.this, "Incorrect Pin Code", Toast.LENGTH_SHORT).show();
+                }else {
+
+                    verifyingPinServiceCall();
+
+                }
+
+
+            }
+        },SPLASH_TIME_OUT);
     }
 
 }

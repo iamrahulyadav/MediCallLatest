@@ -26,11 +26,15 @@
     <include layout="@layout/content_navigation_drawer" />
 
     <RelativeLayout
+        android:id="@+id/rl_full_screen_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
         android:id="@+id/rl_for_drawer_icon"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="top"
-        android:visibility="gone"
+        android:visibility="visible"
         android:background="@drawable/first_guide_back">
 
         <ImageView
@@ -56,10 +60,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/whiteColor"
-            android:text="Menu for Login, Registration and other options"
-            android:textSize="10sp"
+            android:text="Click here to Create Account"
+            android:textSize="13sp"
+            android:textStyle="bold"
             android:gravity="center_horizontal"
-            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
@@ -73,6 +78,7 @@
             android:layout_marginTop="100dp"
             android:translationZ="@dimen/fab_margin"/>
 
+    </RelativeLayout>
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

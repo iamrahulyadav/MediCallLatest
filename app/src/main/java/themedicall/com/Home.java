@@ -136,6 +136,8 @@ public class Home extends NavigationDrawer implements
     RelativeLayout rl_frond;*/
     RelativeLayout rl_for_drawer_icon;
     ImageView im_up_arrow, iv_touch;
+    RelativeLayout rl_full_screen_view;
+
 
     //public static ArrayList<CitiesGetterSetter> CityList = new ArrayList<CitiesGetterSetter>();
     String cityName;
@@ -207,6 +209,7 @@ public class Home extends NavigationDrawer implements
         openSearchViewDialog();
 
         onClickForIntroCross();
+        onFullScreenClicToHideAnimations();
 
         //callingHospitalListservice();
 
@@ -286,7 +289,9 @@ public class Home extends NavigationDrawer implements
         //   rl_frond = (RelativeLayout) findViewById(R.id.rl_frond);
         // rl_frond.bringToFront();
 
-        rl_for_drawer_icon = (RelativeLayout) findViewById(R.id. rl_for_drawer_icon);
+        rl_for_drawer_icon = (RelativeLayout) findViewById(R.id.rl_for_drawer_icon);
+        rl_full_screen_view = (RelativeLayout) findViewById(R.id.rl_full_screen_view);
+
         im_up_arrow = (ImageView) findViewById(R.id.im_up_arrow);
         iv_touch = (ImageView) findViewById(R.id.iv_touch);
         im_up_arrow.bringToFront();
@@ -1388,7 +1393,7 @@ public class Home extends NavigationDrawer implements
                         cityAndLatLngEditor.commit();
                         locationFilter.setText(pakistan);
 
-                        getAddressApi();
+                        //getAddressApi();
 
                         // Toast.makeText(Home.this, "OVER_QUERY_LIMIT", Toast.LENGTH_SHORT).show();
                     }
@@ -1862,6 +1867,46 @@ public class Home extends NavigationDrawer implements
 
     }
 
+    private void onFullScreenClicToHideAnimations(){
+        rl_full_screen_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                askQuestion.setClickable(true);
+                healthEventBtn.setClickable(true);
+                discountedOffers.setClickable(true);
+                findDoctor.setClickable(true);
+                freeConsultation.setClickable(true);
+                medicineReminder.setClickable(true);
+                labs.setClickable(true);
+                pharmacies.setClickable(true);
+                homeCare.setClickable(true);
+                blood.setClickable(true);
+                jobs.setClickable(true);
+                hospitals.setClickable(true);
+                blog.setClickable(true);
+                ambulance.setClickable(true);
+                medicalRecordBtn.setClickable(true);
+                facebookBtn.setClickable(true);
+                youtubeBtn.setClickable(true);
+                bottomnavigationmedistudy.setClickable(true);
+                bottomnavigationmedipedia.setClickable(true);
+                locationFilter.setClickable(true);
+                userIcon.setClickable(true);
+                searchViewImg.setClickable(true);
+                doctorFilterImage.setClickable(true);
+
+                drawer.setClickable(true);
+                drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+
+                //rl_frond.setVisibility(View.GONE);
+                // rl_guide.setVisibility(View.GONE);
+                rl_for_drawer_icon.setVisibility(View.GONE);
+                iv_touch.setVisibility(View.GONE);
+                rl_full_screen_view.setVisibility(View.GONE);
+
+            }
+        });
+    }
     private void onClickForIntroCross(){
         iv_crosee.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1898,6 +1943,7 @@ public class Home extends NavigationDrawer implements
                 // rl_guide.setVisibility(View.GONE);
                 rl_for_drawer_icon.setVisibility(View.GONE);
                 iv_touch.setVisibility(View.GONE);
+                rl_full_screen_view.setVisibility(View.GONE);
 
 
             }

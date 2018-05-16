@@ -1457,7 +1457,7 @@ BioUpdateDoctorProfile.bioExpertise.setText("");
                 dialog.setTitle("Select Specialisties");
                 SearchView search_view = (SearchView) dialog.findViewById(R.id.search_view);
                 search_view.setVisibility(View.GONE);
-                ListView specialist = (ListView) dialog.findViewById(R.id.cityList);
+                final ListView specialist = (ListView) dialog.findViewById(R.id.cityList);
 
                 Button btDilaogDone = (Button) dialog.findViewById(R.id.bt_dilaog_done);
                 btDilaogDone.setOnClickListener(new View.OnClickListener() {
@@ -1483,6 +1483,7 @@ BioUpdateDoctorProfile.bioExpertise.setText("");
                         try {
                             prectices.put("specialities", jsonArraySpecialistID);
                             specialistId = prectices.toString();
+                            Log.e("TAG", "the json array for Speciality is: " + specialist);
                             //aa = a.toString();
 
                         } catch (JSONException e) {
@@ -1558,7 +1559,6 @@ BioUpdateDoctorProfile.bioExpertise.setText("");
                         }
                         //
                         Log.e("TAG", "The all selected Array list is: " + allSelectedSpecialityID);
-
 
                         //calling weServies
                         if (checkedSpecialityId.size()>0){

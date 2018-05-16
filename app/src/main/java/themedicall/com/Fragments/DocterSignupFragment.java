@@ -1,5 +1,6 @@
 package themedicall.com.Fragments;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -8,13 +9,17 @@ import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -182,6 +187,9 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
 
         startMobileWithOnlyNumber3();
 
+
+        //permission calls
+        requestAppPermissions();
 
 
         //SignUpBtnClick();
@@ -980,7 +988,8 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
             @Override
             public void onClick(View view) {
 
-                boolean result= Utility.checkPermission(getActivity());
+                //boolean result= Utility.checkPermission(getActivity());
+               boolean result = requestAppPermissions();
                 if (result) {
                     cameraIntent();
                 }
@@ -991,7 +1000,11 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
         pmdcImageFromGallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                galleryIntent();
+
+                boolean result = requestAppPermissions();
+                if (result) {
+                    galleryIntent();
+                }
             }
         });
 
@@ -1048,6 +1061,7 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
                     //code for deny
                 }
                 break;
+
         }
     }
 
@@ -1068,6 +1082,7 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
         Log.e("TAG", "the image uri is: " + imageUri);
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+        intent.putExtra(MediaStore.EXTRA_SCREEN_ORIENTATION, ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         startActivityForResult(intent, REQUEST_CAMERA);
     }
 
@@ -1083,9 +1098,7 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
             onSelectFromGalleryResult(data);
         else if (requestCode == REQUEST_CAMERA) {
                 onCaptureImageResult();
-
         }
-
     }
 
     //selecting image from galary
@@ -1108,17 +1121,15 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
 
     //getting image form camera
     private void onCaptureImageResult() {
-        try {
+
             if (imageUri != null){
-            bitmap1 = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
             pmdcImageFrameLayout.setVisibility(View.VISIBLE);
             pmdc_select_picture_layout.setVisibility(View.GONE);
-            iv_pmdc.setImageBitmap(bitmap1);
+            iv_pmdc.setImageURI(imageUri);
+            //iv_pmdc.setImageBitmap(bitmap1);
         }
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
 
     }
 
@@ -1248,4 +1259,34 @@ public class DocterSignupFragment extends Fragment implements SearchView.OnQuery
 
         }
     }*/
+
+
+    private boolean requestAppPermissions() {
+        boolean ispermissionGrated = false;
+        if (android.os.Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            ispermissionGrated =  true;
+        }
+
+        if (hasReadPermissions() && hasWritePermissions()) {
+
+            ispermissionGrated =  true;
+            return ispermissionGrated;
+        }
+
+        ActivityCompat.requestPermissions(getActivity(),
+                new String[] {
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE
+                }, 111); // your request code
+
+        return ispermissionGrated;
+    }
+
+    private boolean hasReadPermissions() {
+        return (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
+    }
+
+    private boolean hasWritePermissions() {
+        return (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
+    }
 }

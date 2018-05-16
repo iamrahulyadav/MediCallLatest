@@ -32,6 +32,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/progress"
+        android:backgroundTint="@color/whiteColor"
+        android:foregroundTint="@color/blackColor"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_alignParentBottom="true"

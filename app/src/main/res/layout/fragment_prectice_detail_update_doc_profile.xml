@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="themedicall.com.PrecticeDetailUpdateDocProfile"
-    android:id="@+id/framelayout">
+    android:id="@+id/framelayout"
+    android:background="@color/redColor">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,7 +23,7 @@
                 android:id="@+id/ll_mainview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/formBackground"
+                android:background="@color/redColor"
                 android:orientation="vertical">
 
 
@@ -33,7 +34,7 @@
                     android:layout_marginTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="Add Work Place Information"
-                    android:textColor="@color/blackColor"
+                    android:textColor="@color/whiteColor"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 

@@ -13,6 +13,7 @@
     <color name="blueColor">#2980B9</color>
     <color name="greenColor">#19b9be</color>
     <color name="timingBackground">#64c737</color>
+    <color name="timingBackgroundWithTransperancy">#b07cb342</color>
     <color name="blackColor">#000000</color>
     <color name="goldenColor">#E5C100</color>
     <color name="imageCircularColor">#1A5276</color>
@@ -32,6 +33,7 @@
     <color name="formBackground">#eaeaea</color>
     <color name="headingBackground">#eaeaea</color>
 
+    <color name="colorGray">#808080</color>
     <color name="alarmStripBackground">#e5e5d8</color>
     <color name="questionTextColor">#000000</color>
     <color name="questionOptionNameColor">#ffffff</color>

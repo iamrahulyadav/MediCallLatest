@@ -447,6 +447,7 @@
         <activity
             android:name=".MedicSignup"
             android:label="@string/title_activity_medic_signup"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".UpdateAliedHelathProfile"
@@ -458,7 +459,8 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".SignupAsUser"></activity>
+        <activity android:name=".SignupAsUser"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

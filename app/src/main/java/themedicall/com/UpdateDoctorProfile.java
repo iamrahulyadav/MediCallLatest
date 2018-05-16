@@ -210,14 +210,17 @@ public class UpdateDoctorProfile extends AppCompatActivity{
         if (sharedPreferences!=null){
             experience_status = sharedPreferences.getString("experience_status", null);
 
-        }
-        if (experience_status.equals("4")) {
+            if (experience_status!=null){
+            if (experience_status.equals("4")) {
 
-            // adapter.addFragment(new PrecticeDetailUpdateDocProfile(), "Practice");
+                // adapter.addFragment(new PrecticeDetailUpdateDocProfile(), "Practice");
 
-        }else {
-            adapter.addFragment(new PrecticeDetailUpdateDocProfile(), "Practice");
+            }else {
+                adapter.addFragment(new PrecticeDetailUpdateDocProfile(), "Practice");
+            }
+            }
         }
+
 
 
         adapter.addFragment(new BioUpdateDoctorProfile(), "Bio");

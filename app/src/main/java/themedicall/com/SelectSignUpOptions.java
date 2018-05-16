@@ -27,8 +27,8 @@ public class SelectSignUpOptions extends AppCompatActivity {
     RecyclerView recyclerView_sign_in_option;
     List<SelectSIgnUpOptionGetterSetter> singUpOptionList;
     TextView skipEnter;
-    ImageView signupdoctor , signuppatient , signuphospital , signuplab , signuppharmacy , signuphealthprofessional , signupblood , signupambulance ;
-
+    //ImageView signupdoctor , signuppatient , signuphospital , signuplab , signuppharmacy , signuphealthprofessional , signupblood , signupambulance ;
+    ImageView signupdoctor , signuppatient , signuphospital , signuplab , signuppharmacy   , signupambulance ;
 
     String mClaimeeID = "";
     String mClimeeName = "";
@@ -37,14 +37,15 @@ public class SelectSignUpOptions extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_sign_up_option);
+        setContentView(R.layout.custome_sign_select);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.landingScreenBackgroundColor)));
+
+       // getSupportActionBar().setTitle("");
+       // getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.landingScreenBackgroundColor)));
 
         initiate();
         signUpBtnClickListener();
@@ -92,8 +93,8 @@ public class SelectSignUpOptions extends AppCompatActivity {
         signuphospital = (ImageView) findViewById(R.id.signuphospital);
         signuplab = (ImageView) findViewById(R.id.signuplab);
         signuppharmacy = (ImageView) findViewById(R.id.signuppharmacy);
-        signuphealthprofessional = (ImageView) findViewById(R.id.signuphealthprofessional);
-        signupblood = (ImageView) findViewById(R.id.signupblood);
+        //signuphealthprofessional = (ImageView) findViewById(R.id.signuphealthprofessional);
+        //signupblood = (ImageView) findViewById(R.id.signupblood);
         signupambulance = (ImageView) findViewById(R.id.signupambulance);
 
     }
@@ -162,7 +163,7 @@ public class SelectSignUpOptions extends AppCompatActivity {
         });
 
 
-        signuphealthprofessional.setOnClickListener(new View.OnClickListener() {
+       /* signuphealthprofessional.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SelectSignUpOptions.this , SignUpForAliedHealth.class);
@@ -186,7 +187,7 @@ public class SelectSignUpOptions extends AppCompatActivity {
                 finish();
             }
         });
-
+*/
 
         signupambulance.setOnClickListener(new View.OnClickListener() {
             @Override

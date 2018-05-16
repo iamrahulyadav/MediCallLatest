@@ -400,7 +400,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/button_height"
-                android:text="Sign Up"
+                android:text="Create Account"
                 android:id="@+id/signUpBtn"
                 android:layout_marginTop="@dimen/buttonMarginTop"
                 android:layout_marginBottom="@dimen/buttonMarginBottom"

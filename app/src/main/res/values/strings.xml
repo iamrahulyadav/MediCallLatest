@@ -123,7 +123,7 @@
 
 
     <string name="title_activity_doctor_sign_up">Sign Up</string>
-    <string name="title_activity_forget_password">Forget Password</string>
+    <string name="title_activity_forget_password">Forgot Password</string>
     <string name="title_activity_navigation_drawer">NavigationDrawer</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
