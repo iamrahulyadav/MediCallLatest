@@ -29,6 +29,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
@@ -179,6 +180,8 @@ public class Home extends NavigationDrawer implements
     Dialog networkDialog;
 
 
+    RelativeLayout main_top_layout;
+
     MyReceiverForImageUploaded myReceiverForImageUploaded;
     SharedPreferences sharedPreferencesFirstTimeGuied;
 
@@ -314,9 +317,18 @@ public class Home extends NavigationDrawer implements
 
 
         networkDialog = new Dialog(Home.this);
-
-
         sharedPreferencesFirstTimeGuied = getSharedPreferences("firstTime", 0);
+
+        main_top_layout = (RelativeLayout) findViewById(R.id.main_top_layout);
+        main_top_layout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+
+                drawer.setClickable(true);
+                drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+                return true;
+            }
+        });
     }
 
 
